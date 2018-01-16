@@ -1,4 +1,9 @@
-header, section {
+header {
+  background-image: url(https://picsum.photos/600/600/?random);
+  background-size: cover;
+}
+
+section {
   min-height: 100vh;
 }
 
