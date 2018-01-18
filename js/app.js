@@ -1,7 +1,3 @@
-$(document).foundation()
-
-headerTag.style.cssText = "min-height:" +window.outerHeight+ "px";
-
 // gets location and size of element
 function getOffset(el) {
   el = el.getBoundingClientRect();
@@ -15,106 +11,89 @@ function getOffset(el) {
   };
 }
 
+var range = 50;
+function randomInRange(val) {
+  var min = Math.ceil(val - range);
+  var max = Math.floor(val + range);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
-var headerTextOffset = getOffset(headerText);
-var headerOffset = getOffset(headerTag);
+var myNameEle = document.getElementById("myName");
+var myNameOffset = getOffset(myName);
 
-var canvas = document.getElementById("headerCanvas");
-canvas.width = window.innerWidth;
-canvas.height = window.outerHeight;
-var ctx = canvas.getContext("2d");
+var taglineEle = document.getElementById("tagline");
+var taglineOffset = getOffset(tagline);
+
+var tagline2Ele = document.getElementById("tagline2");
+var tagline2Offset = getOffset(tagline2);
+
+svgMyName.innerHTML = myName.innerText;
+svgTagline.innerHTML = tagline.innerText;
+svgTagline2.innerHTML = tagline2.innerText;
+
+svgMyName.setAttribute("x", myNameOffset.left);
+svgMyName.setAttribute("y", myName.offsetTop + headerText.offsetTop);
+svgMyName.setAttribute("font-size", window.getComputedStyle(myNameEle).fontSize);
+svgMyName.setAttribute("font-family", window.getComputedStyle(myNameEle).fontFamily);
+
+svgTagline.setAttribute("x", taglineOffset.left);
+svgTagline.setAttribute("y", tagline.offsetTop + headerText.offsetTop);
+svgTagline.setAttribute("font-size", window.getComputedStyle(taglineEle).fontSize);
+svgTagline.setAttribute("font-family", window.getComputedStyle(taglineEle).fontFamily);
+
+svgTagline2.setAttribute("x", tagline2Offset.left);
+svgTagline2.setAttribute("y", tagline2.offsetTop + headerText.offsetTop);
+svgTagline2.setAttribute("font-size", window.getComputedStyle(tagline2Ele).fontSize);
+svgTagline2.setAttribute("font-family", window.getComputedStyle(tagline2Ele).fontFamily);
+
+function buildBackground() {
+
+  var limit = Math.floor(window.innerWidth / 200);
+  var xStep = window.innerWidth / limit;
+  var startX = 0;
+  var startY = randomInRange(window.innerHeight*.33);
+  var endY = randomInRange(window.innerHeight*.66);
+  var yStep = (startY - endY)/limit;
+
+
+  var pointsArray =[];
+  // lower left point
+  pointsArray.push([0,window.innerHeight]);
+  // left side start
+  pointsArray.push([0, startY]);
+
+  // build inner points
+  for(var k=1; k<limit; k++ ){
+    pointsArray.push([randomInRange(startX+xStep),randomInRange(startY-yStep)]);
+    startX = startX+xStep;
+    startY = startY-yStep;
+  }
+
+  // right side end
+  pointsArray.push([window.innerWidth, endY]);
+  // lower right point
+  pointsArray.push([window.innerWidth, window.innerHeight])
+
+  var pointsString = "";
+
+  for(var i = 0; i<pointsArray.length; i++) {
+    pointsString = pointsString.concat(pointsString, " ", pointsArray[i].toString());
+  }
+
+  background.setAttribute("points", pointsString);
+}
+buildBackground();
+
+
 
 var animation;
-
-function CanvasBackground() {
-  this.draw = function() {
-      ctx.beginPath();
-      ctx.moveTo(0, canvas.height);
-      ctx.lineTo(0, canvas.height * .33);
-      ctx.lineTo(canvas.width, canvas.height * .66);
-      ctx.lineTo(canvas.width, canvas.height);
-      ctx.fillStyle = "black"
-      ctx.fill();
-    },
-
-    this.update = function() {
-      this.draw();
-    }
-
-  this.draw();
-}
-
-// create text on offscreen canvas
-function CanvasText() {
-	var offScreenCanvas = document.createElement('canvas');
-	offScreenCanvas.width = headerTextOffset.width;
-	offScreenCanvas.height = headerTextOffset.height;
-	var ctxOffscreen = offScreenCanvas.getContext("2d");
-
-	this.draw = function () {
-			var myNameText = document.getElementById("myName");
-			var myNameOffset = getOffset(myName);
-			var myNameFontSize = window.getComputedStyle(myNameText).fontSize;
-			var myNameFontFamily = window.getComputedStyle(myNameText).fontFamily;
-
-			var taglineText = document.getElementById("tagline");
-			var taglineOffset = getOffset(tagline);
-			var taglineFontSize = window.getComputedStyle(taglineText).fontSize;
-			var taglineFontFamily = window.getComputedStyle(taglineText).fontFamily;
-
-			ctxOffscreen.beginPath();
-
-			ctxOffscreen.font = myNameFontSize + " " + myNameFontFamily;
-			ctxOffscreen.fillStyle = "white";
-			ctxOffscreen.textBaseline = "top";
-			ctxOffscreen.fillText(myNameText.innerText, myNameText.offsetLeft, myNameText.offsetTop)
-
-			ctxOffscreen.font = taglineFontSize + " " + taglineFontFamily;
-			ctxOffscreen.fillStyle = "white";
-			ctxOffscreen.textBaseline = "top";
-			ctxOffscreen.fillText(taglineText.innerText, taglineText.offsetLeft, taglineText.offsetTop)
-
-			ctx.drawImage(offScreenCanvas, headerText.getBoundingClientRect().left, headerText.getBoundingClientRect().top);
-	},
-
-	this.update = function () {
-		ctx.drawImage(offScreenCanvas, headerText.getBoundingClientRect().left, headerText.getBoundingClientRect().top + window.pageYOffset);
-	}
-
-
-	this.draw();
-}
-
-
-// var canvasBackground = new CanvasBackground();
-// ctx.globalCompositeOperation = "source-atop";
-// var canvasText = new CanvasText();
-
-// using just scroll for changes lags when touched on mobile
+// TODO: limit animation loop
 function animate() {
-	// animation = requestAnimationFrame(animate);
-	// ctx.clearRect(0, 0, canvas.innerWidth, canvas.innerHeight);
-	// canvasBackground.draw();
-	// canvasText.update();
+	animation = requestAnimationFrame(animate);
+  svgMyName.setAttribute("y", myName.offsetTop + headerText.offsetTop);
+  svgTagline.setAttribute("y", tagline.offsetTop + headerText.offsetTop);
+  svgTagline2.setAttribute("y", tagline2.offsetTop + headerText.offsetTop);
+
+
 }
 animate();
-
-// scroll event
-window.addEventListener("scroll", function() {
-  var headerTextSticky = false;
-
-  if (headerTextOffset.bottom > headerOffset.bottom - pageYOffset) {
-    headerText.setAttribute("style", "position: absolute; top: " + (headerOffset.bottom - (headerTextOffset.height / 2)) + "px");
-    headerTextSticky = true;
-  } else if (headerTextOffset.bottom < headerOffset.bottom - pageYOffset) {
-    headerText.setAttribute("style", "position: fixed; top: 50%");
-    headerTextSticky = false;
-  }
-
-
-  if (!headerTextSticky) {
-    // ctx.clearRect(0, 0, canvas.innerWidth, canvas.innerHeight);
-    // canvasBackground.draw();
-    // canvasText.update();
-  }
-});

@@ -6,283 +6,52 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shawn Rhodes</title>
-  <link rel="stylesheet" href="css/foundation.css">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
   <link rel="stylesheet" href="css/app.css">
 </head>
 
 <body>
+  <svg id="headerSvg" height="100vh" width="100vw">
+
+    <use xlink:href="#background" fill-opacity="1" fill="white"/>
+    <use xlink:href="#background" fill-opacity=".5" mask="url(#maskTest)"/>
+
+
+
+    <defs>
+      <polygon id="background" points="" />
+
+      <mask id="maskTest">
+        <use xlink:href="#background" fill="white" />
+        <text id="svgMyName" alignment-baseline="before-edge"></text>
+        <text id="svgTagline" alignment-baseline="before-edge"></text>
+        <text id="svgTagline2" alignment-baseline="before-edge"></text>
+      </mask>
+    </defs>
+
+  </svg>
   <header id="headerTag">
-    <!-- TODO: add canvas -->
-    <div class="grid-container">
-      <div id="headerText" class="grid-y">
-        <div class="cell">
-          <h1><span id="myName">Shawn Rhodes<span></h1>
-        </div>
-        <div class="cell">
-          <h2><span id="tagline">Front End Developer & Web Designer</span></h2>
-        </div>
-        <div class="cell">
-          <a href="#" class="button">Contact Me</a>
-        </div>
+    <div id="headerContainer" class="container">
+      <div id="headerText" class="sticky">
+        <h1><span id="myName">Shawn Rhodes<span></h1>
+        <h2>
+          <span id="tagline">Front End Developer </span>
+          <span id="tagline2">& Web Designer</span>
+        </h2>
       </div>
+
     </div>
-    <canvas id="headerCanvas"></canvas>
   </header>
 
-  <hr />
+  <section class="test">
 
-  <section id="aboutSection">
-    <div class="contentContainer">
-      <div class="grid-container">
-        <div class="grid-y">
-          <div id="meImage" class="cell">
-            <img src="img/me_500px.png" alt="Me" />
-          </div>
-          <div id="aboutHeader" class="cell sectionHeader">
-            <h2>About Me</h2>
-          </div>
-          <div id="aboutText" class="cell">
-            <p>At first glance I may not seem to fit your typical candidate profile, in the course of my career, I’ve developed a number of important skill that will help me succeed in this new role.</p>
-            <p>I am a proven leader with a strong record of exceeding goals and expectations. I confident that my [web design and front end development] skills will indeed be an excellent match</p>
-            <p>My experience and educational background have prepared me for this career move.</p>
-            <p>I welcome the opportunity to speak with you about this position so I can elaborate on how my expertise in will be an asset to your company.</p>
-          </div>
-        </div>
-      </div>
-    </div>
   </section>
 
-  <hr />
 
-  <section id="skillsSection">
-    <!-- TODO: change order and items -->
-    <div class="contentContainer">
-      <div class="grid-container">
-        <div class="grid-y">
-          <div id="skillsHeader" class="cell sectionHeader">
-            <h2>Skills</h2>
-          </div>
-          <div class="cell">
-            <div class="grid-x grid-margin-x">
-              <div id="skillsDesign" class="cell medium-4">
-                <h3>Design</h3>
-                <ul>
-                  <li>
-                    Experience Design
-                  </li>
-                  <li>
-                    Typography
-                  </li>
-                  <li>
-                    Responsive Design
-                  </li>
-                  <li>
-                    Adobe Creative Suite
-                  </li>
-                </ul>
-              </div>
-              <div id="skillsDevelopment" class="cell medium-4">
-                <h3>Development</h3>
-                <ul>
-                  <li>
-                    HTML5
-                  </li>
-                  <li>
-                    CSS3
-                  </li>
-                  <li>
-                    JavaScript
-                  </li>
-                  <li>
-                    JQuery
-                  </li>
-                  <li>
-                    PHP
-                  </li>
-                  <li>
-                    WordPress
-                  </li>
-                  <li>
-                    SASS
-                  </li>
-                  <li>
-                    Foundation
-                  </li>
-                  <li>
-                    Bootstrap
-                  </li>
-                </ul>
-              </div>
-              <div id="skillsOther" class="cell medium-4">
-                <h3>Other?</h3>
-                <ul>
-                  <li>
-                    Self-motivated
-                  </li>
-                  <li>
-                    Detail oriented
-                  </li>
-                  <li>
-                    Excellent problem sloving abilities
-                  </li>
-                  <li>
-                    Brand Development
-                  </li>
-                  <li>
-                    SEO knowlege
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <hr />
-
-  <section id="projectsSection">
-    <!-- TODO: pull project details from codpen and add icons to project -->
-    <div class="contentContainer">
-      <div class="grid-container">
-        <div class="grid-y">
-          <div id="projectsHeader" class="cell sectionHeader">
-            <h2>Projects</h2>
-          </div>
-          <div class="cell">
-            <div class="grid-x grid-margin-x medium-up-4 align-spaced">
-              <div class="cell project">
-                <a href="https://codepen.io/massivelines/pen/JNeOXE" target="_blank">
-                  <img src="img/simon_crop_square.jpg" />
-                </a>
-                <p>
-                  A Simon Says game created in HTML, CSS, Javascript, jQuery, and Howler.js
-                </p>
-              </div>
-              <div class="cell project">
-                <a href="https://codepen.io/massivelines/pen/dWgpYL" target="_blank">
-                  <img src="img/cal_crop_square.jpg" />
-                </a>
-                <p>
-                  A basic caclculator created in HTML, CSS, Javascript, and jQuery
-                </p>
-              </div>
-              <div class="cell project">
-                <a href="https://codepen.io/massivelines/pen/dWgpYL" target="_blank">
-                  <img src="img/tictactoe_crop_square.jpg" />
-                </a>
-                <p>
-                  A Tic Tac Toe game created in HTML, CSS, Javascript, and jQuery
-                </p>
-              </div>
-              <div class="cell project">
-                <a href="https://codepen.io/massivelines/pen/JNeOXE" target="_blank">
-                  <img src="img/simon_crop_square.jpg" />
-                </a>
-                <p>
-                  A Simon Says game created in HTML, CSS, Javascript, jQuery, and Howler.js
-                </p>
-              </div>
-              <div class="cell project">
-                <a href="https://codepen.io/massivelines/pen/dWgpYL" target="_blank">
-                  <img src="img/cal_crop_square.jpg" />
-                </a>
-                <p>
-                  A basic caclculator created in HTML, CSS, Javascript, and jQuery
-                </p>
-              </div>
-              <div class="cell project">
-                <a href="https://codepen.io/massivelines/pen/dWgpYL" target="_blank">
-                  <img src="img/tictactoe_crop_square.jpg" />
-                </a>
-                <p>
-                  A Tic Tac Toe game created in HTML, CSS, Javascript, and jQuery
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <hr />
-
-  <section class="backgroundSection">
-    <!-- TODO: add years? -->
-    <div class="contentContainer">
-      <div class="grid-container">
-        <div class="grid-y">
-          <div id="backgroundHeader" class="cell sectionHeader">
-            <h2>Background</h2>
-          </div>
-          <div class="cell">
-            <div class="grid-x align-center">
-              <div class="cell medium-5">
-                <div class="grid-y">
-                  <div id="backgroundEducation" class="cell">
-                    <h3>Education</h3>
-                  </div>
-                  <div class="cell">
-                    <p>
-                      Bachelor of Arts: Art and Technology<br /> University of Texas at Dallas - Richardson, Tx
-                    </p>
-                    <p>
-                      Tranfer Credits<br /> University of Arkansas at Little Rock - Little Rock, Ar
-                    </p>
-                    <p>
-                      Associate of Applied Sciene: <br />Automotive Design, Color, and Refinishing<br /> University of Arkansas Community College - Morrilton, Ar
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="cell medium-2">
-                <div class="grid-y">
-                  <div id="backgroundWork" class="cell">
-                    <h3>Work History</h3>
-                  </div>
-                  <div class="cell">
-                    <p>
-                      Independent Contractor<br /> Self Employed - Dallas, Tx<br /> 10/2015 - Current
-                    </p>
-                    <p>
-                      Department Manager<br /> Walmart - Plano, Tx<br /> 03/2004 - 10/2015
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <hr />
-
-  <footer>
-    <!-- TODO: add github and codpen links -->
-    <!-- TODO: add padding at bottom of footer -->
-    <div class="grid-container">
-      <div id="phonenumber" class="grid-x align-justify">
-        <div class="cell medium-2">
-          501-733-9480
-        </div>
-        <div id="resumeLink" class="cell medium-2">
-          Resume PDF
-        </div>
-        <div id="emailLink" class="cell medium-2">
-          <a href="mailto:shawn.rhodes33@gmail.com" target="_top">shawn.rhodes33@gmail.com</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <script src="js/vendor/jquery.js"></script>
-  <script src="js/vendor/what-input.js"></script>
-  <script src="js/vendor/foundation.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script> -->
   <script src="js/app.js"></script>
 </body>
 

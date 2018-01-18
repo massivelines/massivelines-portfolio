@@ -1,73 +1,31 @@
-header {
-  background-image: url(https://picsum.photos/600/600/?random);
-  background-size: cover;
+header, section {
+	min-height: 100vh;
 }
 
-section {
+.test{
+  min-height: 100vh;
+  border: solid black;
+}
+
+.sticky {
+	position: sticky;
+  top: 33%;
+}
+#headerText {
+  font-family: 'PT Sans', sans-serif;
+}
+#headerText span{
+  display: block;
+}
+
+#headerContainer {
   min-height: 100vh;
 }
 
-section {
-  display: flex;
-  align-items: center;
-}
 
-.contentContainer {
-  width: 100vw;
-}
-
-#headerTag {
-}
-
-#headerText {
-  position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-#headerCanvas {
+#headerSvg{
   pointer-events: none;
-  position: relative;
+  position: absolute;
+  top: 0;
   z-index: 1;
 }
-
-#meImage {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-
-.project img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-
-.sectionHeader {
-  text-align: center;
-}
-
-/* Medium and up */
-
-@media screen and (min-width: 40em) {
-  #meImage {
-    width: 25%;
-  }
-  .project img {
-    width: 75%;
-  }
-}
-
-/* Medium only */
-
-@media screen and (min-width: 40em) and (max-width: 63.9375em) {}
-
-/* Large and up */
-
-@media screen and (min-width: 64em) {}
-
-/* Large only */
-
-@media screen and (min-width: 64em) and (max-width: 74.9375em) {}
