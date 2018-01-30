@@ -126,14 +126,17 @@ function buildBackground() {
   var spacerPointsString = "";
 
   spacerPointsArray.push([0, window.innerHeight - 3]);
-  spacerPointsArray.push([0, randomInRange(bottomRight + 100)]);
+  spacerPointsArray.push([0, window.innerHeight/.92]);
 
 
-  spacerPointsArray.push([randomInRange(window.innerWidth * .25), randomInRange(bottomRight + 50)]);
-  spacerPointsArray.push([randomInRange(window.innerWidth * .5), randomInRange(bottomRight + 25)]);
-  spacerPointsArray.push([randomInRange(window.innerWidth * .75), randomInRange(bottomRight + 50)]);
+  // spacerPointsArray.push([randomInRange(window.innerWidth * .25), randomInRange(bottomRight + 50)]);
+  spacerPointsArray.push([window.innerWidth * .2, window.innerHeight/.98]);
+  spacerPointsArray.push([window.innerWidth * .4, window.innerHeight/.93]);
+  spacerPointsArray.push([window.innerWidth * .6, window.innerHeight/.94]);
+  spacerPointsArray.push([window.innerWidth * .7, window.innerHeight/.97]);
+  // spacerPointsArray.push([randomInRange(window.innerWidth * .75), randomInRange(bottomRight + 50)]);
 
-  spacerPointsArray.push([window.innerWidth, randomInRange(bottomRight + 100)]);
+  spacerPointsArray.push([window.innerWidth, window.innerHeight/.9]);
 
   spacerPointsArray.push([window.innerWidth, bottomRight - 3]);
 
