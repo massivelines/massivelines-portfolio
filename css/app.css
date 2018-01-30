@@ -1,31 +1,87 @@
-header, section {
-	min-height: 100vh;
+header,
+section {
+  min-height: 100vh;
 }
 
-.test{
-  min-height: 100vh;
-  border: solid black;
+header {
+}
+
+/* body{
+  font-family: 'Old Standard TT', serif;
+} */
+
+h1 {
+  font-family: 'Cabin', sans-serif;
+}
+
+.menu-container {
+  display: inline-block;
+  cursor: pointer;
+}
+
+#bar1,
+#bar2,
+#bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
 }
 
 .sticky {
-	position: sticky;
+  position: sticky;
   top: 33%;
-}
-#headerText {
-  font-family: 'PT Sans', sans-serif;
-}
-#headerText span{
-  display: block;
 }
 
 #headerContainer {
   min-height: 100vh;
 }
 
+#headerText {
+  padding-bottom: 5%;
+}
 
-#headerSvg{
+#headerText span {
+  display: inline;
+}
+
+#myName {
+  font-family: 'Cabin', sans-serif;
+  font-size: 100px;
+}
+
+#tagline,
+#tagline2 {
+  font-family: 'Old Standard TT', serif;
+  font-size: 50px;
+}
+
+#headerSvg {
   pointer-events: none;
   position: absolute;
   top: 0;
   z-index: 1;
+}
+
+#headerSpacerSvg{
+  position: absolute;
+  z-index: 0;
+}
+#aboutSection{
+  position: relative;
+  z-index: 3;
+}
+#aboutContainer {
+  height: 100vh;
+}
+
+.sectionHeader {
+  text-align: center;
+}
+
+/* remove btn border radius */
+
+.btn {
+  border-radius: 0;
 }

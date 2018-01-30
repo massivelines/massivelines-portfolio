@@ -6,45 +6,87 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shawn Rhodes</title>
-  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy"
+    crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Cabin|Old+Standard+TT" rel="stylesheet">
   <link rel="stylesheet" href="css/app.css">
 </head>
 
 <body>
-  <svg id="headerSvg" height="100vh" width="100vw">
 
-    <use xlink:href="#background" fill-opacity="1" fill="white"/>
-    <use xlink:href="#background" fill-opacity=".5" mask="url(#maskTest)"/>
+  <svg id="headerSvg">
+
+    <use xlink:href="#background" fill-opacity="1" fill="white" mask="url(#re)" />
+
+    <use xlink:href="#background" fill-opacity="1" mask="url(#backgroundMask)" />
+
+    <polygon id="spacerFill" points="" fill="black" />
 
 
 
     <defs>
       <polygon id="background" points="" />
 
-      <mask id="maskTest">
+
+      <mask id="re">
+        <rect width="100%" height="100%" fill="#fff" x="0" y="0" />
+        <use xlink:href="#ctaCutout" />
+      </mask>
+
+      <mask id="backgroundMask">
         <use xlink:href="#background" fill="white" />
         <text id="svgMyName" alignment-baseline="before-edge"></text>
         <text id="svgTagline" alignment-baseline="before-edge"></text>
         <text id="svgTagline2" alignment-baseline="before-edge"></text>
+        <rect id="ctaCutout" fill="black" />
       </mask>
+
     </defs>
 
   </svg>
   <header id="headerTag">
     <div id="headerContainer" class="container">
       <div id="headerText" class="sticky">
-        <h1><span id="myName">Shawn Rhodes<span></h1>
+        <h1>
+          <span id="myName">Shawn Rhodes
+            <span>
+        </h1>
         <h2>
           <span id="tagline">Front End Developer </span>
           <span id="tagline2">& Web Designer</span>
         </h2>
+        <a id="contactMe" class="btn btn-outline-secondary" href="#" role="button">Contact Me</a>
       </div>
 
     </div>
+    <!-- add svg at bottom to transition into next section -->
   </header>
 
-  <section class="test">
+  <section id="aboutSection">
+    <svg id="headerSpacerSvg"></svg>
+    <div class="container">
+      <div id="aboutContainer" class="holder d-flex align-items-center">
+        <div class="row justify-content-center">
+          <div class="col-3">
+            <img src="img/me_500px.png" class="img-fluid" alt="Me" />
+          </div>
+
+          <div id="aboutHeader" class="col-12 sectionHeader">
+            <h2>About Me</h2>
+          </div>
+
+          <div class="col-12">
+            <p>At first glance I may not seem to fit your typical candidate profile, in the course of my career, I’ve developed
+              a number of important skill that will help me succeed in this new role. I am a proven leader with a strong
+              record of exceeding goals and expectations. I confident that my [web design and front end development] skills
+              will indeed be an excellent match. My experience and educational background have prepared me for this career
+              move. I welcome the opportunity to speak with you about this position so I can elaborate on how my expertise
+              in will be an asset to your company.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
 
   </section>
 
