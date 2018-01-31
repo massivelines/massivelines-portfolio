@@ -3,15 +3,20 @@ section {
   min-height: 100vh;
 }
 
-header {
-}
+header {}
 
-/* body{
-  font-family: 'Old Standard TT', serif;
-} */
+body {
+  overflow-x: hidden;
+}
 
 h1 {
   font-family: 'Cabin', sans-serif;
+}
+
+svg {
+  display: block;
+  pointer-events: none;
+  overflow: hidden;
 }
 
 .menu-container {
@@ -62,21 +67,77 @@ h1 {
   position: absolute;
   top: 0;
   z-index: 1;
+  overflow: hidden;
 }
 
-#headerSpacerSvg{
-  position: absolute;
-  z-index: 0;
-}
-#aboutSection{
+#aboutSection {
   position: relative;
   z-index: 3;
 }
-#aboutContainer {
-  height: 100vh;
+
+.verticalflexContainer {
+  width: 100%;
+  min-height: 100vh;
 }
 
 .sectionHeader {
+  margin-bottom: 1%;
+  text-align: center;
+}
+
+.square-box {
+  position: relative
+}
+
+.square-box::before {
+  content: '';
+  display: block;
+  padding-top: 100%;
+}
+
+.square-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.square-content div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  font: 0/0 a;
+  vertical-align: middle;
+}
+
+.square-content img {
+  margin: 0 auto;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.square-content img.horizontal {
+  width: 100%;
+}
+
+.square-content img.vertical {
+  height: 100%;
+  margin: 0;
+}
+.skill-row:not(:first-child) {
+  margin-top: 3%;
+}
+
+.skill-row p {
+
+  text-align: center;
+}
+.skill-row h4 {
   text-align: center;
 }
 
@@ -84,4 +145,8 @@ h1 {
 
 .btn {
   border-radius: 0;
+}
+
+footer {
+  text-align: center;
 }

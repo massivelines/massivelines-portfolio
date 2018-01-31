@@ -16,12 +16,10 @@
 
   <svg id="headerSvg">
 
-    <use xlink:href="#background" fill-opacity="1" fill="white" mask="url(#re)" />
-
-    <use xlink:href="#background" fill-opacity="1" mask="url(#backgroundMask)" />
-
-    <polygon id="spacerFill" points="" fill="black" />
-
+    <g clip-path="url(#clip)">
+      <use xlink:href="#background" fill-opacity="1" fill="white" mask="url(#re)" />
+      <use xlink:href="#background" fill="#3D3E40" fill-opacity="1" mask="url(#backgroundMask)" />
+    </g>
 
 
     <defs>
@@ -40,6 +38,11 @@
         <text id="svgTagline2" alignment-baseline="before-edge"></text>
         <rect id="ctaCutout" fill="black" />
       </mask>
+
+      <rect id="rect" width="100%" height="100%" fill="none" stroke="blue" />
+      <clipPath id="clip">
+        <use xlink:href="#rect" />
+      </clipPath>
 
     </defs>
 
@@ -63,9 +66,8 @@
   </header>
 
   <section id="aboutSection">
-    <svg id="headerSpacerSvg"></svg>
     <div class="container">
-      <div id="aboutContainer" class="holder d-flex align-items-center">
+      <div class="verticalflexContainer d-flex align-items-center">
         <div class="row justify-content-center">
           <div class="col-3">
             <img src="img/me_500px.png" class="img-fluid" alt="Me" />
@@ -85,15 +87,491 @@
           </div>
         </div>
       </div>
+    </div>
+  </section>
 
+  <hr/>
+
+  <!-- TODO: change order and items -->
+  <section id="skillsSection">
+    <div class="container">
+
+      <div class="row verticalflexContainer align-content-center">
+        <div id="skillsHeader" class="col-12 sectionHeader">
+          <h2>Skills</h2>
+        </div>
+        <div class="col-12">
+
+          <div class="row justify-content-around skill-row">
+            <div class="col-12 col-md-5">
+              <h4>Core</h4>
+              <div class="row justify-content-around">
+
+                <div class="col-3">
+                  <div class="square-box">
+                    <div class="square-content">
+                      <div>
+                        <img src="./img/skills/html5.svg" class="img-fluid vertical" alt="HTML5">
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <p>HTML5</p>
+                  </div>
+                </div>
+
+                <div class="col-3">
+                  <div class="square-box">
+                    <div class="square-content">
+                      <div>
+                        <img src="./img/skills/CSS3.svg" class="img-fluid vertical" alt="CSS3">
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <p>CSS3</p>
+                  </div>
+                </div>
+
+                <div class="col-3">
+                  <div class="square-box">
+                    <div class="square-content">
+                      <div>
+                        <img src="./img/skills/javascript.svg" class="img-fluid vertical" alt="Javascript">
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <p>Javascript</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-5">
+              <h4>Javascript Libraries and Frameworks</h4>
+              <div class="row justify-content-around">
+                <div class="col-3">
+                  <div class="square-box">
+                    <div class="square-content">
+                      <div>
+                        <img src="./img/skills/jquery.svg" class="img-fluid vertical" alt="jQuery">
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <p>jQuery</p>
+                  </div>
+                </div>
+
+                <div class="col-3">
+                  <div class="square-box">
+                    <div class="square-content">
+                      <div>
+                        <img src="./img/skills/nodejs-icon.svg" class="img-fluid vertical" alt="Node">
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <p>Node</p>
+                  </div>
+                </div>
+
+                <div class="col-3">
+                  <div class="square-box">
+                    <div class="square-content">
+                      <div>
+                        <img src="./img/skills/react.svg" class="img-fluid vertical" alt="React">
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <p>React</p>
+                  </div>
+                </div>
+
+                <div class="col-3">
+                  <div class="square-box">
+                    <div class="square-content">
+                      <div>
+                        <img src="./img/skills/electron.svg" class="img-fluid vertical" alt="Electron">
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <p>Electron</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-around skill-row">
+            <div class="col-12 col-md-5">
+              <h4>Framework & CMS</h4>
+              <div class="row justify-content-around">
+
+                <div class="col-3">
+                  <div class="square-box">
+                    <div class="square-content">
+                      <div>
+                        <img src="./img/skills/bootstrap-4.svg" class="img-fluid vertical" alt="Bootstrap">
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <p>Bootstrap</p>
+                  </div>
+                </div>
+
+                <div class="col-3">
+                  <div class="square-box">
+                    <div class="square-content">
+                      <div>
+                        <img src="./img/skills/foundation.svg" class="img-fluid vertical" alt="Foundation">
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <p>Foundation</p>
+                  </div>
+                </div>
+
+                <div class="col-3">
+                  <div class="square-box">
+                    <div class="square-content">
+                      <div>
+                        <img src="./img/skills/wordpress-icon.svg" class="img-fluid vertical" alt="Wordpress">
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <p>Wordpress</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-5">
+              <h4>CSS Preprocessors</h4>
+              <div class="row justify-content-around">
+                <div class="col-3">
+                  <div class="square-box">
+                    <div class="square-content">
+                      <div>
+                        <img src="./img/skills/sass.svg" class="img-fluid vertical" alt="Sass">
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <p>Sass</p>
+                  </div>
+                </div>
+
+                <div class="col-3">
+                  <div class="square-box">
+                    <div class="square-content">
+                      <div>
+                        <img src="./img/skills/less.svg" class="img-fluid vertical" alt="Less">
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <p>Less</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="row justify-content-around skill-row">
+
+            <div class="col-12 col-md-5">
+              <h4>Design</h4>
+              <div class="row justify-content-around">
+
+                <div class="col-3">
+                  <div class="square-box">
+                    <div class="square-content">
+                      <div>
+                        <img src="./img/skills/photoshop-cc.svg" class="img-fluid vertical" alt="Photoshop">
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <p>Photoshop</p>
+                  </div>
+                </div>
+
+                <div class="col-3">
+                  <div class="square-box">
+                    <div class="square-content">
+                      <div>
+                        <img src="./img/skills/adobe-illustrator-cc.svg" class="img-fluid vertical" alt="Illustrator">
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <p>Illustrator</p>
+                  </div>
+                </div>
+
+                <div class="col-3">
+                  <div class="square-box">
+                    <div class="square-content">
+                      <div>
+                        <img src="./img/skills/adobe-xd.svg" class="img-fluid vertical" alt="XD">
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <p>XD</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="col-12 col-md-5">
+              <h4>Other</h4>
+              <div class="row justify-content-around">
+
+                <div class="col-3">
+                  <div class="square-box">
+                    <div class="square-content">
+                      <div>
+                        <img src="./img/skills/git-icon.svg" class="img-fluid vertical" alt="git">
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <p>git</p>
+                  </div>
+                </div>
+
+                <div class="col-3">
+                  <div class="square-box">
+                    <div class="square-content">
+                      <div>
+                        <img src="./img/skills/github-icon.svg" class="img-fluid vertical" alt="GitHub">
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <p>GitHub</p>
+                  </div>
+                </div>
+
+                <div class="col-3">
+                  <div class="square-box">
+                    <div class="square-content">
+                      <div>
+                        <img src="./img/skills/heroku.svg" class="img-fluid vertical" alt="Heroku">
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <p>Heroku</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </div>
 
   </section>
 
+  <hr/>
 
-  <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script> -->
+  <!-- TODO: pull project details from codpen and add icons to project -->
+  <section id="projectsSection">
+    <div class="container">
+
+      <div class="row verticalflexContainer align-content-center">
+        <div id="projectsHeader" class="col-12 sectionHeader">
+          <h2>Projects</h2>
+        </div>
+
+        <div class="col-4 card-group">
+          <div class="card">
+            <a href="https://codepen.io/massivelines/pen/JNeOXE" target="_blank">
+              <img class="card-img-top" src="img/simon_crop_square.jpg" />
+            </a>
+            <div class="card-body">
+              <h4 class="card-title">Simon Says</h4>
+              <p class="card-text">
+                A Simon Says game created in HTML, CSS, Javascript, jQuery, and Howler.js
+              </p>
+            </div>
+            <div class="card-footer">
+              <i class="fa fa-codepen" aria-hidden="true"></i>
+              <a href="#" class="card-link"> Code Pen</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-4 card-group">
+          <div class="card">
+            <a href="https://codepen.io/massivelines/pen/dWgpYL" target="_blank">
+              <img class="card-img-top" src="img/cal_crop_square.jpg" />
+            </a>
+            <div class="card-body">
+              <h4 class="card-title">Caclculator</h4>
+              <p class="card-text">
+                A basic caclculator created in HTML, CSS, Javascript, and jQuery
+              </p>
+            </div>
+            <div class="card-footer">
+              <i class="fa fa-codepen" aria-hidden="true"></i>
+              <a href="#" class="card-link"> Code Pen</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-4 card-group">
+          <div class="card">
+            <a href="https://codepen.io/massivelines/pen/dWgpYL" target="_blank">
+              <img class="card-img-top" src="img/tictactoe_crop_square.jpg" />
+            </a>
+            <div class="card-body">
+              <h4 class="card-title">Tic Tac Toe</h4>
+              <p class="card-text">
+                A Tic Tac Toe game created in HTML, CSS, Javascript, and jQuery
+              </p>
+            </div>
+            <div class="card-footer">
+              <i class="fa fa-codepen" aria-hidden="true"></i>
+              <a href="#" class="card-link"> Code Pen</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <hr />
+
+  <!-- TODO: add years? -->
+  <!-- TODO: add google -->
+  <section id="backgroundSection">
+    <div class="container">
+
+      <div class="row verticalflexContainer align-content-center justify-content-center">
+        <div id="backgroundHeader" class="col-12 sectionHeader">
+          <h2>Background</h2>
+        </div>
+
+        <div class="col-6">
+          <h3>Education</h3>
+          <div>
+            <p>
+              Bachelor of Arts: Art and Technology
+              <br /> University of Texas at Dallas - Richardson, Tx
+            </p>
+            <p>
+              Tranfer Credits
+              <br /> University of Arkansas at Little Rock - Little Rock, Ar
+            </p>
+            <p>
+              Associate of Applied Sciene:
+              <br />Automotive Design, Color, and Refinishing
+              <br /> University of Arkansas Community College - Morrilton, Ar
+            </p>
+          </div>
+        </div>
+
+        <div class="col-4">
+          <h3>Work History</h3>
+          <div>
+            <p>
+              Independent Contractor
+              <br /> Self Employed - Dallas, Tx
+              <br /> 10/2015 - Current
+            </p>
+            <p>
+              Department Manager
+              <br /> Walmart - Plano, Tx
+              <br /> 03/2004 - 10/2015
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <hr />
+
+  <!-- TODO: add github and codpen links -->
+  <!-- TODO: add padding at bottom of footer -->
+  <footer>
+    <div class="container">
+
+      <div class="row align-content-center justify-content-center">
+        <div id="phonenumber" class="col-2">
+          <i class="fa fa-mobile" aria-hidden="true"></i> 501-733-9480
+        </div>
+
+        <div id="resumeLink" class="col-2">
+          <a href="#" target="_blank">
+            <i class="fa fa-file-pdf-o" aria-hidden="true"></i> Resume PDF</a>
+        </div>
+
+        <div id="emailLink" class="col-3">
+          <a href="mailto:shawn.rhodes33@gmail.com" target="_top">
+            <i class="fa fa-envelope-o" aria-hidden="true"></i> shawn.rhodes33@gmail.com</a>
+        </div>
+
+        <div class="col-2">
+          <a href="#" target="_blank">
+            <i class="fa fa-github" aria-hidden="true"></i> Github</a>
+        </div>
+
+        <div class="col-2">
+          <a href="#" target="_blank">
+            <i class="fa fa-codepen" aria-hidden="true"></i> Codepen</a>
+        </div>
+
+        <div class="col-2">
+          <a href="#" target="_blank">
+            <i class="fa fa-linkedin-square" aria-hidden="true"></i> Linkedin</a>
+        </div>
+
+      </div>
+      <!-- <div class="row align-content-center justify-content-center">
+              <div class="col-3">
+                Github
+              </div>
+      
+              <div class="col-3">
+                Codepen
+              </div>
+      
+              <div class="col-3">
+                Linkedin
+              </div>
+      
+            </div> -->
+
+    </div>
+  </footer>
+
+  <!-- js -->
+  <script src="https://use.fontawesome.com/c5fc381b07.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
   <script src="js/app.js"></script>
 </body>
 

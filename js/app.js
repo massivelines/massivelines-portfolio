@@ -19,6 +19,7 @@ function randomInRange(val) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+
 var headerTextOffset = getOffset(headerText);
 
 var myNameEle = document.getElementById("myName");
@@ -77,38 +78,21 @@ function buildBackground() {
 
 
   var pointsArray = [];
-  // lower left point
-  // pointsArray.push([0,randomInRange(window.innerHeight + headerTextOffset.height/2)]);
-  pointsArray.push([0, window.innerHeight]);
-  // left side start
-  // pointsArray.push([startX, startY]);
+
 
   pointsArray.push([0,window.innerHeight * .15]);
   pointsArray.push([window.innerWidth/3.5,window.innerHeight/3]);
   pointsArray.push([window.innerWidth/2,window.innerHeight/1.4]);
   pointsArray.push([window.innerWidth/1.2,window.innerHeight/1.1]);
   pointsArray.push([window.innerWidth, window.innerHeight/.9]);
-  // pointsArray.push([1439,1019]);
-
-
-  // build inner points
-  // for (var k = 1; k < limit; k++) {
-  //   if(k>0){
-  //    pointsArray.push([randomInRange(startX + xStep), randomInRange(startY - yStep)]); 
-  //   }
-  //   startX = startX + xStep;
-  //   startY = startY - yStep;
-  // }
-
-  // right side end
-  // pointsArray.push([window.innerWidth, endY]);
-  // lower right point
-  // pointsArray.push([window.innerWidth, bottomRight]);
+  pointsArray.push([window.innerWidth * .7, window.innerHeight/.91]);
+  pointsArray.push([window.innerWidth * .6, window.innerHeight/.92]);
+  pointsArray.push([window.innerWidth * .4, window.innerHeight/.93]);
+  pointsArray.push([window.innerWidth * .2, window.innerHeight/.97]);
+  pointsArray.push([0, window.innerHeight/.92]);
 
   console.log(pointsArray);
   
-
-
   var pointsString = "";
 
   for (var i = 0; i < pointsArray.length; i++) {
@@ -116,36 +100,6 @@ function buildBackground() {
   }
   
   background.setAttribute("points", pointsString);
-
-  // -----------------------------------------
-
-  headerSpacerSvg.setAttribute("height", headerTextOffset.height);
-  headerSpacerSvg.setAttribute("width", window.innerWidth);
-
-  var spacerPointsArray = [];
-  var spacerPointsString = "";
-
-  spacerPointsArray.push([0, window.innerHeight - 3]);
-  spacerPointsArray.push([0, window.innerHeight/.92]);
-
-
-  // spacerPointsArray.push([randomInRange(window.innerWidth * .25), randomInRange(bottomRight + 50)]);
-  spacerPointsArray.push([window.innerWidth * .2, window.innerHeight/.98]);
-  spacerPointsArray.push([window.innerWidth * .4, window.innerHeight/.93]);
-  spacerPointsArray.push([window.innerWidth * .6, window.innerHeight/.94]);
-  spacerPointsArray.push([window.innerWidth * .7, window.innerHeight/.97]);
-  // spacerPointsArray.push([randomInRange(window.innerWidth * .75), randomInRange(bottomRight + 50)]);
-
-  spacerPointsArray.push([window.innerWidth, window.innerHeight/.9]);
-
-  spacerPointsArray.push([window.innerWidth, bottomRight - 3]);
-
-
-  for (var i = 0; i < spacerPointsArray.length; i++) {
-    spacerPointsString = spacerPointsString.concat(" ", spacerPointsArray[i].toString());
-  }
-
-  spacerFill.setAttribute("points", spacerPointsString);
 
 }
 buildBackground();
