@@ -3,41 +3,43 @@ section {
   min-height: 100vh;
 }
 
-header {}
+header {
+  color: #F5F5EB;
+  background-color: #1B252D;
+}
 
 body {
+  font-family: 'Merriweather', serif;
   overflow-x: hidden;
 }
 
-h1 {
-  font-family: 'Cabin', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h4,
+.button, .sans {
+  font-family: 'Merriweather Sans', sans-serif;
 }
 
-svg {
+/* svg {
   display: block;
   pointer-events: none;
   overflow: hidden;
-}
+} */
 
 .menu-container {
   display: inline-block;
   cursor: pointer;
 }
 
-#bar1,
-#bar2,
-#bar3 {
-  width: 35px;
-  height: 5px;
-  background-color: #333;
-  margin: 6px 0;
-  transition: 0.4s;
+.sticky {
+  /* position: sticky;
+  top: 33%; */
 }
 
-.sticky {
-  position: sticky;
-  top: 33%;
-}
+/* Header Section */
 
 #headerContainer {
   min-height: 100vh;
@@ -69,9 +71,19 @@ svg {
   z-index: 1;
   overflow: hidden;
 }
+.top-bar {
+  border-bottom: solid #b8261e 5px;
+}
+
+.top-bar, .menu li a{
+  color: #F5F5EB;
+  background-color: #4A484E;
+}
+
+/* About Section */
 
 #aboutSection {
-  background-color: #f8f8f8;
+  background-color: #F5F5EB;
   position: relative;
   z-index: 3;
 }
@@ -87,6 +99,45 @@ svg {
   margin-bottom: 1%;
   text-align: center;
 }
+
+/* Skills Section */
+
+#skillsSection {
+  /* background-color: black; */
+}
+
+.skill-row:not(:first-child) {
+  margin-top: 3%;
+}
+
+.skill-row p {
+  margin-top: 10%;
+  text-align: center;
+}
+
+.skill-row h4 {
+  text-align: center;
+  margin-bottom: 4%;
+}
+
+/* Projects Section */
+
+#projectsSection {
+  background-color: #F5F5EB;
+}
+
+/* Background Section */
+
+/* Footer Section */
+
+footer,
+footer a {
+  text-align: center;
+  color: #F5F5EB;
+  background-color: #4A484E;
+}
+
+/* Other CSS */
 
 .square-box {
   position: relative
@@ -133,33 +184,104 @@ svg {
   margin: 0;
 }
 
-#skillsSection {
-  /* background-color: black; */
-}
-.test {
-  background-color: white;
-}
-.skill-row:not(:first-child) {
-  margin-top: 3%;
+#contactMe {
+  color: #F5F5EB;
+  background-color: #b8261e;
 }
 
-.skill-row p {
-  margin-top: 10%;
-  text-align: center;
-}
-.skill-row h4 {
-  text-align: center;
-  margin-bottom: 4%;
+.hamburger {
+  padding: 15px 15px;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
 }
 
-/* remove btn border radius */
 
-.btn {
-  border-radius: 0;
+.hamburger:hover {
+  opacity: 0.7;
 }
 
-footer, footer a {
-  text-align: center;
-  color: white;
-  background-color: #39373a;
+.hamburger-box {
+  width: 40px;
+  height: 16px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  width: 20px;
+  height: 4px;
+  /* width: 40px;
+  height: 4px; */
+  background-color: #96A5A8;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+
+.hamburger-inner::before,
+.hamburger-inner::after {
+  content: "";
+  display: block;
+}
+
+.hamburger-inner::before {
+  top: -10px;
+}
+
+.hamburger-inner::after {
+  bottom: -10px;
+}
+
+/*
+   * Squeeze
+   */
+
+.hamburger--squeeze .hamburger-inner {
+  transition-duration: 0.075s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--squeeze .hamburger-inner::before {
+  transition: top 0.075s 0.12s ease, opacity 0.075s ease;
+}
+
+.hamburger--squeeze .hamburger-inner::after {
+  transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--squeeze.is-active .hamburger-inner {
+  transform: rotate(45deg);
+  transition-delay: 0.12s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.hamburger--squeeze.is-active .hamburger-inner::before {
+  top: 0;
+  opacity: 0;
+  transition: top 0.075s ease, opacity 0.075s 0.12s ease;
+}
+
+.hamburger--squeeze.is-active .hamburger-inner::after {
+  bottom: 0;
+  transform: rotate(-90deg);
+  transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
 }

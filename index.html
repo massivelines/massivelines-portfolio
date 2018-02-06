@@ -6,632 +6,719 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="apple-touch-icon-precomposed" sizes="57x57" href="./img/favicon/apple-touch-icon-57x57.png" />
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="./img/favicon/apple-touch-icon-114x114.png" />
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="./img/favicon/apple-touch-icon-72x72.png" />
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="./img/favicon/apple-touch-icon-144x144.png" />
-<link rel="apple-touch-icon-precomposed" sizes="60x60" href="./img/favicon/apple-touch-icon-60x60.png" />
-<link rel="apple-touch-icon-precomposed" sizes="120x120" href="./img/favicon/apple-touch-icon-120x120.png" />
-<link rel="apple-touch-icon-precomposed" sizes="76x76" href="./img/favicon/apple-touch-icon-76x76.png" />
-<link rel="apple-touch-icon-precomposed" sizes="152x152" href="./img/favicon/apple-touch-icon-152x152.png" />
-<link rel="icon" type="image/png" href="./img/favicon/favicon-196x196.png" sizes="196x196" />
-<link rel="icon" type="image/png" href="./img/favicon/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/png" href="./img/favicon/favicon-32x32.png" sizes="32x32" />
-<link rel="icon" type="image/png" href="./img/favicon/favicon-16x16.png" sizes="16x16" />
-<link rel="icon" type="image/png" href="./img/favicon/favicon-128.png" sizes="128x128" />
-<meta name="application-name" content="&nbsp;"/>
-<meta name="msapplication-TileColor" content="#FFFFFF" />
-<meta name="msapplication-TileImage" content="./img/favicon/mstile-144x144.png" />
-<meta name="msapplication-square70x70logo" content="./img/favicon/mstile-70x70.png" />
-<meta name="msapplication-square150x150logo" content="./img/favicon/mstile-150x150.png" />
-<meta name="msapplication-wide310x150logo" content="./img/favicon/mstile-310x150.png" />
-<meta name="msapplication-square310x310logo" content="./img/favicon/mstile-310x310.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./img/favicon/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./img/favicon/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./img/favicon/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="60x60" href="./img/favicon/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="./img/favicon/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="./img/favicon/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="./img/favicon/apple-touch-icon-152x152.png" />
+  <link rel="icon" type="image/png" href="./img/favicon/favicon-196x196.png" sizes="196x196" />
+  <link rel="icon" type="image/png" href="./img/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="./img/favicon/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="./img/favicon/favicon-16x16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="./img/favicon/favicon-128.png" sizes="128x128" />
+  <meta name="application-name" content="&nbsp;" />
+  <meta name="msapplication-Tilesmallor" content="#FFFFFF" />
+  <meta name="msapplication-TileImage" content="./img/favicon/mstile-144x144.png" />
+  <meta name="msapplication-square70x70logo" content="./img/favicon/mstile-70x70.png" />
+  <meta name="msapplication-square150x150logo" content="./img/favicon/mstile-150x150.png" />
+  <meta name="msapplication-wide310x150logo" content="./img/favicon/mstile-310x150.png" />
+  <meta name="msapplication-square310x310logo" content="./img/favicon/mstile-310x310.png" />
 
   <title>Shawn Rhodes</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy"
-    crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Cabin|Old+Standard+TT" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Merriweather|Merriweather+Sans" rel="stylesheet">
   <link rel="stylesheet" href="css/app.css">
 </head>
 
 <body>
+  <div class="off-canvas-wrapper">
+    <div class="off-canvas position-right" id="offCanvas" data-off-canvas>
 
-  <svg id="headerSvg">
+      <!-- Close button -->
+      <button class="close-button" aria-label="Close menu" type="button" data-close>
+        <span aria-hidden="true">&times;</span>
+      </button>
 
-    <g clip-path="url(#clip)">
-      <use xlink:href="#background" fill-opacity="1" fill="white" mask="url(#re)" />
-      <use xlink:href="#background" fill="#3D3E40" fill-opacity="1" mask="url(#backgroundMask)" />
-    </g>
-
-
-    <defs>
-      <polygon id="background" points="" />
-
-
-      <mask id="re">
-        <rect width="100%" height="100%" fill="#fff" x="0" y="0" />
-        <use xlink:href="#ctaCutout" />
-      </mask>
-
-      <mask id="backgroundMask">
-        <use xlink:href="#background" fill="white" />
-        <text id="svgMyName" alignment-baseline="before-edge"></text>
-        <text id="svgTagline" alignment-baseline="before-edge"></text>
-        <text id="svgTagline2" alignment-baseline="before-edge"></text>
-        <rect id="ctaCutout" fill="black" />
-      </mask>
-
-      <rect id="rect" width="100%" height="100%" fill="none" stroke="blue" />
-      <clipPath id="clip">
-        <use xlink:href="#rect" />
-      </clipPath>
-
-    </defs>
-
-  </svg>
-  <header id="headerTag">
-    <div id="headerContainer" class="container">
-      <div id="headerText" class="sticky">
-        <h1>
-          <span id="myName">Shawn Rhodes
-            <span>
-        </h1>
-        <h2>
-          <span id="tagline">Front End Developer </span>
-          <span id="tagline2">& Web Designer</span>
-        </h2>
-        <a id="contactMe" class="btn btn-outline-secondary" href="#" role="button">Contact Me</a>
-      </div>
-
-    </div>
-    <!-- add svg at bottom to transition into next section -->
-  </header>
-
-  <section id="aboutSection">
-    <div class="container">
-      <div class="verticalflexContainer d-flex align-items-center">
-        <div class="row justify-content-center">
-          <div class="col-3">
-            <img src="img/me_500px.png" class="img-fluid" alt="Me" />
-          </div>
-
-          <div id="aboutHeader" class="col-12 sectionHeader">
-            <h2>About Me</h2>
-          </div>
-
-          <div class="col-12">
-            <p>At first glance I may not seem to fit your typical candidate profile, in the course of my career, I’ve developed
-              a number of important skill that will help me succeed in this new role. I am a proven leader with a strong
-              record of exceeding goals and expectations. I confident that my [web design and front end development] skills
-              will indeed be an excellent match. My experience and educational background have prepared me for this career
-              move. I welcome the opportunity to speak with you about this position so I can elaborate on how my expertise
-              in will be an asset to your company.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <hr/>
-  </section>
-
-
-
-  <!-- TODO: change order and items -->
-  <section id="skillsSection">
-    <div class="container">
-
-      <div class="row verticalflexContainer align-content-center">
-        <div id="skillsHeader" class="col-12 sectionHeader">
-          <h2>Skills</h2>
-        </div>
-        <div class="col-12">
-
-          <div class="row justify-content-around skill-row">
-            <div class="col-12 col-md-5">
-              <h4>Core</h4>
-              <div class="row justify-content-around">
-
-                <div class="col-3">
-                  <div class="square-box">
-                    <div class="square-content">
-                      <div>
-                        <img src="./img/skills/html5.svg" class="img-fluid vertical" alt="HTML5">
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <p>HTML5</p>
-                  </div>
-                </div>
-
-                <div class="col-3">
-                  <div class="square-box">
-                    <div class="square-content">
-                      <div>
-                        <img src="./img/skills/CSS3.svg" class="img-fluid vertical" alt="CSS3">
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <p>CSS3</p>
-                  </div>
-                </div>
-
-                <div class="col-3">
-                  <div class="square-box">
-                    <div class="square-content">
-                      <div>
-                        <img src="./img/skills/javascript.svg" class="img-fluid vertical" alt="Javascript">
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <p>Javascript</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-12 col-md-5">
-              <h4>Javascript Libraries and Frameworks</h4>
-              <div class="row justify-content-around">
-                <div class="col-3">
-                  <div class="square-box">
-                    <div class="square-content">
-                      <div>
-                        <img src="./img/skills/jquery.svg" class="img-fluid vertical" alt="jQuery">
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <p>jQuery</p>
-                  </div>
-                </div>
-
-                <div class="col-3">
-                  <div class="square-box">
-                    <div class="square-content">
-                      <div>
-                        <img src="./img/skills/nodejs-icon.svg" class="img-fluid vertical" alt="Node">
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <p>Node</p>
-                  </div>
-                </div>
-
-                <div class="col-3">
-                  <div class="square-box">
-                    <div class="square-content">
-                      <div>
-                        <img src="./img/skills/react.svg" class="img-fluid vertical" alt="React">
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <p>React</p>
-                  </div>
-                </div>
-
-                <div class="col-3">
-                  <div class="square-box">
-                    <div class="square-content">
-                      <div>
-                        <img src="./img/skills/electron.svg" class="img-fluid vertical" alt="Electron">
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <p>Electron</p>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
-          <div class="row justify-content-around skill-row">
-            <div class="col-12 col-md-5">
-              <h4>Framework & CMS</h4>
-              <div class="row justify-content-around">
-
-                <div class="col-3">
-                  <div class="square-box">
-                    <div class="square-content">
-                      <div>
-                        <img src="./img/skills/bootstrap-4.svg" class="img-fluid vertical" alt="Bootstrap">
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <p>Bootstrap</p>
-                  </div>
-                </div>
-
-                <div class="col-3">
-                  <div class="square-box">
-                    <div class="square-content">
-                      <div>
-                        <img src="./img/skills/foundation.svg" class="img-fluid vertical" alt="Foundation">
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <p>Foundation</p>
-                  </div>
-                </div>
-
-                <div class="col-3">
-                  <div class="square-box">
-                    <div class="square-content">
-                      <div>
-                        <img src="./img/skills/wordpress-icon.svg" class="img-fluid vertical" alt="Wordpress">
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <p>Wordpress</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-12 col-md-5">
-              <h4>CSS Preprocessors</h4>
-              <div class="row justify-content-around">
-                <div class="col-3">
-                  <div class="square-box">
-                    <div class="square-content">
-                      <div>
-                        <img src="./img/skills/sass.svg" class="img-fluid vertical" alt="Sass">
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <p>Sass</p>
-                  </div>
-                </div>
-
-                <div class="col-3">
-                  <div class="square-box">
-                    <div class="square-content">
-                      <div>
-                        <img src="./img/skills/less.svg" class="img-fluid vertical" alt="Less">
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <p>Less</p>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
-
-          <div class="row justify-content-around skill-row">
-
-            <div class="col-12 col-md-5">
-              <h4>Design</h4>
-              <div class="row justify-content-around">
-
-                <div class="col-3">
-                  <div class="square-box">
-                    <div class="square-content">
-                      <div>
-                        <img src="./img/skills/photoshop-cc.svg" class="img-fluid vertical" alt="Photoshop">
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <p>Photoshop</p>
-                  </div>
-                </div>
-
-                <div class="col-3">
-                  <div class="square-box">
-                    <div class="square-content">
-                      <div>
-                        <img src="./img/skills/adobe-illustrator-cc.svg" class="img-fluid vertical" alt="Illustrator">
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <p>Illustrator</p>
-                  </div>
-                </div>
-
-                <div class="col-3">
-                  <div class="square-box">
-                    <div class="square-content">
-                      <div>
-                        <img src="./img/skills/adobe-xd.svg" class="img-fluid vertical" alt="XD">
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <p>XD</p>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-
-            <div class="col-12 col-md-5">
-              <h4>Other</h4>
-              <div class="row justify-content-around">
-
-                <div class="col-3">
-                  <div class="square-box">
-                    <div class="square-content">
-                      <div>
-                        <img src="./img/skills/git-icon.svg" class="img-fluid vertical" alt="git">
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <p>git</p>
-                  </div>
-                </div>
-
-                <div class="col-3">
-                  <div class="square-box">
-                    <div class="square-content">
-                      <div>
-                        <img src="./img/skills/github-icon.svg" class="img-fluid vertical" alt="GitHub">
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <p>GitHub</p>
-                  </div>
-                </div>
-
-                <div class="col-3">
-                  <div class="square-box">
-                    <div class="square-content">
-                      <div>
-                        <img src="./img/skills/heroku.svg" class="img-fluid vertical" alt="Heroku">
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <p>Heroku</p>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
+      <!-- Menu -->
+      <ul class="vertical menu sans" data-smooth-scroll>
+        <li>
+          <a href="#headerTag" data-smooth-scroll>Home</a>
+        </li>
+        <li>
+          <a href="#aboutSection" data-smooth-scroll>About</a>
+        </li>
+        <li>
+          <a href="#skillsSection" data-smooth-scroll>Skills</a>
+        </li>
+        <li>
+          <a href="#projectsSection" data-smooth-scroll>Projects</a>
+        </li>
+        <li>
+          <a href="#backgroundSection" data-smooth-scroll>Background</a>
+        </li>
+        <li>
+          <a href="#contactSection" data-smooth-scroll>Contact</a>
+        </li>
+      </ul>
     </div>
 
-  </section>
+    <div class="off-canvas-content" data-off-canvas-content>
+      <!-- Your page content lives here -->
+      <div class="grid-container fluid full">
 
-  <hr/>
-
-  <!-- TODO: pull project details from codpen and add icons to project -->
-  <section id="projectsSection">
-    <div class="container">
-
-      <div class="row verticalflexContainer align-content-center">
-        <div id="projectsHeader" class="col-12 sectionHeader">
-          <h2>Projects</h2>
-        </div>
-
-        <div class="col-4 card-group">
-            <div class="card">
-              <a href="#" target="_blank">
-                <img class="card-img-top" src="https://placeimg.com/640/480/any" />
-              </a>
-              <div class="card-body">
-                <h4 class="card-title">Fullscreen Album Art for Spotify</h4>
-                <p class="card-text">
-                    A web based app that allows you to see your current spotify playing track album art on any browser
-                </p>
-              </div>
-              <div class="card-footer">
-                  <i class="fab fa-github"></i>
-                <a href="#" class="card-link"> GitHub</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-4 card-group">
-              <div class="card">
-                <a href="#" target="_blank">
-                  <img class="card-img-top" src="./img/skills/nodejs-icon.svg" />
-                </a>
-                <div class="card-body">
-                  <h4 class="card-title">Login Node Server for Spotify</h4>
-                  <p class="card-text">
-                    A node.js remote server built to log into the Spotify API that passes the response token to the browser.
-                  </p>
-                </div>
-                <div class="card-footer">
-                    <i class="fab fa-github"></i>
-                  <a href="#" class="card-link"> GitHub</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-4 card-group">
-                <div class="card">
-                  <a href="#" target="_blank">
-                    <img class="card-img-top" src="./img/projects/atom.png" />
-                  </a>
-                  <div class="card-body">
-                    <h4 class="card-title">Neutral Gray UI for Atom</h4>
-                    <p class="card-text">
-                        A gray UI theme for atom that is easy to read and has a changeable font size
-                    </p>
+        
+              <!-- <button class="hamburger hamburger--squeeze" type="button">
+                  <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                  </span>
+                </button> -->
+        
+        
+              <svg id="headerSvg">
+        
+                <g clip-path="url(#clip)">
+                  <use xlink:href="#background" fill-opacity="1" fill="white" mask="url(#re)" />
+                  <use xlink:href="#background" fill="#3D3E40" fill-opacity="1" mask="url(#backgroundMask)" />
+                </g>
+        
+        
+                <defs>
+                  <polygon id="background" points="" />
+        
+        
+                  <mask id="re">
+                    <rect width="100%" height="100%" fill="#fff" x="0" y="0" />
+                    <use xlink:href="#ctaCutout" />
+                  </mask>
+        
+                  <mask id="backgroundMask">
+                    <use xlink:href="#background" fill="white" />
+                    <text id="svgMyName" alignment-baseline="before-edge"></text>
+                    <text id="svgTagline" alignment-baseline="before-edge"></text>
+                    <text id="svgTagline2" alignment-baseline="before-edge"></text>
+                    <rect id="ctaCutout" fill="black" />
+                  </mask>
+        
+                  <rect id="rect" width="100%" height="100%" fill="none" stroke="blue" />
+                  <clipPath id="clip">
+                    <use xlink:href="#rect" />
+                  </clipPath>
+        
+                </defs>
+        
+              </svg>
+              <header id="headerTag">
+                <div id="headerContainer" class="grid-container">
+                  <div id="headerText" class="">
+                    <h1>
+                      <span>
+                        <h1 id="myName">Shawn Rhodes</h1>
+                        <span>
+                    </h1>
+                    <h2>
+                      <span id="tagline">Front End Developer </span>
+                      <span id="tagline2">& Web Designer</span>
+                    </h2>
+                    <a id="contactMe" class="button" href="#" role="button">Contact Me
+                      <i class="fas fa-arrow-right"></i>
+                    </a>
                   </div>
-                  <div class="card-footer">
-                      <i class="fab fa-github"></i>
-                    <a href="#" class="card-link"> GitHub</a>
-                  </div>
+        
+                </div>
+                <!-- add svg at bottom to transition into next section -->
+        
+              </header>
+              <div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium">
+                <button class="menu-icon" type="button" data-toggle="offCanvas"></button>
+                <div class="title-bar-title">Menu</div>
+              </div>
+              <!-- TODO: make sticky -->
+              <div class="top-bar" id="responsive-menu" >
+                <div class="top-bar-left">
+                  <ul class="menu sans expanded text-center" data-smooth-scroll>
+                    <li>
+                      <a href="#headerTag" data-smooth-scroll>Home</a>
+                    </li>
+                    <li>
+                      <a href="#aboutSection" data-smooth-scroll>About</a>
+                    </li>
+                    <li>
+                      <a href="#skillsSection" data-smooth-scroll>Skills</a>
+                    </li>
+                    <li>
+                      <a href="#projectsSection" data-smooth-scroll>Projects</a>
+                    </li>
+                    <li>
+                      <a href="#backgroundSection" data-smooth-scroll>Background</a>
+                    </li>
+                    <li>
+                      <a href="#contactSection" data-smooth-scroll>Contact</a>
+                    </li>
+                  </ul>
                 </div>
               </div>
-
-        <div class="col-4 card-group">
-          <div class="card">
-            <a href="https://codepen.io/massivelines/pen/JNeOXE" target="_blank">
-              <img class="card-img-top" src="./img/projects/simon-says.png" />
-            </a>
-            <div class="card-body">
-              <h4 class="card-title">Simon Says</h4>
-              <p class="card-text">
-                A Simon Says game created in HTML, CSS, Javascript, jQuery, and Howler.js
-              </p>
+        
+              <section id="aboutSection">
+                <div class="grid-container">
+                  <div class="verticalflexContainer">
+                    <div class="grid-x">
+                      <div class="small-3 cell cell">
+                        <img src="img/me_500px.png" class="img-fluid" alt="Me" />
+                      </div>
+        
+                      <div id="aboutHeader" class="small-12 cell sectionHeader">
+                        <h2>About Me</h2>
+                      </div>
+        
+                      <div class="small-12 cell">
+                        <p>At first glance I may not seem to fit your typical candidate profile, in the course of my career, I’ve developed
+                          a number of important skill that will help me succeed in this new role. I am a proven leader with a strong
+                          record of exceeding goals and expectations. I confident that my [web design and front end development]
+                          skills will indeed be an excellent match. My experience and educational background have prepared me for
+                          this career move. I welcome the opportunity to speak with you about this position so I can elaborate on
+                          how my expertise in will be an asset to your company.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+        
+              </section>
+        
+        
+        
+              <!-- TODO: change order and items -->
+              <section id="skillsSection">
+                <div class="grid-container">
+        
+                  <div class="grid-x">
+                    <div id="skillsHeader" class="small-12 cell sectionHeader">
+                      <h2>Skills</h2>
+                    </div>
+                    <div class="small-12 cell text-center">
+        
+                      <div class="grid-x align-spaced">
+                        <div class="small-12 medium-5 cell">
+                          <h4>Core</h4>
+                          <div class="grid-x align-spaced">
+        
+                            <div class="small-3 cell">
+                              <div class="square-box">
+                                <div class="square-content">
+                                  <div>
+                                    <img src="./img/skills/html5.svg" class="img-fluid vertical" alt="HTML5">
+                                  </div>
+                                </div>
+                              </div>
+                              <div>
+                                <p>HTML5</p>
+                              </div>
+                            </div>
+        
+                            <div class="small-3 cell">
+                              <div class="square-box">
+                                <div class="square-content">
+                                  <div>
+                                    <img src="./img/skills/CSS3.svg" class="img-fluid vertical" alt="CSS3">
+                                  </div>
+                                </div>
+                              </div>
+                              <div>
+                                <p>CSS3</p>
+                              </div>
+                            </div>
+        
+                            <div class="small-3 cell">
+                              <div class="square-box">
+                                <div class="square-content">
+                                  <div>
+                                    <img src="./img/skills/javascript.svg" class="img-fluid vertical" alt="Javascript">
+                                  </div>
+                                </div>
+                              </div>
+                              <div>
+                                <p>Javascript</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+        
+                        <div class="small-12 medium-5 cell">
+                          <h4>Javascript Libraries and Frameworks</h4>
+                          <div class="grid-x align-spaced">
+                            <div class="small-3 cell">
+                              <div class="square-box">
+                                <div class="square-content">
+                                  <div>
+                                    <img src="./img/skills/jquery.svg" class="img-fluid vertical" alt="jQuery">
+                                  </div>
+                                </div>
+                              </div>
+                              <div>
+                                <p>jQuery</p>
+                              </div>
+                            </div>
+        
+                            <div class="small-3 cell">
+                              <div class="square-box">
+                                <div class="square-content">
+                                  <div>
+                                    <img src="./img/skills/nodejs-icon.svg" class="img-fluid vertical" alt="Node">
+                                  </div>
+                                </div>
+                              </div>
+                              <div>
+                                <p>Node</p>
+                              </div>
+                            </div>
+        
+                            <div class="small-3 cell">
+                              <div class="square-box">
+                                <div class="square-content">
+                                  <div>
+                                    <img src="./img/skills/react.svg" class="img-fluid vertical" alt="React">
+                                  </div>
+                                </div>
+                              </div>
+                              <div>
+                                <p>React</p>
+                              </div>
+                            </div>
+        
+                            <div class="small-3 cell">
+                              <div class="square-box">
+                                <div class="square-content">
+                                  <div>
+                                    <img src="./img/skills/electron.svg" class="img-fluid vertical" alt="Electron">
+                                  </div>
+                                </div>
+                              </div>
+                              <div>
+                                <p>Electron</p>
+                              </div>
+                            </div>
+        
+                          </div>
+                        </div>
+                      </div>
+                      <div class="grid-x align-spaced">
+                        <div class="small-12 medium-5 cell">
+                          <h4>Framework & CMS</h4>
+                          <div class="grid-x align-spaced">
+        
+                            <div class="small-3 cell">
+                              <div class="square-box">
+                                <div class="square-content">
+                                  <div>
+                                    <img src="./img/skills/bootstrap-4.svg" class="img-fluid vertical" alt="Bootstrap">
+                                  </div>
+                                </div>
+                              </div>
+                              <div>
+                                <p>Bootstrap</p>
+                              </div>
+                            </div>
+        
+                            <div class="small-3 cell">
+                              <div class="square-box">
+                                <div class="square-content">
+                                  <div>
+                                    <img src="./img/skills/foundation.svg" class="img-fluid vertical" alt="Foundation">
+                                  </div>
+                                </div>
+                              </div>
+                              <div>
+                                <p>Foundation</p>
+                              </div>
+                            </div>
+        
+                            <div class="small-3 cell">
+                              <div class="square-box">
+                                <div class="square-content">
+                                  <div>
+                                    <img src="./img/skills/wordpress-icon.svg" class="img-fluid vertical" alt="Wordpress">
+                                  </div>
+                                </div>
+                              </div>
+                              <div>
+                                <p>Wordpress</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+        
+                        <div class="small-12 medium-5 cell">
+                          <h4>CSS Preprocessors</h4>
+                          <div class="grid-x align-spaced">
+                            <div class="small-3 cell">
+                              <div class="square-box">
+                                <div class="square-content">
+                                  <div>
+                                    <img src="./img/skills/sass.svg" class="img-fluid vertical" alt="Sass">
+                                  </div>
+                                </div>
+                              </div>
+                              <div>
+                                <p>Sass</p>
+                              </div>
+                            </div>
+        
+                            <div class="small-3 cell">
+                              <div class="square-box">
+                                <div class="square-content">
+                                  <div>
+                                    <img src="./img/skills/less.svg" class="img-fluid vertical" alt="Less">
+                                  </div>
+                                </div>
+                              </div>
+                              <div>
+                                <p>Less</p>
+                              </div>
+                            </div>
+        
+                          </div>
+                        </div>
+                      </div>
+        
+                      <div class="grid-x align-spaced">
+        
+                        <div class="small-12 medium-5 cell">
+                          <h4>Design</h4>
+                          <div class="grid-x align-spaced">
+        
+                            <div class="small-3 cell">
+                              <div class="square-box">
+                                <div class="square-content">
+                                  <div>
+                                    <img src="./img/skills/photoshop-cc.svg" class="img-fluid vertical" alt="Photoshop">
+                                  </div>
+                                </div>
+                              </div>
+                              <div>
+                                <p>Photoshop</p>
+                              </div>
+                            </div>
+        
+                            <div class="small-3 cell">
+                              <div class="square-box">
+                                <div class="square-content">
+                                  <div>
+                                    <img src="./img/skills/adobe-illustrator-cc.svg" class="img-fluid vertical" alt="Illustrator">
+                                  </div>
+                                </div>
+                              </div>
+                              <div>
+                                <p>Illustrator</p>
+                              </div>
+                            </div>
+        
+                            <div class="small-3 cell">
+                              <div class="square-box">
+                                <div class="square-content">
+                                  <div>
+                                    <img src="./img/skills/adobe-xd.svg" class="img-fluid vertical" alt="XD">
+                                  </div>
+                                </div>
+                              </div>
+                              <div>
+                                <p>XD</p>
+                              </div>
+                            </div>
+        
+                          </div>
+                        </div>
+        
+                        <div class="small-12 medium-5 cell">
+                          <h4>Other</h4>
+                          <div class="grid-x align-spaced">
+        
+                            <div class="small-3 cell">
+                              <div class="square-box">
+                                <div class="square-content">
+                                  <div>
+                                    <img src="./img/skills/git-icon.svg" class="img-fluid vertical" alt="git">
+                                  </div>
+                                </div>
+                              </div>
+                              <div>
+                                <p>git</p>
+                              </div>
+                            </div>
+        
+                            <div class="small-3 cell">
+                              <div class="square-box">
+                                <div class="square-content">
+                                  <div>
+                                    <img src="./img/skills/github-icon.svg" class="img-fluid vertical" alt="GitHub">
+                                  </div>
+                                </div>
+                              </div>
+                              <div>
+                                <p>GitHub</p>
+                              </div>
+                            </div>
+        
+                            <div class="small-3 cell">
+                              <div class="square-box">
+                                <div class="square-content">
+                                  <div>
+                                    <img src="./img/skills/heroku.svg" class="img-fluid vertical" alt="Heroku">
+                                  </div>
+                                </div>
+                              </div>
+                              <div>
+                                <p>Heroku</p>
+                              </div>
+                            </div>
+        
+                          </div>
+                        </div>
+                      </div>
+        
+                    </div>
+                  </div>
+                </div>
+        
+              </section>
+        
+        
+        
+              <!-- TODO: pull project details from codpen and add icons to project -->
+              <section id="projectsSection">
+                <div class="grid-container">
+        
+                  <div class="grid-x">
+                    <div id="projectsHeader" class="small-12 cell sectionHeader">
+                      <h2>Projects</h2>
+                    </div>
+                    <div class="cell">
+                      <div class="grid-x grid-padding-x small-up-12 medium-up-3">
+        
+                        <div class="cell">
+                          <div class="card">
+                            <a href="#" target="_blank">
+                              <img class="card-img-top" src="https://placeimg.com/640/480/any" />
+                            </a>
+                            <div class="card-section">
+                              <h4 class="car-title">Fullscreen Album Art for Spotify</h4>
+                              <p class="card-text">
+                                A web based app that allows you to see your current spotify playing track album art on any bgrid-xser
+                              </p>
+                            </div>
+                            <div class="card-divider">
+                              <i class="fab fa-github"></i>
+                              <a href="#" class="card-link"> GitHub</a>
+                            </div>
+                          </div>
+                        </div>
+        
+        
+                        <div class="cell">
+                          <div class="card">
+                            <a href="#" target="_blank">
+                              <img class="card-img-top" src="./img/skills/nodejs-icon.svg" />
+                            </a>
+                            <div class="card-section">
+                              <h4 class="card-title">Login Node Server for Spotify</h4>
+                              <p class="card-text">
+                                A node.js remote server built to log into the Spotify API that passes the response token to the bgrid-xser.
+                              </p>
+                            </div>
+                            <div class="card-divider">
+                              <i class="fab fa-github"></i>
+                              <a href="#" class="card-link"> GitHub</a>
+                            </div>
+                          </div>
+                        </div>
+        
+                        <div class="cell">
+                          <div class="card">
+                            <a href="#" target="_blank">
+                              <img class="card-img-top" src="./img/projects/atom.png" />
+                            </a>
+                            <div class="card-section">
+                              <h4 class="card-title">Neutral Gray UI for Atom</h4>
+                              <p class="card-text">
+                                A gray UI theme for atom that is easy to read and has a changeable font size
+                              </p>
+                            </div>
+                            <div class="card-divider">
+                              <i class="fab fa-github"></i>
+                              <a href="#" class="card-link"> GitHub</a>
+                            </div>
+                          </div>
+                        </div>
+        
+                        <div class="cell">
+                          <div class="card">
+                            <a href="https://codepen.io/massivelines/pen/JNeOXE" target="_blank">
+                              <img class="card-img-top" src="./img/projects/simon-says.png" />
+                            </a>
+                            <div class="card-section">
+                              <h4 class="card-title">Simon Says</h4>
+                              <p class="card-text">
+                                A Simon Says game created in HTML, CSS, Javascript, jQuery, and Howler.js
+                              </p>
+                            </div>
+                            <div class="card-divider">
+                              <i class="fab fa-codepen"></i>
+                              </i>
+                              <a href="#" class="card-link"> Code Pen</a>
+                            </div>
+                          </div>
+                        </div>
+        
+                        <div class="cell">
+                          <div class="card">
+                            <a href="https://codepen.io/massivelines/pen/dWgpYL" target="_blank">
+                              <img class="card-img-top" src="./img/projects/calculator.png" />
+                            </a>
+                            <div class="card-section">
+                              <h4 class="card-title">Caclculator</h4>
+                              <p class="card-text">
+                                A basic caclculator created in HTML, CSS, Javascript, and jQuery
+                              </p>
+                            </div>
+                            <div class="card-divider">
+                              <i class="fab fa-codepen"></i>
+                              </i>
+                              <a href="#" class="card-link"> Code Pen</a>
+                            </div>
+                          </div>
+                        </div>
+        
+                        <div class="cell">
+                          <div class="card">
+                            <a href="https://codepen.io/massivelines/pen/dWgpYL" target="_blank">
+                              <img class="card-img-top" src="./img/projects/tic-tac-toe.png" />
+                            </a>
+                            <div class="card-section">
+                              <h4 class="card-title">Tic Tac Toe</h4>
+                              <p class="card-text">
+                                A Tic Tac Toe game created in HTML, CSS, Javascript, and jQuery
+                              </p>
+                            </div>
+                            <div class="card-divider">
+                              <i class="fab fa-codepen"></i>
+                              </i>
+                              <a href="#" class="card-link"> Code Pen</a>
+                            </div>
+                          </div>
+                        </div>
+        
+                      </div>
+                    </div>
+        
+        
+                  </div>
+        
+                </div>
+              </section>
+        
+        
+        
+              <!-- TODO: add years? -->
+              <!-- TODO: add google -->
+              <section id="backgroundSection">
+                <div class="grid-container">
+        
+                  <div class="grid-x">
+                    <div id="backgroundHeader" class="small-12 cell sectionHeader">
+                      <h2>Background</h2>
+                    </div>
+        
+                    <div class="small-6 cell">
+                      <h3>Education</h3>
+                      <div>
+                        <p>
+                          Bachelor of Arts: Art and Technology
+                          <br /> University of Texas at Dallas - Richardson, Tx
+                        </p>
+                        <p>
+                          Tranfer Credits
+                          <br /> University of Arkansas at Little Rock - Little Rock, Ar
+                        </p>
+                        <p>
+                          Associate of Applied Sciene:
+                          <br />Automotive Design, smallor, and Refinishing
+                          <br /> University of Arkansas Community smalllege - Morrilton, Ar
+                        </p>
+                      </div>
+                    </div>
+        
+                    <div class="small-4 cell">
+                      <h3>Work History</h3>
+                      <div>
+                        <p>
+                          Independent Contractor
+                          <br /> Self Employed - Dallas, Tx
+                          <br /> 10/2015 - Current
+                        </p>
+                        <p>
+                          Department Manager
+                          <br /> Walmart - Plano, Tx
+                          <br /> 03/2004 - 10/2015
+                        </p>
+                      </div>
+                    </div>
+        
+                  </div>
+        
+                </div>
+              </section>
+        
+              <!-- TODO: add github and codpen links -->
+              <!-- TODO: add padding at bottom of footer -->
+              <footer id="contactSection">
+                <div class="grid-container">
+        
+                  <div class="grid-x">
+                    <div id="phonenumber" class="small-2 cell">
+                      <i class="fas fa-mobile-alt"></i> 501-733-9480
+                    </div>
+        
+                    <div id="resumeLink" class="small-2 cell">
+                      <a href="./Shawn_Rhodes_Resume.pdf" target="_blank">
+                        <i class="far fa-file-pdf"></i> Resume PDF</a>
+                    </div>
+        
+                    <div id="emailLink" class="small-3 cell">
+                      <a href="mailto:shawn.rhodes33@gmail.com" target="_top">
+                        <i class="far fa-envelope"></i> shawn.rhodes33@gmail.com</a>
+                    </div>
+        
+                    <div class="small-2 cell">
+                      <a href="https://github.com/massivelines" target="_blank">
+                        <i class="fab fa-github"></i>
+                        </i> Github</a>
+                    </div>
+        
+                    <div class="small-2 cell">
+                      <a href="https://codepen.io/massivelines/" target="_blank">
+                        <i class="fab fa-codepen"></i>
+                        </i> Codepen</a>
+                    </div>
+        
+                    <div class="small-2 cell">
+                      <a href="https://www.linkedin.com/in/shawn-rhodes" target="_blank">
+                        <i class="fab fa-linkedin-in"></i> Linkedin</a>
+                    </div>
+        
+                  </div>
+        
+                </div>
+              </footer>
+        
             </div>
-            <div class="card-footer">
-              <i class="fab fa-codepen"></i></i>
-              <a href="#" class="card-link"> Code Pen</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-4 card-group">
-          <div class="card">
-            <a href="https://codepen.io/massivelines/pen/dWgpYL" target="_blank">
-              <img class="card-img-top" src="./img/projects/calculator.png" />
-            </a>
-            <div class="card-body">
-              <h4 class="card-title">Caclculator</h4>
-              <p class="card-text">
-                A basic caclculator created in HTML, CSS, Javascript, and jQuery
-              </p>
-            </div>
-            <div class="card-footer">
-              <i class="fab fa-codepen"></i></i>
-              <a href="#" class="card-link"> Code Pen</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-4 card-group">
-          <div class="card">
-            <a href="https://codepen.io/massivelines/pen/dWgpYL" target="_blank">
-              <img class="card-img-top" src="./img/projects/tic-tac-toe.png" />
-            </a>
-            <div class="card-body">
-              <h4 class="card-title">Tic Tac Toe</h4>
-              <p class="card-text">
-                A Tic Tac Toe game created in HTML, CSS, Javascript, and jQuery
-              </p>
-            </div>
-            <div class="card-footer">
-              <i class="fab fa-codepen"></i></i>
-              <a href="#" class="card-link"> Code Pen</a>
-            </div>
-          </div>
-        </div>
-
       </div>
+  </div>
 
-    </div>
-  </section>
-
-  <hr />
-
-  <!-- TODO: add years? -->
-  <!-- TODO: add google -->
-  <section id="backgroundSection">
-    <div class="container">
-
-      <div class="row verticalflexContainer align-content-center justify-content-center">
-        <div id="backgroundHeader" class="col-12 sectionHeader">
-          <h2>Background</h2>
-        </div>
-
-        <div class="col-6">
-          <h3>Education</h3>
-          <div>
-            <p>
-              Bachelor of Arts: Art and Technology
-              <br /> University of Texas at Dallas - Richardson, Tx
-            </p>
-            <p>
-              Tranfer Credits
-              <br /> University of Arkansas at Little Rock - Little Rock, Ar
-            </p>
-            <p>
-              Associate of Applied Sciene:
-              <br />Automotive Design, Color, and Refinishing
-              <br /> University of Arkansas Community College - Morrilton, Ar
-            </p>
-          </div>
-        </div>
-
-        <div class="col-4">
-          <h3>Work History</h3>
-          <div>
-            <p>
-              Independent Contractor
-              <br /> Self Employed - Dallas, Tx
-              <br /> 10/2015 - Current
-            </p>
-            <p>
-              Department Manager
-              <br /> Walmart - Plano, Tx
-              <br /> 03/2004 - 10/2015
-            </p>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- TODO: add github and codpen links -->
-  <!-- TODO: add padding at bottom of footer -->
-  <footer>
-    <div class="container">
-
-      <div class="row align-content-center justify-content-center">
-        <div id="phonenumber" class="col-2">
-            <i class="fas fa-mobile-alt"></i> 501-733-9480
-        </div>
-
-        <div id="resumeLink" class="col-2">
-          <a href="./Shawn_Rhodes_Resume.pdf" target="_blank">
-              <i class="far fa-file-pdf"></i> Resume PDF</a>
-        </div>
-
-        <div id="emailLink" class="col-3">
-          <a href="mailto:shawn.rhodes33@gmail.com" target="_top">
-              <i class="far fa-envelope"></i> shawn.rhodes33@gmail.com</a>
-        </div>
-
-        <div class="col-2">
-          <a href="https://github.com/massivelines" target="_blank">
-              <i class="fab fa-github"></i></i> Github</a>
-        </div>
-
-        <div class="col-2">
-          <a href="https://codepen.io/massivelines/" target="_blank">
-            <i class="fab fa-codepen"></i></i> Codepen</a>
-        </div>
-
-        <div class="col-2">
-          <a href="https://www.linkedin.com/in/shawn-rhodes" target="_blank">
-              <i class="fab fa-linkedin-in"></i> Linkedin</a>
-        </div>
-
-      </div>
-
-    </div>
-  </footer>
 
   <!-- js -->
   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
   <script src="js/app.js"></script>
 </body>
 
