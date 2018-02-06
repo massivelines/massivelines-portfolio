@@ -71,6 +71,7 @@ svg {
 }
 
 #aboutSection {
+  background-color: #f8f8f8;
   position: relative;
   z-index: 3;
 }
@@ -81,6 +82,8 @@ svg {
 }
 
 .sectionHeader {
+  background-color: black;
+  color: white;
   margin-bottom: 1%;
   text-align: center;
 }
@@ -129,16 +132,24 @@ svg {
   height: 100%;
   margin: 0;
 }
+
+#skillsSection {
+  /* background-color: black; */
+}
+.test {
+  background-color: white;
+}
 .skill-row:not(:first-child) {
   margin-top: 3%;
 }
 
 .skill-row p {
-
+  margin-top: 10%;
   text-align: center;
 }
 .skill-row h4 {
   text-align: center;
+  margin-bottom: 4%;
 }
 
 /* remove btn border radius */
@@ -147,6 +158,8 @@ svg {
   border-radius: 0;
 }
 
-footer {
+footer, footer a {
   text-align: center;
+  color: white;
+  background-color: #39373a;
 }
