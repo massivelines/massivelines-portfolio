@@ -4,7 +4,6 @@ section {
 }
 
 section {
-  padding: 3em 0;
 }
 
 body {
@@ -120,11 +119,10 @@ h4,
 
 #aboutSection {
   background-color: #F5F5EB;
+  display: flex;
+  align-items: center;
 }
 
-#about-container {}
-
-#aboutHeader {}
 
 /* Skills Section */
 
@@ -141,11 +139,15 @@ h4,
 /* Projects Section */
 
 #projectsSection {
+  padding: 3em 0;
   background-color: #F5F5EB;
 }
 
 /* Background Section */
-
+#backgroundSection {
+  display: flex;
+  align-items: center;
+}
 /* Footer Section */
 
 footer,
@@ -179,9 +181,11 @@ footer a:hover {
 
 .sectionHeader {
   margin: 2em 0;
-  background-color: black;
-  color: white;
+  color: #1B252D;
   text-align: center;
+}
+.sectionHeader span {
+  border-bottom: solid #b8261e 5px;
 }
 
 .square-box {
