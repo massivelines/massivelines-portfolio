@@ -260,7 +260,7 @@ function Box(x, y, height, width, color, speed) {
 
   this.update = function () {
     // movement
-    if (this.x > window.innerWidth) {
+    if (this.x > screenSize.w) {
       this.x = -this.width;
     } else {
       this.x += this.speed;
