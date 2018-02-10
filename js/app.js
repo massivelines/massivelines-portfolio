@@ -3,6 +3,8 @@ $(document).foundation();
 // holder for screen size function
 var updateScreenSize;
 
+var isMobile = false;
+
 // if mobile is detected use screen for size else use inner
 if (
 	(/Mobi/i.test(navigator.userAgent) || /Anroid/i.test(navigator.userAgent)) &&
@@ -13,7 +15,8 @@ if (
 			h: window.screen.height,
 			w: window.screen.width
 		};
-	};
+  };
+  isMobile = true;
 } else {
 	updateScreenSize = function() {
 		return {
@@ -23,7 +26,24 @@ if (
 	};
 }
 
+// sets key elements to screen height px instead of min-height: 100vh
+function mobileVH(size) {
+  document.getElementById("header").style.minHeight = size.h + "px";
+  var sections = document.getElementsByTagName("section");
+  for (var i = 0; i<sections.length; i++){
+    sections[i].style.minHeight = size.h + "px";
+  }
+  document.getElementById("headerContainer").style.minHeight = size.h + "px";
+}
+
+// inital screen size
 var screenSize = updateScreenSize();
+
+// if mobile browser = true call mobileVH
+if(isMobile == true){
+  mobileVH(screenSize);
+}
+
 
 // canvas
 var canvas = document.getElementById("headerCanvas");
@@ -346,7 +366,12 @@ var previousCanvasWidth = screenSize.w;
 
 // use foundation throttle and deboucer
 $("body").on("resizeme.zf.trigger", function() {
-	screenSize = updateScreenSize();
+  screenSize = updateScreenSize();
+  
+  if(isMobile == true){
+    mobileVH(screenSize);
+  }
+
 	// resize the canvas
 	canvas.height = screenSize.h;
 	canvas.width = screenSize.w;
