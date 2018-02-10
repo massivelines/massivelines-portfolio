@@ -311,7 +311,7 @@ for (var i = 0; i < 30; i++) {
 // animate
 function animate() {
   requestAnimationFrame(animate);
-  ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+  ctx.clearRect(0, 0, screenSize.w, screenSize.h);
   for (var i = 0; i < boxArray.length; i++) {
     boxArray[i].update();
   }
