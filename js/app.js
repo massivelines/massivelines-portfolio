@@ -38,7 +38,7 @@ function mobileVH(size) {
 var screenSize = updateScreenSize();
 
 // if mobile browser = true call mobileVH
-if (isMobile == true) {
+if (isMobile === true) {
   mobileVH(screenSize);
 }
 
@@ -130,10 +130,10 @@ function Random() {
 // convert a hex color to a object with rgb
 function convertHexToRGB(hex) {
   hex = hex.replace("#", "");
-  r = parseInt(hex.substring(0, 2), 16);
-  g = parseInt(hex.substring(2, 4), 16);
-  b = parseInt(hex.substring(4, 6), 16);
-  result = result = {
+  var r = parseInt(hex.substring(0, 2), 16);
+  var g = parseInt(hex.substring(2, 4), 16);
+  var b = parseInt(hex.substring(4, 6), 16);
+  var result = {
     r: r,
     g: g,
     b: b
@@ -200,7 +200,7 @@ function Box(x, y, height, width, color, speed) {
     // if object touched fade hoverColor in
     // keep currentColorObj for rgb with decimals points
     // round up for output
-    if (this.touch == true && this.hoverDirection == "in") {
+    if (this.touch === true && this.hoverDirection == "in") {
       if (this.hoverItt <= frameColorSteps) {
         this.currentColorObj = {
           r: this.currentColorObj.r + this.colorStepObj.r,
@@ -228,7 +228,7 @@ function Box(x, y, height, width, color, speed) {
       }
       // fades the hover color back to the orginal
       // determined in this.update
-    } else if (this.touch == false && this.hoverDirection == "out") {
+    } else if (this.touch === false && this.hoverDirection == "out") {
       if (this.hoverItt > 1) {
         this.currentColorObj = {
           r: this.currentColorObj.r - this.colorStepObj.r,
@@ -366,7 +366,7 @@ var previousCanvasWidth = screenSize.w;
 $("body").on("resizeme.zf.trigger", function () {
   screenSize = updateScreenSize();
 
-  if (isMobile == true) {
+  if (isMobile === true) {
     mobileVH(screenSize);
   }
 
