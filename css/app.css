@@ -1,7 +1,7 @@
 canvas {
-	position: absolute;
-	top: 0;
-	z-index: 0;
+  position: absolute;
+  top: 0;
+  z-index: 0;
 }
 
 header,
@@ -9,8 +9,7 @@ section {
   min-height: 100vh;
 }
 
-section {
-}
+section {}
 
 body {
   font-family: 'Merriweather', serif;
@@ -54,7 +53,7 @@ h4,
 
 #headerText {
   position: relative;
-	z-index: 2;
+  z-index: 2;
 }
 
 #headerText span {
@@ -102,6 +101,7 @@ h4,
 }
 
 .title-bar {
+  font-size: 20px;
   background-color: #4A484E;
   color: #F5F5EB;
   border-bottom: solid #b8261e 5px;
@@ -114,6 +114,7 @@ h4,
 
 .off-canvas ul a {
   color: #F5F5EB;
+  border-bottom: #1B252D solid 1px;
 }
 
 .off-canvas ul a:hover {
@@ -127,11 +128,11 @@ h4,
 /* About Section */
 
 #aboutSection {
+  padding: 3em 0;
   background-color: #F5F5EB;
   display: flex;
   align-items: center;
 }
-
 
 /* Skills Section */
 
@@ -144,7 +145,6 @@ h4,
   font-size: .8em;
 }
 
-
 /* Projects Section */
 
 #projectsSection {
@@ -153,15 +153,16 @@ h4,
 }
 
 /* Background Section */
+
 #backgroundSection {
   display: flex;
   align-items: center;
 }
+
 /* Footer Section */
 
 footer,
 footer a {
-  
   color: #F5F5EB;
   background-color: #4A484E;
   white-space: nowrap;
@@ -193,6 +194,7 @@ footer a:hover {
   color: #1B252D;
   text-align: center;
 }
+
 .sectionHeader span {
   border-bottom: solid #b8261e 5px;
 }
@@ -353,7 +355,7 @@ footer a:hover {
   .skills-icons-container {
     font-size: .8em;
   }
-  #phonenumber{
+  #phonenumber {
     text-align: left;
   }
   #resumeLink {

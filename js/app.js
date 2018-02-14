@@ -1,3 +1,5 @@
+// TODO: fix icon jump
+
 $(document).foundation();
 
 // holder for screen size function
@@ -72,7 +74,7 @@ var mouse = {
 var colorOutline = ["#496479", "#232F3A", "#938F9A", "#56545B", "#504E54"];
 
 // random object to hold all random funcitons
-// todo revist to simplify and fix inner
+// TODO revist to simplify
 function Random() {
   this.boxSize = {
     minH: 50,
@@ -320,6 +322,7 @@ animate();
 
 // determin type and where touch, pointer, or mouse movent is
 // use header beacause canvas is behind text
+// TODO clean up addEventListeners
 var header = document.getElementById('header');
 if (
   "TouchEvent" in window &&

@@ -32,9 +32,9 @@
   <link rel="stylesheet" href="css/app.css">
 </head>
 
-<body  data-resize>
+<body data-resize>
   <div class="off-canvas-wrapper">
-    <div id="offCanvas" class="off-canvas position-right" data-off-canvas data-transition="overlap">
+    <div id="offCanvas" class="off-canvas position-right" data-off-canvas data-transition="overlap" data-content-scroll="false">
       <!-- Off-canvas content goes here -->
 
       <!-- Off-canvas Menu -->
@@ -65,9 +65,9 @@
               <i class="far fa-envelope"></i> Contact</a>
           </li>
         </ul>
-        <button class="close-button" aria-label="Close menu" type="button" data-close>
+        <!-- <button class="close-button" aria-label="Close menu" type="button" data-close>
           <span aria-hidden="true">&times;</span>
-        </button>
+        </button> -->
       </nav>
     </div>
     <div class="off-canvas-content" data-off-canvas-content>
@@ -83,8 +83,8 @@
                 <span>
             </h1>
             <div id="tagline-container">
-               <span id="tagline1">Front End Developer </span>
-              <span id="tagline2">&amp; Web Designer</span> 
+              <span id="tagline1">Front End Developer </span>
+              <span id="tagline2">&amp; Web Designer</span>
             </div>
             <a id="contactMe" class="button" href="#contactSection" role="button" data-smooth-scroll>Contact Me
               <i class="fas fa-arrow-right"></i>
@@ -146,7 +146,9 @@
               </div>
 
               <div id="aboutHeader" class="small-12 cell sectionHeader">
-                <h2><span>About Me</span></h2>
+                <h2>
+                  <span>About Me</span>
+                </h2>
               </div>
 
               <div class="small-12 large-10 cell">
@@ -166,7 +168,9 @@
 
           <div class="grid-x">
             <div id="skillsHeader" class="small-12 cell sectionHeader">
-              <h2><span>Skills</span></h2>
+              <h2>
+                <span>Skills</span>
+              </h2>
             </div>
             <div class="small-12 cell text-center">
 
@@ -218,66 +222,66 @@
 
                 <div class="small-12 medium-5 cell skills-icons-container">
                   <h4>Javascript Libraries and Frameworks</h4>
-                  
+
                   <div class="grid-x align-spaced">
 
                     <div class="small-12 medium-6 cell">
                       <div class="grid-x align-spaced">
-                          <div class="small-3 medium-6 cell">
-                              <div class="square-box">
-                                <div class="square-content">
-                                  <div>
-                                    <img src="./img/skills/jquery.svg" class="img-fluid vertical" alt="jQuery">
-                                  </div>
-                                </div>
-                              </div>
+                        <div class="small-3 medium-6 cell">
+                          <div class="square-box">
+                            <div class="square-content">
                               <div>
-                                <p>jQuery</p>
+                                <img src="./img/skills/jquery.svg" class="img-fluid vertical" alt="jQuery">
                               </div>
                             </div>
-        
-                            <div class="small-3 medium-6 cell">
-                              <div class="square-box">
-                                <div class="square-content">
-                                  <div>
-                                    <img src="./img/skills/nodejs-icon.svg" class="img-fluid vertical" alt="Node">
-                                  </div>
-                                </div>
-                              </div>
+                          </div>
+                          <div>
+                            <p>jQuery</p>
+                          </div>
+                        </div>
+
+                        <div class="small-3 medium-6 cell">
+                          <div class="square-box">
+                            <div class="square-content">
                               <div>
-                                <p>Node</p>
+                                <img src="./img/skills/nodejs-icon.svg" class="img-fluid vertical" alt="Node">
                               </div>
                             </div>
+                          </div>
+                          <div>
+                            <p>Node</p>
+                          </div>
+                        </div>
                       </div>
                     </div>
                     <div class="small-12 medium-6 cell">
-                        <div class="grid-x align-spaced">
-                            <div class="small-3 medium-6 cell">
-                                <div class="square-box">
-                                  <div class="square-content">
-                                    <div>
-                                      <img src="./img/skills/react.svg" class="img-fluid vertical" alt="React">
-                                    </div>
-                                  </div>
-                                </div>
-                                <div>
-                                  <p>React</p>
-                                </div>
+                      <div class="grid-x align-spaced">
+                        <div class="small-3 medium-6 cell">
+                          <div class="square-box">
+                            <div class="square-content">
+                              <div>
+                                <img src="./img/skills/react.svg" class="img-fluid vertical" alt="React">
                               </div>
-          
-                              <div class="small-3 medium-6 cell">
-                                <div class="square-box">
-                                  <div class="square-content">
-                                    <div>
-                                      <img src="./img/skills/electron.svg" class="img-fluid vertical" alt="Electron">
-                                    </div>
-                                  </div>
-                                </div>
-                                <div>
-                                  <p>Electron</p>
-                                </div>
-                              </div>
+                            </div>
+                          </div>
+                          <div>
+                            <p>React</p>
+                          </div>
                         </div>
+
+                        <div class="small-3 medium-6 cell">
+                          <div class="square-box">
+                            <div class="square-content">
+                              <div>
+                                <img src="./img/skills/electron.svg" class="img-fluid vertical" alt="Electron">
+                              </div>
+                            </div>
+                          </div>
+                          <div>
+                            <p>Electron</p>
+                          </div>
+                        </div>
+                      </div>
                     </div>
 
                     <!-- <div class="small-3 cell">
@@ -518,7 +522,9 @@
 
           <div class="grid-x">
             <div id="projectsHeader" class="small-12 cell sectionHeader">
-              <h2><span>Projects</span></h2>
+              <h2>
+                <span>Projects</span>
+              </h2>
             </div>
             <div class="cell">
               <div class="grid-x grid-margin-x small-up-12 medium-up-2 large-up-3" data-equalizer="row-height">
@@ -526,7 +532,7 @@
                 <div class="cell">
                   <div class="card" data-equalizer-watch="row-height">
                     <a href="#" target="_blank">
-                      <img class="card-img-top" src="https://placeimg.com/1024/768/any"/>
+                      <img class="card-img-top" src="https://placeimg.com/1024/768/any" />
                     </a>
                     <div class="card-section">
                       <h4 class="car-title">Fullscreen Album Art for Spotify</h4>
@@ -545,7 +551,7 @@
                 <div class="cell">
                   <div class="card" data-equalizer-watch="row-height">
                     <a href="#" target="_blank">
-                      <img class="card-img-top" src="./img/projects/nodejs-project.svg"/>
+                      <img class="card-img-top" src="./img/projects/nodejs-project.svg" />
                     </a>
                     <div class="card-section">
                       <h4 class="card-title">Login Node Server for Spotify</h4>
@@ -648,7 +654,9 @@
 
           <div class="grid-x align-center">
             <div id="backgroundHeader" class="small-12 cell sectionHeader">
-              <h2><span>Background</span></h2>
+              <h2>
+                <span>Background</span>
+              </h2>
             </div>
 
             <div class="small-12 medium-6 cell">
@@ -713,16 +721,19 @@
                 <div class="small-4 cell">
                   <a href="https://github.com/massivelines" target="_blank">
                     <i class="fab fa-github"></i>
-                    </i></a>
+                    </i>
+                  </a>
                 </div>
                 <div class="small-4 cell">
                   <a href="https://codepen.io/massivelines/" target="_blank">
                     <i class="fab fa-codepen"></i>
-                    </i></a>
+                    </i>
+                  </a>
                 </div>
                 <div class="small-4 cell">
                   <a href="https://www.linkedin.com/in/shawn-rhodes" target="_blank">
-                    <i class="fab fa-linkedin-in"></i></a>
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
                 </div>
               </div>
             </div>
@@ -750,4 +761,3 @@
 </body>
 
 </html>
-<!-- TODO: remove all hr at end -->
