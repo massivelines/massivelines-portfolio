@@ -159,6 +159,18 @@ h4,
   align-items: center;
 }
 
+.backgroundCell {
+  margin-bottom: 10%;
+}
+
+.backgroundTitle {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 1.1em;
+}
+.backgroundDates {
+  font-size: .9em;
+}
+
 /* Footer Section */
 
 footer,
@@ -360,6 +372,16 @@ footer a:hover {
   }
   #resumeLink {
     text-align: right;
+  }
+  .backgroundCell {
+    margin-bottom: 3%;
+  }
+  .backgroundTitle {
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: 1.2em;
+  }
+  .backgroundDates {
+    font-size: .8em;
   }
 }
 
