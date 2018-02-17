@@ -1,37 +1,22 @@
+body {
+  color: #1B252D;
+  font-family: 'Merriweather', serif;
+  overflow-x: hidden;
+}
+
+header, section {
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h4, .button, .sans {
+  font-family: 'Merriweather Sans', sans-serif;
+}
+
 canvas {
   position: absolute;
   top: 0;
   z-index: 0;
 }
-
-header,
-section {
-  min-height: 100vh;
-}
-
-section {}
-
-body {
-  font-family: 'Merriweather', serif;
-  overflow-x: hidden;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h4,
-.button,
-.sans {
-  font-family: 'Merriweather Sans', sans-serif;
-}
-
-/* svg {
-  display: block;
-  pointer-events: none;
-  overflow: hidden;
-} */
 
 .menu-container {
   display: inline-block;
@@ -65,8 +50,7 @@ h4,
   font-size: 3em;
 }
 
-#tagline1,
-#tagline2 {
+#tagline1, #tagline2 {
   white-space: nowrap;
   font-size: 1.5em;
 }
@@ -83,13 +67,13 @@ h4,
   border-bottom: solid #b8261e 5px;
 }
 
-.top-bar,
-.top-bar ul {
+.top-bar, .top-bar ul {
   background-color: #4A484E;
 }
 
 .top-bar ul a {
   color: #F5F5EB;
+  transition: color 0.3s ease;
 }
 
 .top-bar ul a:hover {
@@ -115,6 +99,7 @@ h4,
 .off-canvas ul a {
   color: #F5F5EB;
   border-bottom: #1B252D solid 1px;
+  transition: color 0.3s ease;
 }
 
 .off-canvas ul a:hover {
@@ -152,6 +137,24 @@ h4,
   background-color: #F5F5EB;
 }
 
+#projectsSection .card {
+  border-color: #F5F5EB;
+}
+
+#projectsSection .card-divider {
+  background-color: #96A5A8;
+}
+
+#projectsSection .card-divider a {
+  margin-left: 1%;
+  color: #F5F5EB;
+  transition: color 0.3s ease;
+}
+
+#projectsSection .card-divider a:hover {
+  color: #4A484E;
+}
+
 /* Background Section */
 
 #backgroundSection {
@@ -167,14 +170,14 @@ h4,
   font-family: 'Merriweather Sans', sans-serif;
   font-size: 1.1em;
 }
+
 .backgroundDates {
   font-size: .9em;
 }
 
 /* Footer Section */
 
-footer,
-footer a {
+footer, footer a {
   color: #F5F5EB;
   background-color: #4A484E;
   white-space: nowrap;
@@ -289,9 +292,7 @@ footer a:hover {
   margin-top: -2px;
 }
 
-.hamburger-inner,
-.hamburger-inner::before,
-.hamburger-inner::after {
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
   width: 20px;
   height: 4px;
   /* width: 40px;
@@ -303,8 +304,7 @@ footer a:hover {
   transition-timing-function: ease;
 }
 
-.hamburger-inner::before,
-.hamburger-inner::after {
+.hamburger-inner::before, .hamburger-inner::after {
   content: "";
   display: block;
 }
@@ -359,8 +359,7 @@ footer a:hover {
     line-height: 1;
     font-size: 1.7em;
   }
-  #tagline1,
-  #tagline2 {
+  #tagline1, #tagline2 {
     white-space: nowrap;
     font-size: 2em;
   }
