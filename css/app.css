@@ -1,6 +1,6 @@
 body {
   color: #1B252D;
-  font-family: 'Merriweather', serif;
+  font-family: "Libre Baskerville",serif;
   overflow-x: hidden;
 }
 
@@ -9,7 +9,15 @@ header, section {
 }
 
 h1, h2, h3, h4, h5, h4, .button, .sans {
-  font-family: 'Merriweather Sans', sans-serif;
+  font-family: "proxima-nova",sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 1px;
+
+}
+
+h3, h4, h5, h4, .button, .sans {
+  font-weight: normal;
 }
 
 canvas {
@@ -171,7 +179,7 @@ canvas {
 }
 
 .backgroundTitle {
-  font-family: 'Merriweather Sans', sans-serif;
+  font-family: "proxima-nova",sans-serif;
   font-size: 1.1em;
 }
 
@@ -380,7 +388,7 @@ footer a:hover {
     margin-bottom: 3%;
   }
   .backgroundTitle {
-    font-family: 'Merriweather Sans', sans-serif;
+    font-family: "proxima-nova",sans-serif;
     font-size: 1.2em;
   }
   .backgroundDates {
