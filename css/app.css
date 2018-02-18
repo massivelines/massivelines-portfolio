@@ -145,6 +145,10 @@ canvas {
   background-color: #96A5A8;
 }
 
+#projectsSection .card-divider .grid-x {
+  width: 100%;
+}
+
 #projectsSection .card-divider a {
   margin-left: 1%;
   color: #F5F5EB;
