@@ -1,6 +1,6 @@
 body {
   color: #1B252D;
-  font-family: "Libre Baskerville",serif;
+  font-family: "Libre Baskerville", serif;
   overflow-x: hidden;
 }
 
@@ -9,15 +9,10 @@ header, section {
 }
 
 h1, h2, h3, h4, h5, h4, .button, .sans {
-  font-family: "proxima-nova",sans-serif;
+  font-family: "proxima-nova", sans-serif;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 500;
   letter-spacing: 1px;
-
-}
-
-h3, h4, h5, h4, .button, .sans {
-  font-weight: normal;
 }
 
 canvas {
@@ -31,12 +26,12 @@ canvas {
   cursor: pointer;
 }
 
+/* Header Section */
+
 #header {
   color: #F5F5EB;
   background-color: #1B252D;
 }
-
-/* Header Section */
 
 #headerContainer {
   min-height: 100vh;
@@ -56,6 +51,14 @@ canvas {
 #myName {
   line-height: 1;
   font-size: 3em;
+}
+
+/* #myName h1 {
+  margin-bottom: 0;
+} */
+
+#tagline-container {
+  margin-bottom: .5em;
 }
 
 #tagline1, #tagline2 {
@@ -122,20 +125,8 @@ canvas {
 
 #aboutSection {
   padding: 3em 0;
-  background-color: #F5F5EB;
   display: flex;
   align-items: center;
-}
-
-/* Skills Section */
-
-#skillsSection {
-  padding: 3em 0;
-}
-
-.skills-icons-container {
-  margin-bottom: 2em;
-  font-size: .8em;
 }
 
 /* Projects Section */
@@ -167,26 +158,52 @@ canvas {
   color: #4A484E;
 }
 
+/* Skills Section */
+
+#skillsSection {
+  padding: 3em 0;
+}
+
+.skills-icons-container {
+  margin-bottom: 2em;
+  font-size: .8em;
+}
+
 /* Background Section */
+h2 {
+  font-size: 2em;
+}
+h3 {
+  font-size: 1.5em;
+}
+h3 span{
+  border-bottom: solid #b8261e 2px;
+}
 
 #backgroundSection {
   display: flex;
   align-items: center;
+  background-color: #F5F5EB;
 }
 
 .backgroundCell {
-  margin-bottom: 10%;
+  margin-bottom: 7%;
 }
 
 .backgroundTitle {
-  font-family: "proxima-nova",sans-serif;
-  font-size: 1.1em;
+  font-weight: 700;
 }
 
 .backgroundDates {
-  font-size: .9em;
 }
 
+.backgroundPosition {
+
+}
+
+.backgroundDetails, .backgroundLocation, .backgroundDates{
+  font-size: .9em;
+}
 /* Footer Section */
 
 footer, footer a {
@@ -271,64 +288,6 @@ footer a:hover {
   margin: 0;
 }
 
-.hamburger {
-  padding: 15px 15px;
-  display: inline-block;
-  cursor: pointer;
-  transition-property: opacity, filter;
-  transition-duration: 0.15s;
-  transition-timing-function: linear;
-  font: inherit;
-  color: inherit;
-  text-transform: none;
-  background-color: transparent;
-  border: 0;
-  margin: 0;
-  overflow: visible;
-}
-
-.hamburger:hover {
-  opacity: 0.7;
-}
-
-.hamburger-box {
-  width: 40px;
-  height: 16px;
-  display: inline-block;
-  position: relative;
-}
-
-.hamburger-inner {
-  display: block;
-  top: 50%;
-  margin-top: -2px;
-}
-
-.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-  width: 20px;
-  height: 4px;
-  /* width: 40px;
-  height: 4px; */
-  background-color: #96A5A8;
-  position: absolute;
-  transition-property: transform;
-  transition-duration: 0.15s;
-  transition-timing-function: ease;
-}
-
-.hamburger-inner::before, .hamburger-inner::after {
-  content: "";
-  display: block;
-}
-
-.hamburger-inner::before {
-  top: -10px;
-}
-
-.hamburger-inner::after {
-  bottom: -10px;
-}
-
 /*
    * Squeeze
    */
@@ -368,13 +327,18 @@ footer a:hover {
 
 @media screen and (min-width: 40em) {
   #myName {
-    line-height: 1;
     font-size: 1.7em;
+    line-height: .7;
   }
   #tagline1, #tagline2 {
     white-space: nowrap;
     font-size: 2em;
   }
+
+  .backgroundCell {
+    margin-bottom: 5%;
+  }
+
   .skills-icons-container {
     font-size: .8em;
   }
@@ -384,24 +348,17 @@ footer a:hover {
   #resumeLink {
     text-align: right;
   }
-  .backgroundCell {
-    margin-bottom: 3%;
-  }
-  .backgroundTitle {
-    font-family: "proxima-nova",sans-serif;
-    font-size: 1.2em;
-  }
-  .backgroundDates {
-    font-size: .8em;
-  }
 }
 
 /* Large and up */
 
 @media screen and (min-width: 64em) {
   #myName {
-    line-height: 1;
     font-size: 2em;
+    line-height: .8;
+  }
+  .backgroundCell {
+    margin-bottom: 8%;
   }
   .skills-icons-container {
     font-size: 1em;
