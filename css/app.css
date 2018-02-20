@@ -15,6 +15,16 @@ h1, h2, h3, h4, h5, h4, .button, .sans {
   letter-spacing: 1px;
 }
 
+h2 {
+  font-size: 2em;
+}
+h3 {
+  font-size: 1.7em;
+}
+h3 span{
+  border-bottom: solid #b8261e 2px;
+}
+
 canvas {
   position: absolute;
   top: 0;
@@ -122,11 +132,39 @@ canvas {
 }
 
 /* About Section */
+.meImg {
+  margin-top: 2%;
+}
 
 #aboutSection {
   padding: 3em 0;
   display: flex;
   align-items: center;
+}
+
+#aboutSection .card {
+  /* border: none; */
+  /* margin-bottom: 0; */
+}
+
+.cardSpacer{
+  padding-bottom: 3%;
+}
+
+/* Skills Section */
+.skillsSectionHeader {
+  padding-bottom: 1%;
+  margin-bottom: 1em;
+}
+.limited {
+  font-size: .7em;
+  vertical-align: top;
+}
+.skillsHeader {
+  font-family: "proxima-nova", sans-serif;
+  font-size: 1.4em;
+  text-decoration: underline;
+  margin: 6% 0 2% 0;
 }
 
 /* Projects Section */
@@ -158,32 +196,10 @@ canvas {
   color: #4A484E;
 }
 
-/* Skills Section */
-
-#skillsSection {
-  padding: 3em 0;
-}
-
-.skills-icons-container {
-  margin-bottom: 2em;
-  font-size: .8em;
-}
-
 /* Background Section */
-h2 {
-  font-size: 2em;
-}
-h3 {
-  font-size: 1.5em;
-}
-h3 span{
-  border-bottom: solid #b8261e 2px;
-}
-
 #backgroundSection {
   display: flex;
   align-items: center;
-  background-color: #F5F5EB;
 }
 
 .backgroundCell {
@@ -239,11 +255,14 @@ footer a:hover {
   text-align: center;
 }
 
-.sectionHeader span {
+.sectionHeader {
   border-bottom: solid #b8261e 5px;
+  margin-bottom: 8%;
 }
 
 .square-box {
+  margin: auto;
+  width: 45%;
   position: relative
 }
 
@@ -286,41 +305,6 @@ footer a:hover {
 .square-content img.vertical {
   height: 100%;
   margin: 0;
-}
-
-/*
-   * Squeeze
-   */
-
-.hamburger--squeeze .hamburger-inner {
-  transition-duration: 0.075s;
-  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-}
-
-.hamburger--squeeze .hamburger-inner::before {
-  transition: top 0.075s 0.12s ease, opacity 0.075s ease;
-}
-
-.hamburger--squeeze .hamburger-inner::after {
-  transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-}
-
-.hamburger--squeeze.is-active .hamburger-inner {
-  transform: rotate(45deg);
-  transition-delay: 0.12s;
-  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-
-.hamburger--squeeze.is-active .hamburger-inner::before {
-  top: 0;
-  opacity: 0;
-  transition: top 0.075s ease, opacity 0.075s 0.12s ease;
-}
-
-.hamburger--squeeze.is-active .hamburger-inner::after {
-  bottom: 0;
-  transform: rotate(-90deg);
-  transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 /* Medium and up */
