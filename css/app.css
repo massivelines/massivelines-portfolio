@@ -133,7 +133,7 @@ canvas {
 
 /* About Section */
 .meImg {
-  margin-top: 2%;
+  margin: 1% 0 2% 0;
 }
 
 #aboutSection {
@@ -153,8 +153,9 @@ canvas {
 
 /* Skills Section */
 .skillsSectionHeader {
-  padding-bottom: 1%;
-  margin-bottom: 1em;
+  margin-top: 5%;
+  /* padding-bottom: 1%; */
+  /* margin-bottom: 1em; */
 }
 .limited {
   font-size: .7em;
@@ -164,7 +165,7 @@ canvas {
   font-family: "proxima-nova", sans-serif;
   font-size: 1.4em;
   text-decoration: underline;
-  margin: 6% 0 2% 0;
+  margin: 4% 0 2% 0;
 }
 
 /* Projects Section */
@@ -250,14 +251,10 @@ footer a:hover {
 /* Other CSS */
 
 .sectionHeader {
-  margin: 2em 0;
+  margin: 3% 0 4% 0;
   color: #1B252D;
   text-align: center;
-}
-
-.sectionHeader {
   border-bottom: solid #b8261e 5px;
-  margin-bottom: 8%;
 }
 
 .square-box {
