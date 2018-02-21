@@ -33,9 +33,9 @@
   <link rel="icon" type="image/png" href="./img/favicon/favicon-16x16.png" sizes="16x16" />
   <link rel="icon" type="image/png" href="./img/favicon/favicon-128.png" sizes="128x128" />
   <meta name="author" content="Shawn Rhodes">
-  <meta name="description" content="A front end developer and web designer with an animation and graphic design background, he specializes in HTML5, CSS3, and JavaScript.">
+  <meta name="description" content="A front end developer and web designer with an animation and graphic design background specializing in HTML5, CSS3, and JavaScript.">
   <meta property="og:image" content=".img/og.png">
-  <meta property="og:description" content="A front end developer and web designer with an animation and graphic design background, he specializes in HTML5, CSS3, and JavaScript.">
+  <meta property="og:description" content="A front end developer and web designer with an animation and graphic design background specializing in HTML5, CSS3, and JavaScript.">
   <meta property="og:title" content="Shawn Rhodes">
   <meta name="application-name" content="&nbsp;" />
   <meta name="msapplication-Tilesmallor" content="#FFFFFF" />
@@ -101,7 +101,7 @@
               <span id="tagline1">Front End Developer </span>
             <span id="tagline2">&amp; Web Designer</span>
           </div>
-          <a id="contactMe" class="button" href="#contactSection" role="button" data-smooth-scroll>Contact Me
+          <a id="contactMe" class="button" href="#contactSection" role="button" aria-label="Contact Me" data-smooth-scroll>Contact Me
               <i class="fas fa-arrow-right"></i>
             </a>
         </div>
@@ -110,7 +110,7 @@
 
 
     <!-- sticky nav -->
-    <nav id="nav-stickly-container" data-sticky-container>
+    <nav id="nav-stickly-container" role="navigation" data-sticky-container>
       <div data-sticky data-margin-top="0" data-top-anchor="header:bottom" data-sticky-on="small">
         <!-- small screen bar -->
         <div class="title-bar sans" data-responsive-toggle="main-menu" data-hide-for="medium">
@@ -118,7 +118,7 @@
             <span class="title-bar-title">Shawn Rhodes</span>
           </div>
           <div class="title-bar-right">
-            <button class="menu-icon" type="button" data-toggle="offCanvas"></button>
+            <button class="menu-icon" type="button" aria-label="Open" data-toggle="offCanvas"></button>
           </div>
         </div>
 
@@ -159,7 +159,7 @@
                 <div class="cell small-12">
                   <div class="grid-x align-center">
                     <div class="cell small-8 medium-4 large-3 meImg">
-                      <img src="img/me_500px.png" class="me" alt="Me" />
+                      <img src="img/me_500px.png" class="me" alt="Shawn Rhodes" />
                     </div>
                   </div>
                 </div>
@@ -485,7 +485,7 @@
 			<div class="cell">
               <div class="card" data-equalizer-watch="row-height">
                 <a href="https://massivelines.github.io/fullscreen-album-art-for-spotify/" target="_blank">
-                      <img class="card-img-top" src="./img/projects/spotify.png" />
+                      <img class="card-img-top" src="./img/projects/spotify.png" alt="Fullscreen Album Art for Spotify" />
                     </a>
                 <div class="card-section">
                   <h4 class="car-title">Fullscreen Album Art for Spotify</h4>
@@ -511,7 +511,7 @@
 <div class="cell">
               <div class="card" data-equalizer-watch="row-height">
                 <a href="https://github.com/massivelines/login-node-for-spotify" target="_blank">
-                      <img class="card-img-top" src="./img/projects/nodejs-project.svg" />
+                      <img class="card-img-top" src="./img/projects/nodejs-project.svg" alt="Login Node Server for Spotify" />
                     </a>
                 <div class="card-section">
                   <h4 class="card-title">Login Node Server for Spotify</h4>
@@ -528,7 +528,7 @@
             <div class="cell">
               <div class="card" data-equalizer-watch="row-height">
                 <a href="https://atom.io/themes/neutral-gray-ui" target="_blank">
-                      <img class="card-img-top" src="./img/projects/atom.png" />
+                      <img class="card-img-top" src="./img/projects/atom.png" alt="Neutral Gray UI for Atom"/>
                     </a>
                 <div class="card-section">
                   <h4 class="card-title">Neutral Gray UI for Atom</h4>
@@ -553,7 +553,7 @@
             <div class="cell">
               <div class="card" data-equalizer-watch="row-height">
                 <a href="https://codepen.io/massivelines/pen/JNeOXE" target="_blank">
-                      <img class="card-img-top" src="./img/projects/simon-says.png" />
+                      <img class="card-img-top" src="./img/projects/simon-says.png" alt="Simon Says"/>
                     </a>
                 <div class="card-section">
                   <h4 class="card-title">Simon Says</h4>
@@ -571,7 +571,7 @@
             <div class="cell">
               <div class="card" data-equalizer-watch="row-height">
                 <a href="https://codepen.io/massivelines/pen/OmEqXV" target="_blank">
-                      <img class="card-img-top" src="./img/projects/calculator.png" />
+                      <img class="card-img-top" src="./img/projects/calculator.png" alt="Calculator"/>
                     </a>
                 <div class="card-section">
                   <h4 class="card-title">Calculator</h4>
@@ -589,7 +589,7 @@
             <div class="cell">
               <div class="card" data-equalizer-watch="row-height">
                 <a href="https://codepen.io/massivelines/pen/dWgpYL" target="_blank">
-                      <img class="card-img-top" src="./img/projects/tic-tac-toe.png" />
+                      <img class="card-img-top" src="./img/projects/tic-tac-toe.png" alt="Tic Tac Toe"/>
                     </a>
                 <div class="card-section">
                   <h4 class="card-title">Tic Tac Toe</h4>
@@ -814,19 +814,19 @@
         <div class="small-12 medium-4 cell small-order-4  medium-order-4">
           <div class="grid-x social-icons">
             <div class="small-4 cell">
-              <a href="https://github.com/massivelines" target="_blank">
+              <a href="https://github.com/massivelines" target="_blank" aria-label="GitHub Profile">
                     <i class="fab fa-github"></i>
                     </i>
                   </a>
             </div>
             <div class="small-4 cell">
-              <a href="https://codepen.io/massivelines/" target="_blank">
+              <a href="https://codepen.io/massivelines/" target="_blank" aria-label="Codepen Profile">
                     <i class="fab fa-codepen"></i>
                     </i>
                   </a>
             </div>
             <div class="small-4 cell">
-              <a href="https://www.linkedin.com/in/shawn-rhodes" target="_blank">
+              <a href="https://www.linkedin.com/in/shawn-rhodes" target="_blank" aria-label="Linkedin Profile">
                     <i class="fab fa-linkedin-in"></i>
                   </a>
             </div>
