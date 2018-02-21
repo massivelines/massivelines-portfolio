@@ -1,5 +1,3 @@
-// TODO: fix icon jump
-
 $(document).foundation();
 
 // holder for screen size function

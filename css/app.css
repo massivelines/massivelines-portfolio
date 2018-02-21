@@ -1,6 +1,6 @@
 body {
   color: #1B252D;
-  font-family: 'Merriweather', serif;
+  font-family: "Libre Baskerville", serif;
   overflow-x: hidden;
 }
 
@@ -9,7 +9,20 @@ header, section {
 }
 
 h1, h2, h3, h4, h5, h4, .button, .sans {
-  font-family: 'Merriweather Sans', sans-serif;
+  font-family: "proxima-nova", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-size: 2em;
+}
+h3 {
+  font-size: 1.7em;
+}
+h3 span{
+  border-bottom: solid #b8261e 2px;
 }
 
 canvas {
@@ -23,12 +36,12 @@ canvas {
   cursor: pointer;
 }
 
+/* Header Section */
+
 #header {
   color: #F5F5EB;
   background-color: #1B252D;
 }
-
-/* Header Section */
 
 #headerContainer {
   min-height: 100vh;
@@ -48,6 +61,14 @@ canvas {
 #myName {
   line-height: 1;
   font-size: 3em;
+}
+
+/* #myName h1 {
+  margin-bottom: 0;
+} */
+
+#tagline-container {
+  margin-bottom: .5em;
 }
 
 #tagline1, #tagline2 {
@@ -111,23 +132,40 @@ canvas {
 }
 
 /* About Section */
+.meImg {
+  margin: 1% 0 2% 0;
+}
 
 #aboutSection {
   padding: 3em 0;
-  background-color: #F5F5EB;
   display: flex;
   align-items: center;
 }
 
-/* Skills Section */
-
-#skillsSection {
-  padding: 3em 0;
+#aboutSection .card {
+  /* border: none; */
+  /* margin-bottom: 0; */
 }
 
-.skills-icons-container {
-  margin-bottom: 2em;
-  font-size: .8em;
+.cardSpacer{
+  padding-bottom: 3%;
+}
+
+/* Skills Section */
+.skillsSectionHeader {
+  margin-top: 5%;
+  /* padding-bottom: 1%; */
+  /* margin-bottom: 1em; */
+}
+.limited {
+  font-size: .7em;
+  vertical-align: top;
+}
+.skillsHeader {
+  font-family: "proxima-nova", sans-serif;
+  font-size: 1.4em;
+  text-decoration: underline;
+  margin: 4% 0 2% 0;
 }
 
 /* Projects Section */
@@ -160,25 +198,29 @@ canvas {
 }
 
 /* Background Section */
-
 #backgroundSection {
   display: flex;
   align-items: center;
 }
 
 .backgroundCell {
-  margin-bottom: 10%;
+  margin-bottom: 7%;
 }
 
 .backgroundTitle {
-  font-family: 'Merriweather Sans', sans-serif;
-  font-size: 1.1em;
+  font-weight: 700;
 }
 
 .backgroundDates {
-  font-size: .9em;
 }
 
+.backgroundPosition {
+
+}
+
+.backgroundDetails, .backgroundLocation, .backgroundDates{
+  font-size: .9em;
+}
 /* Footer Section */
 
 footer, footer a {
@@ -209,16 +251,15 @@ footer a:hover {
 /* Other CSS */
 
 .sectionHeader {
-  margin: 2em 0;
+  margin: 3% 0 4% 0;
   color: #1B252D;
   text-align: center;
-}
-
-.sectionHeader span {
   border-bottom: solid #b8261e 5px;
 }
 
 .square-box {
+  margin: auto;
+  width: 45%;
   position: relative
 }
 
@@ -263,110 +304,22 @@ footer a:hover {
   margin: 0;
 }
 
-.hamburger {
-  padding: 15px 15px;
-  display: inline-block;
-  cursor: pointer;
-  transition-property: opacity, filter;
-  transition-duration: 0.15s;
-  transition-timing-function: linear;
-  font: inherit;
-  color: inherit;
-  text-transform: none;
-  background-color: transparent;
-  border: 0;
-  margin: 0;
-  overflow: visible;
-}
-
-.hamburger:hover {
-  opacity: 0.7;
-}
-
-.hamburger-box {
-  width: 40px;
-  height: 16px;
-  display: inline-block;
-  position: relative;
-}
-
-.hamburger-inner {
-  display: block;
-  top: 50%;
-  margin-top: -2px;
-}
-
-.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-  width: 20px;
-  height: 4px;
-  /* width: 40px;
-  height: 4px; */
-  background-color: #96A5A8;
-  position: absolute;
-  transition-property: transform;
-  transition-duration: 0.15s;
-  transition-timing-function: ease;
-}
-
-.hamburger-inner::before, .hamburger-inner::after {
-  content: "";
-  display: block;
-}
-
-.hamburger-inner::before {
-  top: -10px;
-}
-
-.hamburger-inner::after {
-  bottom: -10px;
-}
-
-/*
-   * Squeeze
-   */
-
-.hamburger--squeeze .hamburger-inner {
-  transition-duration: 0.075s;
-  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-}
-
-.hamburger--squeeze .hamburger-inner::before {
-  transition: top 0.075s 0.12s ease, opacity 0.075s ease;
-}
-
-.hamburger--squeeze .hamburger-inner::after {
-  transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-}
-
-.hamburger--squeeze.is-active .hamburger-inner {
-  transform: rotate(45deg);
-  transition-delay: 0.12s;
-  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-
-.hamburger--squeeze.is-active .hamburger-inner::before {
-  top: 0;
-  opacity: 0;
-  transition: top 0.075s ease, opacity 0.075s 0.12s ease;
-}
-
-.hamburger--squeeze.is-active .hamburger-inner::after {
-  bottom: 0;
-  transform: rotate(-90deg);
-  transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-
 /* Medium and up */
 
 @media screen and (min-width: 40em) {
   #myName {
-    line-height: 1;
     font-size: 1.7em;
+    line-height: .7;
   }
   #tagline1, #tagline2 {
     white-space: nowrap;
     font-size: 2em;
   }
+
+  .backgroundCell {
+    margin-bottom: 5%;
+  }
+
   .skills-icons-container {
     font-size: .8em;
   }
@@ -376,24 +329,17 @@ footer a:hover {
   #resumeLink {
     text-align: right;
   }
-  .backgroundCell {
-    margin-bottom: 3%;
-  }
-  .backgroundTitle {
-    font-family: 'Merriweather Sans', sans-serif;
-    font-size: 1.2em;
-  }
-  .backgroundDates {
-    font-size: .8em;
-  }
 }
 
 /* Large and up */
 
 @media screen and (min-width: 64em) {
   #myName {
-    line-height: 1;
     font-size: 2em;
+    line-height: .8;
+  }
+  .backgroundCell {
+    margin-bottom: 8%;
   }
   .skills-icons-container {
     font-size: 1em;
