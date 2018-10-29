@@ -211,15 +211,12 @@ canvas {
   font-weight: 700;
 }
 
-.backgroundDates {
-}
-
-.backgroundPosition {
-
-}
-
 .backgroundDetails, .backgroundLocation, .backgroundDates{
   font-size: .9em;
+}
+
+.backgroundDetails ul {
+  margin-bottom: 0;
 }
 /* Footer Section */
 
@@ -317,7 +314,7 @@ footer a:hover {
   }
 
   .backgroundCell {
-    margin-bottom: 5%;
+    margin-bottom: 3%;
   }
 
   .skills-icons-container {
@@ -339,7 +336,7 @@ footer a:hover {
     line-height: .8;
   }
   .backgroundCell {
-    margin-bottom: 8%;
+    margin-bottom: 3%;
   }
   .skills-icons-container {
     font-size: 1em;
