@@ -186,6 +186,22 @@ canvas {
 #projectsSection .card-divider .grid-x {
   width: 100%;
 }
+.card-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-skill-image {
+  height: 25px;
+  margin-right: 10px;
+}
+
+.card-body {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
 #projectsSection .card-divider a {
   margin-left: 1%;
