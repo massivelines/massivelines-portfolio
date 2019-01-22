@@ -1,0 +1,29 @@
+nav {
+  border-bottom: solid lightgreen 1px;
+  position: sticky;
+  top: 0;
+  background-color: lightgray;
+
+  .top-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .menu {
+    width: 100%;
+    position: absolute;
+    background-color: lightgray;
+    z-index: 1000;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+  }
+}

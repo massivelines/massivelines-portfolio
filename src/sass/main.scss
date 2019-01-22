@@ -1,0 +1,25 @@
+@import url('https://use.typekit.net/kpr8wpw.css');
+
+@import './reboot/_reboot';
+@import './_vars';
+@import './_mixins';
+
+@import '../components/Nav/Nav';
+@import '../components/Footer/Footer';
+@import '../components/About/About';
+@import '../components/Project/Project';
+@import '../components/Background/Background';
+
+body {
+  font-family: proxima-nova, sans-serif;
+}
+
+section {
+  padding: 10px;
+  border: solid black 1px;
+}
+
+canvas {
+  display: block;
+  background-color: lightblue;
+}

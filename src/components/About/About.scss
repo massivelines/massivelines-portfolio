@@ -1,0 +1,38 @@
+.about {
+}
+
+.skill-group-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.group-title {
+}
+.skills-icons-container {
+  display: flex;
+}
+
+.skill {
+  width: 33%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.icon-container {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+}
+
+img {
+  width: 100%;
+}
+
+.skill-title {
+  padding-top: 10px;
+  width: 100%;
+  text-align: center;
+  flex-shrink: 1;
+}
