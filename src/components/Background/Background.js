@@ -2,21 +2,23 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Background = ({ education, employment }) => (
-  <section className="background">
+  <section id="background" className="background">
     <h3>Background</h3>
 
     <div className="employment-container">
       <h4>Employment</h4>
       {employment.map(empData => (
-        <div key={empData.title}>
-          <div>{empData.title}</div>
-          <div>{empData.location}</div>
-          <div>{empData.dates}</div>
-          <div>
+        <div key={empData.title} className="job-container">
+          <div className="title">{empData.title}</div>
+          <div className="location">{empData.location}</div>
+          <div className="dates">{empData.dates}</div>
+          <ul className="bullets-container">
             {empData.bullets.map(bullet => (
-              <div key={bullet}>{bullet}</div>
+              <li key={bullet} className="bullet">
+                {bullet}
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       ))}
     </div>
@@ -24,10 +26,10 @@ const Background = ({ education, employment }) => (
     <div className="education-container">
       <h4>Education</h4>
       {education.map(eduData => (
-        <div key={eduData.title}>
-          <div>{eduData.title}</div>
-          <div>{eduData.location}</div>
-          <div>{eduData.dates}</div>
+        <div key={eduData.title} className="school-container">
+          <div className="title">{eduData.title}</div>
+          <div className="location">{eduData.location}</div>
+          <div className="dates">{eduData.dates}</div>
         </div>
       ))}
     </div>

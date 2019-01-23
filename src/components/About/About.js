@@ -3,7 +3,7 @@ import React from 'react';
 import skills from '../../data/skills';
 
 const About = () => (
-  <section className="about">
+  <section id="about" className="about">
     <h3>About</h3>
     <p>
       I am a front end web developer / designer based in Dallas, Texas. I take

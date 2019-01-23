@@ -20,7 +20,7 @@ class IndexPage extends PureComponent {
       <Layout location={location} title={siteTitle}>
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
         <About />
-        <section>
+        <section id="portfolio">
           <h3>Portfolio</h3>
           {projectArray.map(({ node }) => (
             <Project key={node.fields.slug} projectData={node} />

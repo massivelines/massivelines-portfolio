@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Footer = () => (
-  <footer>
+  <footer id="contact">
     <div>
       <div>
         <a href="tel:501-733-9480">501-733-9480</a>
