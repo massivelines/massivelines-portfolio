@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 
 import Layout from '../components/Layout';
 import About from '../components/About';
-import Project from '../components/Project';
+import Portfolio from '../components/Portfolio';
 import Background from '../components/Background';
 
 import SEO from '../components/seo';
@@ -20,12 +20,13 @@ class IndexPage extends PureComponent {
       <Layout location={location} title={siteTitle}>
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
         <About />
-        <section id="portfolio">
-          <h3>Portfolio</h3>
+        <Portfolio data={projectArray} />
+        {/* <section id="portfolio">
+          <div className="section-title">Portfolio</div>
           {projectArray.map(({ node }) => (
             <Project key={node.fields.slug} projectData={node} />
           ))}
-        </section>
+        </section> */}
         <Background education={education} employment={employment} />
       </Layout>
     );

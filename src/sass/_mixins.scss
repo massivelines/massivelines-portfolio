@@ -1,14 +1,29 @@
+// https://www.sitepoint.com/using-sass-maps/
+
+// @mixin screenSize($size) {
+//   // Check if size exists, else oput warning
+//   @if map-has-key($breakpoints, $size) {
+//     // get with of size
+//     $width: map-get($breakpoints, $size);
+//     // write media query
+//     @media (min-width: $width) {
+//       @content;
+//     }
+//   }
+//   else {
+//     @warn 'Invalid size: #{$size}.';
+//   }
+// }
+
 @mixin screenSize($size) {
-  // Check if breakpoint exists, else oput warning
+  // Check if size exists, else oput warning
   @if map-has-key($breakpoints, $size) {
-    // get with of breakpoint
-    $width: map-get($breakpoints, $size);
     // write media query
-    @media (min-width: $width) {
+    @media (min-width: #{map-get($breakpoints, $size)}) {
       @content;
     }
-  }
-  else {
-    @warn 'Invalid breakpoint: #{$size}.';
+  } @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$size}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
   }
 }

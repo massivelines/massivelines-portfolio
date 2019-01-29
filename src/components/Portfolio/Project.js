@@ -6,7 +6,7 @@ const Project = ({ projectData }) => {
   const title = projectData.frontmatter.title || projectData.fields.slug;
   const { thumbnail, codeLink, liveLink, icons } = projectData.frontmatter;
   return (
-    <div className="project-container">
+    <div className="project">
       <img src={thumbnail} />
       <Link to={projectData.fields.slug}>
         <h4>{title}</h4>

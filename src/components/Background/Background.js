@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const Background = ({ education, employment }) => (
   <section id="background" className="background">
-    <h3>Background</h3>
+    <div className="section-title">Background</div>
 
     <div className="employment-container">
       <h4>Employment</h4>

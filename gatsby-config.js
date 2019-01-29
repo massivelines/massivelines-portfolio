@@ -5,6 +5,8 @@ module.exports = {
     author: `@gatsbyjs`,
   },
   plugins: [
+    'gatsby-plugin-ngrok-tunneling',
+    'gatsby-plugin-svgr',
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,

@@ -1,13 +1,22 @@
 import React from 'react';
 
+import Circle from './Circle';
+
 const Header = () => (
-  <div>
-    <div>
-      <h1>Shawn Rhodes</h1>
-      <h2>Front End Developer &amp; Web Designer</h2>
-      <button type="button">Email Me</button>
+  <header>
+    {/* TODO: chagne classnames */}
+    <div className="header-graphic">
+      <div className="name">
+        <span>Shawn</span>
+        <span>Rhodes</span>
+      </div>
+      <Circle />
     </div>
-  </div>
+    <div className="tagline-container">
+      <div className="tagline">Front End Developer &amp; Web Designer</div>
+      {/* <button type="button">Email Me</button> */}
+    </div>
+  </header>
 );
 
 export default Header;

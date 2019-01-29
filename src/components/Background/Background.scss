@@ -1,4 +1,16 @@
 .background {
+  @include screenSize(md) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .employment-container {
+      width: 55%;
+    }
+    .education-container {
+      width: 35%;
+    }
+  }
+
   .employment-container {
     .job-container {
       padding-bottom: 20px;
