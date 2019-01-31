@@ -11,6 +11,8 @@ import SEO from '../components/seo';
 import education from '../data/education';
 import employment from '../data/employment';
 
+import Header from '../components/Header';
+
 class IndexPage extends PureComponent {
   render() {
     const { data, location } = this.props;
@@ -19,6 +21,7 @@ class IndexPage extends PureComponent {
     return (
       <Layout location={location} title={siteTitle}>
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+        <Header />
         <About />
         <Portfolio data={projectArray} />
         {/* <section id="portfolio">
@@ -51,7 +54,13 @@ export const projectQuery = graphql`
           frontmatter {
             title
             description
-            thumbnail
+            thumbnail {
+              childImageSharp {
+                sizes(maxWidth: 768) {
+                  ...GatsbyImageSharpSizes
+                }
+              }
+            }
             codeLink
             liveLink
             icons

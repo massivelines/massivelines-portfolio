@@ -1,11 +1,11 @@
 ---
 order: 2
 title: Fullscreen Album Art for Spotify
-thumbnail: https://via.placeholder.com/150
+thumbnail: ./spot_1.png
 description: A web-based app that allows you to see your current spotify playing track album art fullscreen on any browser.
 codeLink: https://github.com/massivelines/fullscreen-album-art-for-spotify
 liveLink: ttps://massivelines.github.io/fullscreen-album-art-for-spotify
-icons: [HTML5, CSS3, Javascript, jQuery, Foundation]
+icons: [HTML5, CSS3, javascript, foundation]
 ---
 
 Oh, I think we should just stay friends. What are their names? Take me to your leader! Too much work. Let's burn it and say we dumped it in the sewer.

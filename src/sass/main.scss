@@ -11,6 +11,8 @@
 @import '../components/Portfolio/Portfolio';
 @import '../components/Background/Background';
 
+@import '../templates/project';
+
 body {
   font-family: proxima-nova, sans-serif;
   background-color: $background-color;
@@ -45,5 +47,4 @@ section {
 
 canvas {
   display: block;
-  background-color: lightblue;
 }

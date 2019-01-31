@@ -1,11 +1,11 @@
 ---
 order: 5
-title: Z Club of Texas
-thumbnail: https://via.placeholder.com/150
+title: WIP Z Club of Texas
+thumbnail: ./zcot_1.png
 description: Duis elementum commodo justo. Nam suscipit placerat libero non euismod nibh. Integer at lorem neque. Quisque id mauris finibus venenatis arcu nec cursus mi. Interdum et malesuada fames ac ante ipsum.
 codeLink: https://github.com/massivelines/
 liveLink: https://github.com/massivelines/
-icons: [React, Gatsbyjs, Sass]
+icons: [react, gatsby, sass]
 ---
 
 When will that be? Bender, quit destroying the universe! You lived before you met me?! Tell her you just want to talk. It has nothing to do with mating. Would you censor the Venus de Venus just because you can see her spewers?

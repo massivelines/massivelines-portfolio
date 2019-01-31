@@ -1,11 +1,11 @@
 ---
-order: 1
+order: 4
 title: React Role Based Admin
-thumbnail: https://via.placeholder.com/150
+thumbnail: ./admin_1.png
 description: A striped down work in progress version of the role based admin section for the Harbinger web app. Data has been randomized and some functionality has been changed or removed to comply with the Harbinger NDA.
 codeLink: https://github.com/massivelines/role-based-admin
 liveLink: https://massivelines.github.io/role-based-admin
-icons: [React, Typescript, React Router, Apollo, GraphQL, Sass]
+icons: [react, typescript, router, apollo, graphql, sass]
 ---
 
 Who's brave enough to fly into something we all keep calling a death sphere? Shut up and get to the point! No! Don't jump! As an interesting side note, as a head without a body, I envy the dead. You've killed me! Oh, you've killed me!
