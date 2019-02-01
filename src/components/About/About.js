@@ -4,8 +4,8 @@ import skills from '../../data/skills';
 
 const About = () => (
   <section id="about" className="about">
-    <div className="section-title">About</div>
     <div className="text">
+      <div className="section-title">About</div>
       <p>
         I am a front end web developer / designer based in Dallas, Texas. I take
         pride in code that is easy to read, well documented, and efficient

@@ -10,4 +10,6 @@ icons: [javascript, node, express]
 
 A Node and Express server built to log into the Spotify API deployed to Heroku. Its used with the Fullscreen Album Art for Spotify app.
 
+<code-links code="https://github.com/massivelines/login-node-for-spotify"></code-links>
+
 ![Node](./node_1.png)

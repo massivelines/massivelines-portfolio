@@ -43,7 +43,7 @@ const animate = (path, translateY, scaleY) => {
 
   anime({
     targets: path,
-    duration: () => anime.random(4000, 8000),
+    duration: () => anime.random(4000, 6000),
     scaleY: () => {
       let scale = 1;
       if (initScale !== 1) {

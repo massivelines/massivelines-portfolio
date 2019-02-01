@@ -16,6 +16,8 @@ The original system was built on HTML tables and flash. I used RequireJS to spli
 
 Primary use is on phones and tablets but required support down to IE11. The system uses local web storage to retain values entered into the input boxes to use on other sections and pages. Since it is primarily mobile the input boxes are set up with the "tel" input and decimal formatting is handled for the user for quicker entry. It also uses CSS Grids to easily change positions depending on the layout.
 
+<code-links code="https://github.com/massivelines/power-of-numbers" live="https://massivelines.github.io/power-of-numbers/"></code-links>
+
 ### Tablet and Mobile
 
 ![Power of Numbers](pon_2.png)

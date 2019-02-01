@@ -14,18 +14,13 @@ const Footer = () => (
         <span className="text">501-733-9480</span>
       </a>
 
-      <a
-        href="mailto:shawn@massivelines.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Email"
-      >
+      <a href="mailto:shawn@massivelines.com" aria-label="Email">
         <Email className="icon" />
         <span className="text">shawn@massivelines.com</span>
       </a>
 
       <a
-        href="/0#"
+        href="/Shawn_Rhodes_Resume.pdf"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Resume"

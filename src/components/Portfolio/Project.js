@@ -12,25 +12,27 @@ const Project = ({ projectData }) => {
     <div className="project">
       <div className="content">
         <Link to={projectData.fields.slug}>
-          <div
+          {/* <div
             className="image"
             style={{
               backgroundImage: `url(${thumbnail.childImageSharp.sizes.src})`,
             }}
-          />
+          /> */}
+          <Img className="image" sizes={thumbnail.childImageSharp.sizes} />
         </Link>
         <div className="details">
           <Link className="title" to={projectData.fields.slug}>
             {title}
+            {/* <div className="bar1" /> */}
           </Link>
-          <div className="bar1" />
-          <div className="fade-content">
+          {/* <div className="fade-content">
             <p
+              className="text"
               dangerouslySetInnerHTML={{
                 __html: projectData.frontmatter.description,
               }}
             />
-            <div>
+            <div className="icon-container">
               {icons.map(iconName => {
                 return (
                   <span key={iconName}>
@@ -46,7 +48,7 @@ const Project = ({ projectData }) => {
             <div className="card-footer">
               <Link to={projectData.fields.slug}>More Info</Link>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

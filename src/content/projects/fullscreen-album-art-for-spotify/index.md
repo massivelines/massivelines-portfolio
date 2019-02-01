@@ -14,6 +14,8 @@ Using CSS3 I changed the background art to black and white, setup positioning so
 
 I built this app so I could have the Spotify album art on my tv while using other devices to play and control Spotify.
 
+<code-links code="https://github.com/massivelines/fullscreen-album-art-for-spotify" live="https://massivelines.github.io/fullscreen-album-art-for-spotify"></code-links>
+
 ### Even work on the TV
 
 Will work on anything that has a browser

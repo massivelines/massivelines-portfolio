@@ -7,6 +7,7 @@
   "dependencies": {
     "@svgr/webpack": "^4.1.0",
     "animejs": "^3.0.1",
+    "body-scroll-lock": "^2.6.1",
     "gatsby": "^2.0.91",
     "gatsby-image": "^2.0.26",
     "gatsby-plugin-google-analytics": "^2.0.9",
@@ -29,8 +30,10 @@
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
     "react-device-detect": "^1.6.2",
+    "react-div-100vh": "^0.3.2",
     "react-dom": "^16.6.3",
     "react-helmet": "^5.2.0",
+    "react-locky": "^1.5.4",
     "react-visibility-sensor": "^5.0.2",
     "rehype-react": "^3.1.0",
     "svg-react-loader": "^0.4.6"

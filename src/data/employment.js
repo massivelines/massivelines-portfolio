@@ -1,8 +1,8 @@
 const employment = [
   {
-    title: 'Jr. Developer (Freelance)',
+    title: 'Jr. Developer',
     location: 'Creative Circle – Dallas Tx',
-    dates: 'November 2018 to Current',
+    dates: 'November 2018 to January 2019',
     bullets: [
       'Developed web app for in-store sales team to increase sales and profit',
       'Refactored legacy code to incorporate current standards and practices',
