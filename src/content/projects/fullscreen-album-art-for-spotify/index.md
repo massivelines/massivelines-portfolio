@@ -2,12 +2,29 @@
 order: 2
 title: Fullscreen Album Art for Spotify
 thumbnail: ./spot_1.png
-description: A web-based app that allows you to see your current spotify playing track album art fullscreen on any browser.
+description: A web-based app that ties into the users currently playing Spotify album and displays the album art on any browser.
 codeLink: https://github.com/massivelines/fullscreen-album-art-for-spotify
-liveLink: ttps://massivelines.github.io/fullscreen-album-art-for-spotify
-icons: [HTML5, CSS3, javascript, foundation]
+liveLink: https://massivelines.github.io/fullscreen-album-art-for-spotify
+icons: [HTML5, CSS3, javascript]
 ---
 
-Oh, I think we should just stay friends. What are their names? Take me to your leader! Too much work. Let's burn it and say we dumped it in the sewer.
+A web-based app that ties into the users currently playing Spotify album and displays the album art on any browser. It takes the users top 50 most listened to albums and the albums from the last 50 played tracks and mixes the cover art randomly together.
 
-I guess because my parents keep telling me to be more ladylike. As though! You'll have all the Slurm you can drink when you're partying with Slurms McKenzie! We can't compete with Mom! Her company is big and evil! Ours is small and neutral!
+Using CSS3 I changed the background art to black and white, setup positioning so they clipped offscreen, added a drop shadow to the current playing art, and created a crossfade for art changes.
+
+I built this app so I could have the Spotify album art on my tv while using other devices to play and control Spotify.
+
+### Even work on the TV
+
+Will work on anything that has a browser
+![TV](spot_4.png)
+
+### Fullscreen
+
+Shows current playing album as the main focus
+![Fullscreen](spot_2.png)
+
+### Top 50
+
+User's top 50 albums mixed with the last 50 albums listened to
+![Top 50](spot_3.png)

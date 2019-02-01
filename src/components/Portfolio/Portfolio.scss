@@ -1,57 +1,96 @@
 .projects-container {
   min-height: 650px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  position: relative;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(5 1fr);
   grid-gap: 20px;
-}
-.projects-container div:first-child {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 3;
+
+  @include screenSize(lg) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    & div:first-child {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 3;
+    }
+  }
 }
 
 .project {
-  height: 100%;
-  width: 100%;
-  background-size: cover;
-  position: relative;
-
-  .thumbnail {
-    z-index: 1;
-  }
-
-  .icon {
-    height: 25px;
-  }
+  border: solid 1px rgba(0, 0, 0, 0.1);
 
   .content {
-    position: absolute;
-    bottom: 0;
-    background-color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 20px;
-    margin-right: 20px;
+    position: relative;
 
-    .title {
-      display: inline;
-      font-size: 18px;
-      font-weight: 600;
-      padding: 0 10px;
+    .image {
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      &::after {
+        content: '';
+        display: block;
+        padding-bottom: 100%;
+      }
     }
+    .details {
+      background-color: rgba(255, 255, 255, 1);
+      border-top: solid 1px rgba(0, 0, 0, 0.2);
+      border-right: solid 1px rgba(0, 0, 0, 0.2);
+      border-bottom: solid 1px rgba(0, 0, 0, 0.2);
 
-    .bar1 {
-      content: '';
-      width: 100%;
-      height: 2px;
-      margin-top: 2px;
-      background-color: $header-background;
+      @include screenSize(lg) {
+        position: absolute;
+        top: 50px;
+        z-index: 5;
+      }
+
+      a {
+        color: $body-text;
+      }
+
+      .title {
+        display: inline-block;
+        font-size: 18px;
+        font-weight: 600;
+        padding: 10px;
+
+        @include screenSize(lg) {
+          padding: 0 10px;
+        }
+      }
+
+      .bar1 {
+        content: '';
+        width: 100%;
+        height: 2px;
+        margin-bottom: 2px;
+        background-color: $header-background;
+      }
+
+      .fade-content {
+        // max-width: 0;
+        // max-height: 0;
+        // overflow: hidden;
+        // transition: max-width 0.3s ease 1.5s, max-height 0.8s ease;
+
+        .icon {
+          height: 25px;
+          margin-left: 10px;
+        }
+        p,
+        .card-footer {
+          margin: 10px;
+        }
+      }
     }
+  }
 
-    a {
-      color: $body-text;
-    }
-
+  // project hover
+  @include screenSize(lg) {
     .fade-content {
       max-width: 0;
       max-height: 0;
@@ -59,32 +98,12 @@
       transition: max-width 0.3s ease 1.5s, max-height 0.8s ease;
     }
 
-    p,
-    .card-footer {
-      margin: 10px;
-    }
-
-    .icon {
-      margin-left: 10px;
-    }
-  }
-
-  &:hover {
-    .content {
-      // max-height: 50%;
-      // height: 50vh;
-      // transition: all 1s ease-out;
-    }
-
-    .test2 {
-      // flex: 1;
-    }
-    .fade-content {
-      max-width: 700px;
-      max-height: 500px;
-      transition: max-width 0.3s ease, max-height 0.8s ease 0.5s;
-      // height: 100%;
-      // display: block;
+    &:hover {
+      .fade-content {
+        max-width: 700px;
+        max-height: 500px;
+        transition: max-width 0.3s ease, max-height 0.8s ease 0.5s;
+      }
     }
   }
 }

@@ -1,21 +1,43 @@
 import React from 'react';
+import VisibilitySensor from 'react-visibility-sensor';
 
 import Circle from './Circle';
 
-const Header = () => (
-  <header>
-    {/* TODO: chagne classnames */}
-    <div className="header-graphic">
-      <div className="name">
-        <span>Shawn</span>
-        <span>Rhodes</span>
-      </div>
-      <Circle />
-    </div>
-    <div className="tagline-container">
-      <div className="tagline">Front End Developer &amp; Web Designer</div>
-      {/* <button type="button">Email Me</button> */}
-    </div>
+const Header = ({ indexPage, offScreen }) => (
+  <header id="home" className={`${indexPage && 'index-page'}`}>
+    {indexPage ? (
+      <>
+        <VisibilitySensor
+          partialVisibility
+          onChange={visData => {
+            offScreen(visData);
+          }}
+        >
+          <div className="header-graphic">
+            <div className="name">
+              <span>Shawn</span>
+              <span>Rhodes</span>
+            </div>
+            <Circle />
+          </div>
+        </VisibilitySensor>
+        <div className="tagline-container">
+          <div className="tagline">Front End Developer &amp; Web Designer</div>
+        </div>
+      </>
+    ) : (
+      <VisibilitySensor
+        partialVisibility
+        onChange={visData => {
+          offScreen(visData);
+        }}
+      >
+        <div className="template-header">
+          <Circle />
+          <div className="name">Shawn Rhodes</div>
+        </div>
+      </VisibilitySensor>
+    )}
   </header>
 );
 

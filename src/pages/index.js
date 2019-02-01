@@ -11,7 +11,7 @@ import SEO from '../components/seo';
 import education from '../data/education';
 import employment from '../data/employment';
 
-import Header from '../components/Header';
+// import Header from '../components/Header';
 
 class IndexPage extends PureComponent {
   render() {
@@ -19,9 +19,9 @@ class IndexPage extends PureComponent {
     const siteTitle = data.site.siteMetadata.title;
     const projectArray = data.allMarkdownRemark.edges;
     return (
-      <Layout location={location} title={siteTitle}>
+      <Layout indexPage={true} location={location} title={siteTitle}>
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-        <Header />
+        {/* <Header /> */}
         <About />
         <Portfolio data={projectArray} />
         {/* <section id="portfolio">

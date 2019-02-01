@@ -2,16 +2,28 @@
 order: 3
 title: Power of Numbers
 thumbnail: ./pon_1.png
-description: Ut tellus ex aliquam eu est a viverra aliquam turpis. Maecenas vestibulum malesuada ipsum. Proin congue justo et condimentum elementum.
-codeLink: https://github.com/massivelines/
-liveLink: https://github.com/massivelines/
+description: A web-based app built for mobile devices to assist an in-store sales team to drive profit
+codeLink: https://github.com/massivelines/power-of-numbers
+liveLink: https://massivelines.github.io/power-of-numbers/
 icons: [gulp, javascript, requirejs, sass]
 ---
 
-![Chinese Salty Egg](./salty_egg.jpg)
+A web-based app built for mobile devices to assist an in-store sales team to drive profit.
 
-There's no part of that sentence I didn't like! That could be 'my' beautiful soul sitting naked on a couch. If I could just learn to play this stupid thing. It's okay, Bender. I like cooking too. Look, last night was a mistake.
+Requirements were that it had to be easily updatable by someone with little javascript knowledge. Hince the reason I wasn't able to include es6 or any advance frameworks and libraries.
 
-Stop it, stop it. It's fine. I will 'destroy' you! I daresay that Fry has discovered the smelliest object in the known universe! This is the worst kind of discrimination: the kind against me! You know, I was God once.
+The original system was built on HTML tables and flash. I used RequireJS to split the Javascript files up so I could call only what is needed depending on the page. This also allowed me to make it modular if I needed to add in features later.
 
-![Chinese Salty Egg](./salty_egg.jpg)
+Primary use is on phones and tablets but required support down to IE11. The system uses local web storage to retain values entered into the input boxes to use on other sections and pages. Since it is primarily mobile the input boxes are set up with the "tel" input and decimal formatting is handled for the user for quicker entry. It also uses CSS Grids to easily change positions depending on the layout.
+
+### Tablet and Mobile
+
+![Power of Numbers](pon_2.png)
+
+### Tel Keypad With Auto Formating Numbers
+
+![Phone](pon_3.png)
+
+### Screen Size Based layout
+
+![Tablet](pon_4.png)

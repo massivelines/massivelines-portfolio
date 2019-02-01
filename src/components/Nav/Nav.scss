@@ -1,11 +1,15 @@
 $navOpen: width 0.3s ease, height 0.3s ease 1s;
 $navClose: height 0.3s ease, width 0.3s ease 1s;
-$bar1Open: top 0.3s ease, transform 0.3s ease 1s;
-$bar1Close: top 0.3s ease 1s, transform 0.3s ease;
-$bar2Open: transform 0.3s ease 1s;
-$bar2Close: transform 0.3s ease;
-$bar3Open: width 0.3s ease, height 0.3s ease 0.5s;
-$bar3Close: width 0.3s ease 1s, height 0.3s ease;
+$bar1Open: top 0.3s ease, transform 0.3s ease 1s,
+  background-color 0.3s ease 0.5s;
+$bar1Close: top 0.3s ease 1s, transform 0.3s ease,
+  background-color 0.3s ease 0.5s;
+$bar2Open: transform 0.3s ease 1s, background-color 0.3s ease 0.5s;
+$bar2Close: transform 0.3s ease, background-color 0.3s ease 0.5s;
+$bar3Open: width 0.3s ease, height 0.3s ease 0.5s,
+  background-color 0.3s ease 0.5s;
+$bar3Close: width 0.3s ease 1s, height 0.3s ease,
+  background-color 0.3s ease 0.5s;
 $backgroundOpen: height 0.3s ease 0.5s;
 $backgroundClose: height 0.3s ease 0.5s;
 $linkVisibilityOpen: visibility 0s linear 1s;
@@ -19,16 +23,51 @@ nav {
   position: fixed;
   top: 0;
   right: 0px;
-  // from open to close
   transition: $navClose;
   z-index: 100;
 
+  // When menu is open
   &.menu-open {
     width: 100%;
     height: 100vh;
     transition: $navOpen;
+
+    .bar1 {
+      top: 20px;
+      transform: rotate(45deg);
+      transition: $bar1Open;
+    }
+
+    .bar2 {
+      transform: rotate(-45deg);
+      transition: $bar2Open;
+    }
+
+    .bar3 {
+      width: 100%;
+      transition: $bar3Open;
+    }
+
+    &.change-color {
+      .bar1,
+      .bar2,
+      .bar3 {
+        background-color: $header-foreground;
+        // transition: background-color 0.3s ease;
+      }
+    }
   }
 
+  // change color if header is hidden
+  &.change-color {
+    .bar1,
+    .bar2,
+    .bar3 {
+      background-color: $body-text;
+    }
+  }
+
+  // trigger for menu
   .trigger {
     content: '';
     position: fixed;
@@ -38,10 +77,10 @@ nav {
     position: fixed;
     top: 0;
     right: 0;
-    // background-color: darkgray;
     z-index: 2000;
   }
 
+  // bars original position
   .bar1 {
     content: '';
     display: block;
@@ -52,12 +91,8 @@ nav {
     top: 10px;
     right: 10px;
     transition: $bar1Close;
-
-    &.menu-open {
-      top: 20px;
-      transform: rotate(45deg);
-      transition: $bar1Open;
-    }
+    z-index: 2001;
+    pointer-events: none;
   }
   .bar2 {
     content: '';
@@ -69,29 +104,21 @@ nav {
     top: 20px;
     right: 10px;
     transition: $bar2Close;
-
-    &.menu-open {
-      transform: rotate(-45deg);
-      transition: $bar2Open;
-    }
+    z-index: 2001;
+    pointer-events: none;
   }
   .bar3 {
     content: '';
     display: block;
     height: 2px;
-
     background-color: $header-foreground;
     position: absolute;
     bottom: 10px;
     right: 10px;
     width: 15px;
     transition: $bar3Close;
-
-    &.menu-open {
-      width: 100%;
-      // width: calc(100vw - 20px);
-      transition: $bar3Open;
-    }
+    z-index: 2001;
+    pointer-events: none;
   }
 
   .background {
@@ -110,22 +137,15 @@ nav {
     }
 
     .link-container {
-      // width: 100%;
-      // height: 100%;
-      // padding: 20px;
       .link-list {
         margin: 0;
         padding: 0;
-        // width: 100%;
         height: 100vh;
-        // position: relative;
         display: flex;
         flex-wrap: wrap;
 
         li {
           width: 100%;
-          // height: 100%;
-
           margin: 20px;
           list-style-type: none;
           position: relative;
@@ -133,156 +153,24 @@ nav {
           .test {
             display: block;
             height: 100%;
-            // width: 100%;
             position: relative;
             overflow: hidden;
-            // background-color: lightgreen;
 
             .link {
-              // height: 100%;
-              // width: 100%;
-              // top: 100%;
-              // overflow: hidden;
-
               font-size: 48px;
               position: absolute;
               transform: translateY(100%);
-              // transition-delay: 0;
               color: #f6f7eb;
 
               &.menu-open {
-                // top: 0;
                 transform: translateY(0%);
                 transition-property: transform;
                 transition-duration: 0.6s;
               }
             }
           }
-
-          // .link {
-          //   visibility: hidden;
-          //   font-size: 48px;
-          //   position: relative;
-          //   height: 100%;
-          //   left: 0;
-          //   right: 0;
-          //   transition: $linkVisibilityClose;
-
-          //   &::after {
-          //     right: 0;
-          //     top: 0;
-          //     position: absolute;
-          //     content: '';
-          //     height: 100%;
-          //     width: 100%;
-          //     background: lightcyan;
-          //     // background: lightcoral;
-          //   }
-          //   &.menu-open {
-          //     visibility: visible;
-          //     transition: $linkVisibilityOpen;
-
-          //     &::after {
-          //       height: 0%;
-          //       transition: $linkOpen;
-          //     }
-          //   }
-          // }
         }
       }
     }
   }
 }
-//   .link-container {
-//     // visibility: hidden;
-//     width: 100%;
-//     height: 100%;
-//     // opacity: 0;
-
-//     .link-list {
-//       width: 100%;
-//       height: 100%;
-//       // display: flex;
-//       // flex-direction: column;
-
-//       // li {
-//       //   flex: 1 1 auto;
-//       // }
-//     }
-
-//     &.menu-open {
-//       // visibility: visible;
-//       // opacity: 1;
-//       // transition: opacity 0.3s 1s ease;
-//     }
-//   }
-// }
-
-// li {
-//   font-size: 30px;
-//   // visibility: hidden;
-//   height: 0;
-
-//   &.menu-open {
-//     // visibility: visible;
-//     // width: 100%;
-//     // transition: width 1s 1s ease;
-//   }
-
-// .top-bar {
-//   width: 100%;
-//   height: 100%;
-//   background-color: darkblue;
-
-//   .hamburger-container {
-//     content: '';
-//     position: absolute;
-//     top: 0;
-//     right: 0;
-//     width: 25px;
-//     margin-top: 10px;
-//     margin-right: 10px;
-//     // height: 35px;
-//     background-color: lightseagreen;
-//   }
-//   .bar1 {
-//     content: '';
-//     display: block;
-//     height: 1px;
-//     width: 25px;
-//     margin-bottom: 7px;
-//     background-color: black;
-//   }
-//   .bar2 {
-//     content: '';
-//     display: block;
-//     height: 1px;
-//     width: 25px;
-//     margin-bottom: 7px;
-//     background-color: black;
-//   }
-//   .bar3 {
-//     content: '';
-//     display: block;
-//     height: 1px;
-//     width: 25px;
-//     background-color: black;
-//   }
-// }
-
-// .menu {
-//   width: 100%;
-//   position: absolute;
-//   background-color: lightgray;
-//   z-index: 1000;
-// }
-
-// ul {
-//   margin: 0;
-//   padding: 0;
-//   li {
-//     margin: 0;
-//     padding: 0;
-//     list-style-type: none;
-//   }
-// }

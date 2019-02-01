@@ -2,12 +2,18 @@
 order: 5
 title: WIP Z Club of Texas
 thumbnail: ./zcot_1.png
-description: Duis elementum commodo justo. Nam suscipit placerat libero non euismod nibh. Integer at lorem neque. Quisque id mauris finibus venenatis arcu nec cursus mi. Interdum et malesuada fames ac ante ipsum.
-codeLink: https://github.com/massivelines/
-liveLink: https://github.com/massivelines/
+description: A JAMstack website built for the Z Club of Texas using Google Drive CMS
+codeLink: https://github.com/massivelines/zcot
+liveLink: https://zcot.netlify.com/
 icons: [react, gatsby, sass]
 ---
 
-When will that be? Bender, quit destroying the universe! You lived before you met me?! Tell her you just want to talk. It has nothing to do with mating. Would you censor the Venus de Venus just because you can see her spewers?
+Work In Progress: A JAMstack website built for the Z Club of Texas.
 
-The key to victory is discipline, and that means a well made bed. You will practice until you can make your bed in your sleep. It's just like the story of the grasshopper and the octopus. All year long, the grasshopper kept burying acorns for winter, while the octopus mooched off his girlfriend and watched TV. But then the winter came, and the grasshopper died, and the octopus ate all his acorns. Also he got a race car. Is any of this getting through to you?
+A car club based in Dallas Texas needed a new website that was easy to keep updated and could be could be hosted on a shared server.
+
+This meant that a typical CMS would not work and a Netlify CMS would cause unnecessary calls and load times. To work around a Firebase server is set up to use Google Drive as a CMS.
+
+This ties into a Google Sheet and Google Calendar, when the files are updated it fires a function on Firebase to pull the data and update the database. This made it easy for multiple people to edit the needed files and keep the website up to date.
+
+![Z Club of Texas](full.png)

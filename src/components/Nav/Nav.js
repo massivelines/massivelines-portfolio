@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 const pageLinks = [
   {
     title: 'Home',
-    address: '#home',
+    address: '/#home',
   },
   {
     title: 'About',
@@ -11,15 +11,15 @@ const pageLinks = [
   },
   {
     title: 'Portfolio',
-    address: '#portfolio',
+    address: '/#portfolio',
   },
   {
     title: 'Background',
-    address: '#background',
+    address: '/#background',
   },
   {
     title: 'Contact',
-    address: '#contact',
+    address: '/#contact',
   },
   {
     title: 'Resume',
@@ -45,20 +45,25 @@ class Nav extends Component {
 
   render() {
     const { menuIsOpen } = this.state;
+    const { headerVisible } = this.props;
     let delay = 1;
-
     return (
-      <nav className={`${menuIsOpen && 'menu-open'}`} role="navigation">
+      <nav
+        className={`${menuIsOpen && 'menu-open'} ${!headerVisible &&
+          'change-color'}`}
+        role="navigation"
+      >
         <a className="trigger" onClick={this.toggleMenuHandler} />
-        <span className={`bar1 ${menuIsOpen && 'menu-open'}`} />
-        <span className={`bar2 ${menuIsOpen && 'menu-open'}`} />
-        <span className={`bar3 ${menuIsOpen && 'menu-open'}`} />
+        <span className={`bar1`} />
+        <span className={`bar2`} />
+        <span className={`bar3`} />
         <div className={`background ${menuIsOpen && 'menu-open'}`}>
           <div className={`link-container ${menuIsOpen && 'menu-open'}`}>
             <ul className="link-list">
               {pageLinks.map(linkData => {
                 delay += 0.3;
                 return (
+                  // todo: links from page dont take you to correct section
                   <li key={linkData.title}>
                     <span className="test">
                       <a
@@ -69,6 +74,7 @@ class Nav extends Component {
                             : { transitionDelay: `0s` }
                         }
                         className={`link ${menuIsOpen && 'menu-open'}`}
+                        onClick={this.toggleMenuHandler}
                       >
                         {linkData.title}
                       </a>

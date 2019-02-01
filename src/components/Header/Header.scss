@@ -1,11 +1,14 @@
 header {
   width: 100%;
-  height: 100vh;
-  text-align: center;
+
   display: flex;
   flex-direction: column;
-  background-color: $header-background;
   overflow: hidden;
+
+  &.index-page {
+    height: 100vh;
+    text-align: center;
+  }
 
   .header-graphic {
     width: 100%;
@@ -13,6 +16,7 @@ header {
     flex-grow: 1;
     position: relative;
     overflow: hidden;
+    background-color: $header-background;
 
     .name {
       display: flex;
