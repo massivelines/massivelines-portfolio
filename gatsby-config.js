@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Shawn Rhodes`,
+    description: `Shawn Rhodes - Front End Developer & Web Designer`,
+    author: `@massivelines`,
   },
   plugins: [
     'gatsby-plugin-ngrok-tunneling',
@@ -12,7 +12,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/src/content/assets`,
       },
     },
     {
@@ -27,13 +27,14 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Shawn Rhodes`,
+        short_name: `Shawn Rhodes`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#b8312d`,
+        theme_color: `#b8312d`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/content/assets/code-regular.png`, // This path is relative to the root of the site.
+        // icon: `src/images/code-regular.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-sass`,
