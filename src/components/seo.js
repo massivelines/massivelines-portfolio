@@ -72,7 +72,9 @@ function SEO({ description, lang, meta, keywords, title }) {
                   : [],
               )
               .concat(meta)}
-          />
+          >
+            <link rel="stylesheet" href="https://use.typekit.net/kpr8wpw.css" />
+          </Helmet>
         );
       }}
     />
