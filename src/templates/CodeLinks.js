@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { ReactComponent as Github } from '../content/assets/icons/github-brands.svg';
 import { ReactComponent as Ext } from '../content/assets/icons/external-link-light.svg';
@@ -17,5 +18,15 @@ const CodeLinks = ({ code, live }) => (
     </a>
   </div>
 );
+
+CodeLinks.defaultProps = {
+  code: undefined,
+  live: undefined,
+};
+
+CodeLinks.propTypes = {
+  code: PropTypes.string,
+  live: PropTypes.string,
+};
 
 export default CodeLinks;

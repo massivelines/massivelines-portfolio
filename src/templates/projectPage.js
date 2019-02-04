@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
-import rehypeReact from 'rehype-react';
+import RehypeReact from 'rehype-react';
 
 import CodeLinks from './CodeLinks';
 import Layout from '../components/Layout';
@@ -11,27 +12,34 @@ import skillIcons from '../data/skillIcons';
 import { ReactComponent as LeftArrow } from '../content/assets/icons/arrow-left-light.svg';
 import { ReactComponent as RightArrow } from '../content/assets/icons/arrow-right-light.svg';
 
-const renderAst = new rehypeReact({
+const renderAst = new RehypeReact({
   createElement: React.createElement,
   components: { 'code-links': CodeLinks },
 }).Compiler;
 
 class BlogPostTemplate extends PureComponent {
   render() {
-    console.log(this.props);
-    const post = this.props.data.markdownRemark;
-    const siteTitle = this.props.data.site.siteMetadata.title;
-    const { previous, next } = this.props.pageContext;
-    const { location } = this.props;
+    const {
+      data: {
+        site: {
+          siteMetadata: { title },
+        },
+        markdownRemark,
+      },
+      pageContext: { previous, next },
+    } = this.props;
 
     return (
-      <Layout indexPage={false} location={location} title={siteTitle}>
-        <SEO title={post.frontmatter.title} description={post.excerpt} />
+      <Layout indexPage={false} title={title}>
+        <SEO
+          title={markdownRemark.frontmatter.title}
+          description={markdownRemark.excerpt}
+        />
         <div className="template-container">
           <div className="project-content">
-            <div className="title">{post.frontmatter.title}</div>
+            <div className="title">{markdownRemark.frontmatter.title}</div>
             <div className="icon-container">
-              {post.frontmatter.icons.map(iconName => (
+              {markdownRemark.frontmatter.icons.map(iconName => (
                 <div key={iconName} className="icon-holder">
                   <img
                     className="icon"
@@ -43,7 +51,7 @@ class BlogPostTemplate extends PureComponent {
               ))}
             </div>
             <hr />
-            <div className="content">{renderAst(post.htmlAst)}</div>
+            <div className="content">{renderAst(markdownRemark.htmlAst)}</div>
           </div>
 
           <hr />
@@ -72,6 +80,38 @@ class BlogPostTemplate extends PureComponent {
   }
 }
 
+BlogPostTemplate.defaultProps = {
+  pageContext: {
+    previous: null,
+    next: null,
+  },
+};
+
+BlogPostTemplate.propTypes = {
+  data: PropTypes.shape({
+    site: PropTypes.shape({
+      siteMetadata: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+      }).isRequired,
+    }).isRequired,
+    markdownRemark: PropTypes.shape({
+      htmlAst: PropTypes.shape({}).isRequired,
+      frontmatter: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        icons: PropTypes.arrayOf(PropTypes.string.isRequired),
+      }).isRequired,
+    }),
+  }).isRequired,
+  pageContext: PropTypes.shape({
+    previous: PropTypes.shape({
+      fields: PropTypes.shape({ slug: PropTypes.string }),
+    }),
+    next: PropTypes.shape({
+      fields: PropTypes.shape({ slug: PropTypes.string }),
+    }),
+  }),
+};
+
 export default BlogPostTemplate;
 
 export const pageQuery = graphql`
@@ -79,17 +119,12 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
-        author
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
-      id
-      excerpt(pruneLength: 160)
       htmlAst
       frontmatter {
         title
-        codeLink
-        liveLink
         icons
       }
     }

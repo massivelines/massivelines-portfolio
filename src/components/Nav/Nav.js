@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
-import {
-  disableBodyScroll,
-  enableBodyScroll,
-  clearAllBodyScrollLocks,
-} from 'body-scroll-lock';
 
 import { ReactComponent as Github } from '../../content/assets/icons/github-brands.svg';
 import { ReactComponent as Linkedin } from '../../content/assets/icons/linkedin-in-brands.svg';
@@ -30,10 +26,6 @@ const pageLinks = [
     title: 'Contact',
     address: '/#contact',
   },
-  // {
-  //   title: 'Resume',
-  //   address: '/Shawn_Rhodes_Resume.pdf',
-  // },
 ];
 
 class Nav extends Component {
@@ -52,20 +44,6 @@ class Nav extends Component {
     const { toggleScrollLock } = this.props;
     this.setState({ menuIsOpen: !menuIsOpen });
     toggleScrollLock();
-
-    // this.setState({ menuIsOpen: !menuIsOpen }, () => {
-    //   // const { menuIsOpen } = this.state;
-    //   if (!menuIsOpen) {
-    //     disableBodyScroll(document.body, {
-    //       reserveScrollBarGap: true,
-    //     });
-    //     clearTimeout(this.scrollTimer);
-    //   } else {
-    //     setTimeout(() => {
-    //       this.scrollTimer = enableBodyScroll(document.body);
-    //     }, 300);
-    //   }
-    // });
   }
 
   render() {
@@ -79,7 +57,13 @@ class Nav extends Component {
         role="navigation"
         style={{ height: menuIsOpen && headerHeight }}
       >
-        <a className="trigger" onClick={this.toggleMenuHandler} />
+        <div
+          className="trigger"
+          role="button"
+          tabIndex="0"
+          onClick={this.toggleMenuHandler}
+          onKeyPress={this.toggleMenuHandler}
+        />
         <span className="bar1" />
         <span className="bar2" />
         <span className="bar3" />
@@ -156,5 +140,11 @@ class Nav extends Component {
     );
   }
 }
+
+Nav.propTypes = {
+  toggleScrollLock: PropTypes.func.isRequired,
+  headerVisible: PropTypes.bool.isRequired,
+  headerHeight: PropTypes.string.isRequired,
+};
 
 export default Nav;

@@ -1,19 +1,19 @@
 import React from 'react';
 import VisibilitySensor from 'react-visibility-sensor';
-import Div100vh from 'react-div-100vh';
 import { Link } from 'gatsby';
-import { isMobile } from 'react-device-detect';
 
 import Circle from './Circle';
 
 const Header = ({ indexPage, offScreen, headerHeight }) => (
   <>
     {indexPage ? (
+      // Header for Index page
       <header
         id="home"
         className={`${indexPage && 'index-page'}`}
         style={{ height: headerHeight }}
       >
+        {/* Test for header visibility to change menu bar colors */}
         <VisibilitySensor
           partialVisibility
           onChange={visData => {
@@ -35,6 +35,8 @@ const Header = ({ indexPage, offScreen, headerHeight }) => (
         </div>
       </header>
     ) : (
+      // Header for Template Pages
+      // Test for header visibility to change menu bar colors on template page
       <VisibilitySensor
         partialVisibility
         onChange={visData => {

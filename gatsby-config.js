@@ -33,8 +33,7 @@ module.exports = {
         background_color: `#b8312d`,
         theme_color: `#b8312d`,
         display: `minimal-ui`,
-        icon: `src/content/assets/code-regular.png`, // This path is relative to the root of the site.
-        // icon: `src/images/code-regular.png`, // This path is relative to the root of the site.
+        icon: `src/content/assets/code-regular.png`,
       },
     },
     `gatsby-plugin-sass`,
@@ -60,8 +59,6 @@ module.exports = {
         // trackingId: `ADD YOUR TRACKING ID HERE`,
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
   ],
 };

@@ -23,19 +23,21 @@ class Layout extends Component {
   }
 
   componentDidMount() {
+    // if mobile set height of header to innerHeight to counter the top bar
     if (isMobile) {
       this.setState({ headerHeight: `${window.innerHeight}px` });
     }
   }
 
   headerOffScreen(visData) {
-    // console.log(visData);
+    // set true if header is offscreen to change menu bar colors
     this.setState({
       headerVisible: visData,
     });
   }
 
   toggleScrollLock() {
+    // toggle scroll lock when menu is open
     const { enabledScrollLock } = this.state;
     this.setState({ enabledScrollLock: !enabledScrollLock });
   }
@@ -54,62 +56,32 @@ class Layout extends Component {
             }
           }
         `}
-        render={data => {
-          // console.log(data);
-          return (
-            <>
-              {/* todo: change to when svg is visible */}
-              <Nav
-                headerHeight={headerHeight}
-                headerVisible={headerVisible}
-                toggleScrollLock={this.toggleScrollLock}
-              />
-              <Header
-                headerHeight={headerHeight}
-                offScreen={this.headerOffScreen}
-                indexPage={indexPage}
-                siteTitle={data.site.siteMetadata.title}
-              />
-
-              <Locky
-                enabled={enabledScrollLock}
-                events={{ click: false, touchstart: false }}
-              >
-                {children}
-              </Locky>
-              <Footer />
-            </>
-          );
-        }}
+        render={data => (
+          <>
+            <Nav
+              headerHeight={headerHeight}
+              headerVisible={headerVisible}
+              toggleScrollLock={this.toggleScrollLock}
+            />
+            <Header
+              headerHeight={headerHeight}
+              offScreen={this.headerOffScreen}
+              indexPage={indexPage}
+              siteTitle={data.site.siteMetadata.title}
+            />
+            <Locky
+              enabled={enabledScrollLock}
+              events={{ click: false, touchstart: false }}
+            >
+              {children}
+            </Locky>
+            <Footer />
+          </>
+        )}
       />
     );
   }
 }
-
-// const Layout = ({ children }) => (
-//   <StaticQuery
-//     query={graphql`
-//       query SiteTitleQuery {
-//         site {
-//           siteMetadata {
-//             title
-//           }
-//         }
-//       }
-//     `}
-//     render={data => {
-//       console.log(data);
-//       return (
-//         <>
-//           <Nav />
-//           <Header siteTitle={data.site.siteMetadata.title} />
-//           {children}
-//           <Footer />
-//         </>
-//       );
-//     }}
-//   />
-// );
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,

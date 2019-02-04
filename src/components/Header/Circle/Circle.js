@@ -1,22 +1,24 @@
 import React, { Component } from 'react';
 import anime from 'animejs';
 
+// min values to transform and scale
 const transRange = 15;
 const minScaleY = 0.9;
 const maxScaleY = 1.1;
 
+// generate random values
 const randomScale = () => Math.random() * (maxScaleY - minScaleY) + minScaleY;
 const randomTranslate = () => Math.random() * (transRange * 2) - transRange;
 
-const style = () => {
-  return {
-    transformOrigin: '50% 50%',
-    transformBox: 'fill-box',
-  };
-};
+// centers transform in all browsers
+// wont work just added to css, js runs first
+const style = () => ({
+  transformOrigin: '50% 50%',
+  transformBox: 'fill-box',
+});
 
 const transform = () => {
-  // randomly decided which ones to move
+  // randomly decided which move circle part
   const decidedToMove = Math.floor(Math.random() * Math.floor(2));
   const decidedToScale = Math.floor(Math.random() * Math.floor(2));
 
@@ -31,10 +33,9 @@ const transform = () => {
   }
 
   return { translateY, scaleY };
-  // return `translate(0, ${translateY}),
-  //         scale(1, ${scaleY})`;
 };
 
+// Animate loop
 const animate = (path, translateY, scaleY) => {
   const initTrans = translateY;
   const initScale = scaleY;
@@ -60,6 +61,7 @@ const animate = (path, translateY, scaleY) => {
     },
     easing: 'easeInOutQuad',
     direction: 'alternate',
+    // when animation is done, call to start again, allows random movement
     complete: () => animate(path, translateY, scaleY),
   });
 };
@@ -72,10 +74,13 @@ class Circle extends Component {
     this.pathRef = [];
   }
 
+  // TODO change from componentDidMount to fix initial jump
   componentDidMount() {
+    // Push all parts of the circle for animation recreance
     this.SvgRef.current.childNodes[0].childNodes.forEach(element => {
       this.pathRef.push(element);
 
+      // initial transform and scale
       const { translateY, scaleY } = transform();
 
       element.setAttribute(
@@ -83,6 +88,7 @@ class Circle extends Component {
         `translate(0, ${translateY}),scale(1, ${scaleY})`,
       );
 
+      // start animation
       animate(element, translateY, scaleY);
     });
   }

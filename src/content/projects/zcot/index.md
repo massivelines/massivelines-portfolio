@@ -1,6 +1,6 @@
 ---
 order: 5
-title: WIP Z Club of Texas
+title: Z Club of Texas
 thumbnail: ./zcot_1.png
 description: A JAMstack website built for the Z Club of Texas using Google Drive as a CMS
 codeLink: https://github.com/massivelines/zcot
@@ -8,7 +8,9 @@ liveLink: https://zcot.netlify.com/
 icons: [react, gatsby, sass]
 ---
 
-Work In Progress: A JAMstack website built for the Z Club of Texas.
+Work In Progress
+
+A JAMstack website built for the Z Club of Texas.
 
 A car club based in Dallas Texas needed a new website that was easy to keep updated and could be could be hosted on a shared server.
 

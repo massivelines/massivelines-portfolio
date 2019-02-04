@@ -95,16 +95,13 @@
   }
 
   .post-links {
-    // display: flex;
-    // flex-flow: row wrap;
-    // justify-content: space-between;
     margin: 20px 10px;
     list-style: none;
     padding: 0;
 
-    @include screenSize(sm) {
+    @include screenSize(xs) {
       display: flex;
-      flex-flow: row wrap;
+      flex-wrap: wrap;
       justify-content: space-between;
 
       .next,

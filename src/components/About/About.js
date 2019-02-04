@@ -7,8 +7,8 @@ const About = () => (
     <div className="text">
       <div className="section-title">About</div>
       <p>
-        I am a front end web developer / designer based in Dallas, Texas. I take
-        pride in code that is easy to read, well documented, and efficient
+        I am a front end developer and web designer based in Dallas, Texas. I
+        take pride in code that is easy to read, well documented, and efficient
         behind the scenes. I always strive to have modern, pixel perfect, and
         user-friendly UX and UI designs.
       </p>
@@ -35,7 +35,7 @@ const About = () => (
             {skillObj.skills.map(skill => (
               <div key={skill.title} className="skill">
                 <div className="icon-container">
-                  <img src={skill.icon} />
+                  <img src={skill.icon} alt={skill.title} />
                 </div>
                 <div className="skill-title">{skill.title}</div>
               </div>
