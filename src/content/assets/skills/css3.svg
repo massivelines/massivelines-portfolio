@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1556.3" height="1750.9" version="1.1" viewBox="0 0 335.29 377.2" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <path d="m303.85 340.52-136.21 36.676-136.21-36.676-31.432-340.53h335.29z" fill="#2062af"/>
+ <path d="m167.64 27.582v320.37l0.308 0.084 110.23-29.682 25.443-290.77z" fill="#3c9cd7"/>
+ <path d="m167.52 112.73-97.49 40.602 3.233 40.199 94.257-40.301 100.26-42.868 4.157-41.122z" fill="#fff"/>
+ <linearGradient id="a" x1="-825.51" x2="-825.51" y1="1338.3" y2="1419.1" gradientTransform="matrix(1 0 0 -1 944.28 1531.8)" gradientUnits="userSpaceOnUse">
+  <stop stop-color="#d1d3d4" stop-opacity="0" offset=".387"/>
+  <stop stop-color="#d1d3d4" offset="1"/>
+ </linearGradient>
+ <path d="m70.031 153.33 3.233 40.199 94.257-40.301v-40.5z" fill="url(#a)"/>
+ <linearGradient id="b" x1="-724.55" x2="-724.55" y1="1378.6" y2="1462.6" gradientTransform="matrix(1 0 0 -1 944.28 1531.8)" gradientUnits="userSpaceOnUse">
+  <stop stop-color="#d1d3d4" stop-opacity="0" offset=".387"/>
+  <stop stop-color="#d1d3d4" offset="1"/>
+ </linearGradient>
+ <path d="m271.94 69.238-104.42 43.489v40.5l100.26-42.868z" fill="url(#b)"/>
+ <linearGradient id="c" x1="-874.1" x2="-680.04" y1="1302.3" y2="1302.3" gradientTransform="matrix(1 0 0 -1 944.28 1531.8)" gradientUnits="userSpaceOnUse">
+  <stop stop-color="#e8e7e5" offset="0"/>
+  <stop stop-color="#fff" offset="1"/>
+ </linearGradient>
+ <path d="m70.181 153.33 3.234 40.199 144.62 0.461-3.235 53.598-47.59 13.398-45.748-11.551-2.772-33.268h-42.508l5.545 64.225 85.945 25.412 85.479-24.951 11.09-127.52z" fill="url(#c)"/>
+ <path d="m167.52 153.33h-97.49l3.233 40.199 94.257 0.301zm0 107.53-0.462 0.129-45.742-11.551-2.772-33.268h-42.507l5.544 64.225 85.939 25.412z" opacity=".05"/>
+ <linearGradient id="d" x1="-883.03" x2="-672.34" y1="1442" y2="1442" gradientTransform="matrix(1 0 0 -1 944.28 1531.8)" gradientUnits="userSpaceOnUse">
+  <stop stop-color="#e8e7e5" offset="0"/>
+  <stop stop-color="#fff" offset="1"/>
+ </linearGradient>
+ <path d="m61.252 69.238h210.69l-4.157 41.122h-201.45z" fill="url(#d)"/>
+ <path d="m167.52 69.238h-106.27l5.082 41.122h101.19z" opacity=".05"/>
+</svg>

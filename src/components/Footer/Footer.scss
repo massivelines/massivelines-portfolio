@@ -1,0 +1,47 @@
+footer {
+  padding: 10px;
+  background-color: $footer-background;
+
+  .contact-links {
+    // padding-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include screenSize(sm) {
+      flex-wrap: nowrap;
+    }
+
+    a {
+      font-size: 18px;
+      margin: 5px 0;
+      color: white;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .icon {
+        margin-right: 5px;
+        flex-shrink: 1;
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+
+  .social-links {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    a {
+      width: 10%;
+      max-width: 30px;
+
+      .icon {
+        color: white;
+      }
+    }
+  }
+}

@@ -1,0 +1,177 @@
+$navOpen: width 0.3s ease, height 0.3s ease 1s;
+$navClose: height 0.3s ease, width 0.3s ease 1s;
+$bar1Open: top 0.3s ease, transform 0.3s ease 1s,
+  background-color 0.3s ease 0.5s;
+$bar1Close: top 0.3s ease 1s, transform 0.3s ease,
+  background-color 0.3s ease 0.5s;
+$bar2Open: transform 0.3s ease 1s, background-color 0.3s ease 0.5s;
+$bar2Close: transform 0.3s ease, background-color 0.3s ease 0.5s;
+$bar3Open: width 0.3s ease, height 0.3s ease 0.5s,
+  background-color 0.3s ease 0.5s;
+$bar3Close: width 0.3s ease 1s, height 0.3s ease,
+  background-color 0.3s ease 0.5s;
+$backgroundOpen: height 0.3s ease 0.5s;
+$backgroundClose: height 0.3s ease 0.5s;
+$linkVisibilityOpen: visibility 0s linear 1s;
+$linkVisibilityClose: visibility 0s linear 1s;
+$linkOpen: height 0.8s ease 1.5s;
+$linkClose: height 0.8s ease;
+
+nav {
+  width: 25px;
+  height: 42px;
+  position: fixed;
+  top: 0;
+  right: 0px;
+  transition: $navClose;
+  z-index: 100;
+
+  // When menu is open
+  &.menu-open {
+    width: 100%;
+    // height: 100vh;
+    transition: $navOpen;
+
+    .bar1 {
+      top: 20px;
+      transform: rotate(45deg);
+      transition: $bar1Open;
+    }
+
+    .bar2 {
+      transform: rotate(-45deg);
+      transition: $bar2Open;
+    }
+
+    .bar3 {
+      width: 100%;
+      transition: $bar3Open;
+    }
+
+    &.change-color {
+      .bar1,
+      .bar2,
+      .bar3 {
+        background-color: $header-foreground;
+        // transition: background-color 0.3s ease;
+      }
+    }
+  }
+
+  // change color if header is hidden
+  &.change-color {
+    .bar1,
+    .bar2,
+    .bar3 {
+      background-color: $body-text;
+    }
+  }
+
+  // trigger for menu
+  .trigger {
+    content: '';
+    position: fixed;
+    display: block;
+    width: 45px;
+    height: 42px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2000;
+  }
+
+  // bars original position
+  .bar1 {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 25px;
+    background-color: $header-foreground;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: $bar1Close;
+    z-index: 2001;
+    pointer-events: none;
+  }
+  .bar2 {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 25px;
+    background-color: $header-foreground;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    transition: $bar2Close;
+    z-index: 2001;
+    pointer-events: none;
+  }
+  .bar3 {
+    content: '';
+    display: block;
+    height: 2px;
+    background-color: $header-foreground;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 15px;
+    transition: $bar3Close;
+    z-index: 2001;
+    pointer-events: none;
+  }
+
+  .background {
+    background-color: $nav-background;
+    width: 100%;
+    height: 0%;
+    transition: $backgroundClose;
+    position: absolute;
+    z-index: -10;
+    overflow: hidden;
+
+    &.menu-open {
+      width: 100%;
+      height: 100%;
+      transition: $backgroundOpen;
+    }
+
+    .link-container {
+      margin-left: 20px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+
+      .link {
+        opacity: 0;
+        display: flex;
+        align-items: center;
+        flex: 1 1 auto;
+        color: white;
+        font-size: 36px;
+
+        @include screenSize(md) {
+          font-size: 48px;
+        }
+
+        &.menu-open {
+          opacity: 1;
+          transition-property: opacity;
+          transition-duration: 0.6s;
+        }
+      }
+      .social {
+        flex: 1 1 auto;
+        display: flex;
+
+        .icon {
+          height: 36px;
+
+          @include screenSize(md) {
+            font-size: 48px;
+          }
+        }
+      }
+    }
+  }
+}

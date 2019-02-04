@@ -10,11 +10,11 @@ shawn@massivelines.com
 - Experienced in an array of multimedia tools and design approaches, including typography, visual arts, and page layout.
 
 ## Skills
-|Core|React|Server|Utilities|Frameworkds|Design|Other
-|--|--|--|--|--|--|--|--|
-|HTML5|React|Apollo|Typescript|Bootstrap|Photoshop|git|
-|CSS3|React Router|GraphQL|Webpack|Foundation|Illustrator|Storybook|
-|Javascript|Redux|Heroku|Sass|Material UI|XD|Electron
+| Core | React | Server | Utilities | Frameworkds | Design | Other |
+| ---- | ----- | ------ | --------- | ----------- | ------ | ----- ||
+| HTML5      | React        | Apollo  | Typescript | Bootstrap   | Photoshop   | git       |
+| CSS3       | React Router | GraphQL | Webpack    | Foundation  | Illustrator | Storybook |
+| Javascript | Redux        | Heroku  | Sass       | Material UI | XD          | Electron  |
 
 ## Education & Certifications
 
@@ -67,4 +67,3 @@ Self Employed – Dallas Tx
 https://www.massivelines.com/
 https://www.linkedin.com/in/shawn-rhodes/
 https://github.com/massivelines
-https://codepen.io/massivelines
