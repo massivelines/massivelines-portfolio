@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: '/massivelines-portfolio',
   siteMetadata: {
     title: `Shawn Rhodes`,
     description: `Shawn Rhodes - Front End Developer & Web Designer`,
