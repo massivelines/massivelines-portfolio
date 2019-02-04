@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 
 import { ReactComponent as Github } from '../../content/assets/icons/github-brands.svg';
 import { ReactComponent as Linkedin } from '../../content/assets/icons/linkedin-in-brands.svg';
@@ -103,7 +104,7 @@ class Nav extends Component {
               Resume
             </a>
             <div className="social">
-              <a
+              <OutboundLink
                 style={
                   menuIsOpen
                     ? { transitionDelay: `${delay + 0.6}s` }
@@ -117,8 +118,8 @@ class Nav extends Component {
                 href="https://github.com/massivelines"
               >
                 <Github className="icon" />
-              </a>
-              <a
+              </OutboundLink>
+              <OutboundLink
                 style={
                   menuIsOpen
                     ? { transitionDelay: `${delay + 0.6}s` }
@@ -132,7 +133,7 @@ class Nav extends Component {
                 aria-label="Linkedin Profile"
               >
                 <Linkedin className="icon" />
-              </a>
+              </OutboundLink>
             </div>
           </div>
         </div>

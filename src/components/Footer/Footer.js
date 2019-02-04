@@ -1,4 +1,5 @@
 import React from 'react';
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 
 import { ReactComponent as Github } from '../../content/assets/icons/github-brands.svg';
 import { ReactComponent as Linkedin } from '../../content/assets/icons/linkedin-in-brands.svg';
@@ -31,23 +32,23 @@ const Footer = () => (
     </div>
 
     <div className="social-links">
-      <a
+      <OutboundLink
         href="https://github.com/massivelines"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Github Profile"
       >
         <Github className="icon" />
-      </a>
+      </OutboundLink>
 
-      <a
+      <OutboundLink
         href="https://www.linkedin.com/in/shawn-rhodes/"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Linkedin Profile"
       >
         <Linkedin className="icon" />
-      </a>
+      </OutboundLink>
     </div>
   </footer>
 );

@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "massivelines-portfolio",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Shawn Rhodes - Front End Developer & Web Designer http://www.massivelines.com",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Shawn Rhodes <shawn@massivelines.com>",
   "dependencies": {
     "@svgr/webpack": "^4.1.0",
     "animejs": "^3.0.1",
@@ -39,9 +39,19 @@
     "svg-react-loader": "^0.4.6"
   },
   "keywords": [
-    "gatsby"
+    "Shawn",
+    "Rhodes",
+    "Massivelines",
+    "Massive",
+    "Lines",
+    "Portfolio",
+    "Dallas",
+    "Texas",
+    "Tx",
+    "Front End Developer",
+    "Web Designer"
   ],
-  "license": "MIT",
+  "license": "UNLICENSED",
   "scripts": {
     "dev": "gatsby develop",
     "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
@@ -64,9 +74,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/massivelines/massivelines-portfolio"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/massivelines/massivelines-portfolio/issues"
   }
 }
