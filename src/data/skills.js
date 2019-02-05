@@ -17,7 +17,7 @@ const skills = [
     skills: [
       { title: 'HTML5', icon: HTML5 },
       { title: 'CSS3', icon: CSS3 },
-      { title: 'Javascript', icon: Javascript },
+      { title: 'JavaScript', icon: Javascript },
     ],
   },
   {

@@ -33,7 +33,7 @@ const skillIcons = {
     icon: sassSvg,
   },
   javascript: {
-    title: 'Javascript',
+    title: 'JavaScript',
     icon: javascriptSvg,
   },
   express: {
