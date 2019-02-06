@@ -1,7 +1,8 @@
 # Shawn Rhodes
 Front End Developer & Web Designer   
 501-733-9480   
-shawn@massivelines.com   
+shawn@massivelines.com  
+https://www.massivelines.com/   
 
 ## Summary
 
@@ -66,7 +67,6 @@ University of Texas at Dallas
 University of Arkansas Community College-Morrilton   
 *January 2004 to August 2005*   
 
-## Links
-https://www.massivelines.com/
-https://www.linkedin.com/in/shawn-rhodes/
-https://github.com/massivelines
+## Links  
+https://www.linkedin.com/in/shawn-rhodes/   
+https://github.com/massivelines   
