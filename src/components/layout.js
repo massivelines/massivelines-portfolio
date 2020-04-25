@@ -1,91 +1,51 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { StaticQuery, graphql } from 'gatsby';
-import Locky from 'react-locky';
-import { isMobile } from 'react-device-detect';
+/**
+ * Layout component that queries for data
+ * with Gatsby's useStaticQuery component
+ *
+ * See: https://www.gatsbyjs.org/docs/use-static-query/
+ */
 
-import Nav from './Nav';
-import Header from './Header';
-import Footer from './Footer';
+import React from "react"
+import PropTypes from "prop-types"
+import { useStaticQuery, graphql } from "gatsby"
 
-class Layout extends Component {
-  constructor(props) {
-    super(props);
+import Header from "./header"
+import "../sass/index.scss"
 
-    this.headerOffScreen = this.headerOffScreen.bind(this);
-    this.toggleScrollLock = this.toggleScrollLock.bind(this);
-
-    this.state = {
-      headerVisible: true,
-      enabledScrollLock: false,
-      headerHeight: '100vh',
-    };
-  }
-
-  componentDidMount() {
-    // if mobile set height of header to innerHeight to counter the top bar
-    if (isMobile) {
-      this.setState({ headerHeight: `${window.innerHeight}px` });
+const Layout = ({ children }) => {
+  const data = useStaticQuery(graphql`
+    query SiteTitleQuery {
+      site {
+        siteMetadata {
+          title
+        }
+      }
     }
-  }
+  `)
 
-  headerOffScreen(visData) {
-    // set true if header is offscreen to change menu bar colors
-    this.setState({
-      headerVisible: visData,
-    });
-  }
-
-  toggleScrollLock() {
-    // toggle scroll lock when menu is open
-    const { enabledScrollLock } = this.state;
-    this.setState({ enabledScrollLock: !enabledScrollLock });
-  }
-
-  render() {
-    const { children, indexPage } = this.props;
-    const { headerVisible, enabledScrollLock, headerHeight } = this.state;
-    return (
-      <StaticQuery
-        query={graphql`
-          query SiteTitleQuery {
-            site {
-              siteMetadata {
-                title
-              }
-            }
-          }
-        `}
-        render={data => (
-          <>
-            <Nav
-              headerHeight={headerHeight}
-              headerVisible={headerVisible}
-              toggleScrollLock={this.toggleScrollLock}
-            />
-            <Header
-              headerHeight={headerHeight}
-              offScreen={this.headerOffScreen}
-              indexPage={indexPage}
-              siteTitle={data.site.siteMetadata.title}
-            />
-            <Locky
-              enabled={enabledScrollLock}
-              events={{ click: false, touchstart: false }}
-            >
-              {children}
-            </Locky>
-            <Footer />
-          </>
-        )}
-      />
-    );
-  }
+  return (
+    <>
+      <Header siteTitle={data.site.siteMetadata.title} />
+      <div
+        style={{
+          margin: `0 auto`,
+          maxWidth: 960,
+          padding: `0 1.0875rem 1.45rem`,
+        }}
+      >
+        <main>{children}</main>
+        <footer>
+          © {new Date().getFullYear()}, Built with
+          {` `}
+          <a href="https://www.gatsbyjs.org">Gatsby</a>
+        </footer>
+      </div>
+    </>
+  )
 }
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-  indexPage: PropTypes.bool.isRequired,
-};
+}
 
-export default Layout;
+export default Layout
