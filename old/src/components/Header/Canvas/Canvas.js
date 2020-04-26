@@ -51,11 +51,11 @@ class Canvas extends React.Component {
       event.type === 'touchcancel' ||
       event.type === 'touchend'
     ) {
-      this.boxArray.forEach(box => {
+      this.boxArray.forEach((box) => {
         box.hover(undefined, undefined);
       });
     } else {
-      this.boxArray.forEach(box => {
+      this.boxArray.forEach((box) => {
         box.hover(event.pageX, event.pageY);
       });
     }
@@ -63,7 +63,7 @@ class Canvas extends React.Component {
 
   tick() {
     this.ctx.clearRect(0, 0, this.state.width, this.state.height);
-    this.boxArray.forEach(box => {
+    this.boxArray.forEach((box) => {
       box.update();
     });
     window.requestAnimationFrame(this.tick);
@@ -73,7 +73,7 @@ class Canvas extends React.Component {
     this.previousScreenSize = this.state;
     const size = this.screenSize();
     this.setState({ width: size.width, height: size.height });
-    this.boxArray.forEach(box => {
+    this.boxArray.forEach((box) => {
       box.resize(this.previousScreenSize, this.state);
     });
   }
@@ -84,13 +84,13 @@ class Canvas extends React.Component {
         ref={this.canvas}
         width={`${this.state.width}px`}
         height={`${this.state.height}px`}
-        onPointerMove={event => this.handleHover(event)}
-        onPointerDown={event => this.handleHover(event)}
-        onPointerLeave={event => this.handleHover(event)}
-        onMouseMove={event => this.handleHover(event)}
-        onTouchStart={event => this.handleHover(event)}
-        onTouchEnd={event => this.handleHover(event)}
-        onTouchCancel={event => this.handleHover(event)}
+        onPointerMove={(event) => this.handleHover(event)}
+        onPointerDown={(event) => this.handleHover(event)}
+        onPointerLeave={(event) => this.handleHover(event)}
+        onMouseMove={(event) => this.handleHover(event)}
+        onTouchStart={(event) => this.handleHover(event)}
+        onTouchEnd={(event) => this.handleHover(event)}
+        onTouchCancel={(event) => this.handleHover(event)}
       />
     );
   }

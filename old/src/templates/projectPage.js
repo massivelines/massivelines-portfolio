@@ -39,7 +39,7 @@ class BlogPostTemplate extends PureComponent {
           <div className="project-content">
             <div className="title">{markdownRemark.frontmatter.title}</div>
             <div className="icon-container">
-              {markdownRemark.frontmatter.icons.map(iconName => (
+              {markdownRemark.frontmatter.icons.map((iconName) => (
                 <div key={iconName} className="icon-holder">
                   <img
                     className="icon"

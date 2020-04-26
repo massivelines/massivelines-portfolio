@@ -53,8 +53,9 @@ class Nav extends Component {
     let delay = 1;
     return (
       <nav
-        className={`${menuIsOpen && 'menu-open'} ${!headerVisible &&
-          'change-color'}`}
+        className={`${menuIsOpen && 'menu-open'} ${
+          !headerVisible && 'change-color'
+        }`}
         role="navigation"
         style={{ height: menuIsOpen && headerHeight }}
       >
@@ -70,7 +71,7 @@ class Nav extends Component {
         <span className="bar3" />
         <div className={`background ${menuIsOpen && 'menu-open'}`}>
           <div className={`link-container ${menuIsOpen && 'menu-open'}`}>
-            {pageLinks.map(linkData => {
+            {pageLinks.map((linkData) => {
               delay += 0.3;
               return (
                 <Link

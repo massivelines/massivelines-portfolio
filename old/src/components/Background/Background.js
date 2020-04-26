@@ -7,13 +7,13 @@ const Background = ({ education, employment }) => (
 
     <div className="employment-container">
       <h4>Employment</h4>
-      {employment.map(empData => (
+      {employment.map((empData) => (
         <div key={empData.title} className="job-container">
           <div className="title">{empData.title}</div>
           <div className="location">{empData.location}</div>
           <div className="dates">{empData.dates}</div>
           <ul className="bullets-container">
-            {empData.bullets.map(bullet => (
+            {empData.bullets.map((bullet) => (
               <li key={bullet} className="bullet">
                 {bullet}
               </li>
@@ -25,7 +25,7 @@ const Background = ({ education, employment }) => (
 
     <div className="education-container">
       <h4>Education</h4>
-      {education.map(eduData => (
+      {education.map((eduData) => (
         <div key={eduData.title} className="school-container">
           <div className="title">{eduData.title}</div>
           <div className="location">{eduData.location}</div>

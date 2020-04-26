@@ -95,7 +95,7 @@ class BoxObject {
     // if box is not being touched and fade direction is out
     if (this.touch === true && this.hoverDirection === 'in') {
       if (this.hoverItt <= this.frameColorSteps) {
-        Object.keys(this.currentColorObj).forEach(key => {
+        Object.keys(this.currentColorObj).forEach((key) => {
           this.currentColorObj[key] += this.colorStepObj[key];
         });
         this.box.color = `rgb(${Math.ceil(this.currentColorObj.r)},${Math.ceil(
@@ -111,7 +111,7 @@ class BoxObject {
       // determined in this.update
     } else if (this.touch === false && this.hoverDirection === 'out') {
       if (this.hoverItt > 1) {
-        Object.keys(this.currentColorObj).forEach(key => {
+        Object.keys(this.currentColorObj).forEach((key) => {
           this.currentColorObj[key] -= this.colorStepObj[key];
         });
         this.box.color = `rgb(${Math.ceil(this.currentColorObj.r)},${Math.ceil(

@@ -56,7 +56,7 @@ class Layout extends Component {
             }
           }
         `}
-        render={data => (
+        render={(data) => (
           <>
             <Nav
               headerHeight={headerHeight}

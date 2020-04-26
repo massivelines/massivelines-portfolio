@@ -76,7 +76,7 @@ class Circle extends Component {
 
   componentDidMount() {
     // Push all parts of the circle for animation recreance and strip the transform values to pass to animate
-    this.SvgRef.current.childNodes[0].childNodes.forEach(element => {
+    this.SvgRef.current.childNodes[0].childNodes.forEach((element) => {
       const {
         attributes: {
           transform: { value },

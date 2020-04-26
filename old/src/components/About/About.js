@@ -27,12 +27,12 @@ const About = () => (
       <div className="title">
         Here are a few things I&apos;m experienced with:
       </div>
-      {skills.map(skillObj => (
+      {skills.map((skillObj) => (
         <div key={skillObj.title} className="skill-group-container">
           <div className="group-title">{skillObj.title}</div>
           <div className="skills-icons-container">
             {/* map through skill icons */}
-            {skillObj.skills.map(skill => (
+            {skillObj.skills.map((skill) => (
               <div key={skill.title} className="skill">
                 <div className="icon-container">
                   <img src={skill.icon} alt={skill.title} />

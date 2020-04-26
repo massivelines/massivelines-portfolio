@@ -16,7 +16,7 @@ const Header = ({ indexPage, offScreen, headerHeight }) => (
         {/* Test for header visibility to change menu bar colors */}
         <VisibilitySensor
           partialVisibility
-          onChange={visData => {
+          onChange={(visData) => {
             offScreen(visData);
           }}
         >
@@ -39,7 +39,7 @@ const Header = ({ indexPage, offScreen, headerHeight }) => (
       // Test for header visibility to change menu bar colors on template page
       <VisibilitySensor
         partialVisibility
-        onChange={visData => {
+        onChange={(visData) => {
           offScreen(visData);
         }}
       >
