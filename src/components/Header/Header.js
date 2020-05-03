@@ -1,42 +1,56 @@
-import { Link } from 'gatsby';
+import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
-import React from 'react';
+// import { Link } from 'gatsby';
+import Circle from '../Circle';
+import Button from '../Button';
+import Navigation from '../Navigation';
+import useOnScreen from '../../hooks/useOnScreen';
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
+const Header = ({
+  // siteTitle,
+  homePage,
+}) => {
+  const ref = useRef();
+  const isVisible = useOnScreen(ref);
+
+  return (
+    <header
+      className={`header ${homePage ? '' : 'header--page-header'}`}
+      ref={ref}
+      id="home"
     >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-);
+      <Navigation />
+      <div
+        className={`header__graphic ${
+          isVisible ? 'header__graphic--is-visible' : ''
+        }`}
+      >
+        <div className="header__graphic__content-wrapper">
+          <div className="header__graphic__name">
+            <div>Shawn</div>
+            <div>Rhodes</div>
+          </div>
+          <div className="header__graphic__cta-wrapper">
+            <Button onClick={() => {}}>Contact Me</Button>
+          </div>
+        </div>
+        <Circle />
+      </div>
+      <div className="header__tagline">
+        Front End Developer &amp; Web Designer
+      </div>
+    </header>
+  );
+};
 
 Header.propTypes = {
-  siteTitle: PropTypes.string,
+  // siteTitle: PropTypes.string,
+  homePage: PropTypes.bool,
 };
 
 Header.defaultProps = {
-  siteTitle: ``,
+  // siteTitle: ``,
+  homePage: false,
 };
 
 export default Header;

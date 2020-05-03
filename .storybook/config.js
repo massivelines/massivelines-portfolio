@@ -4,7 +4,10 @@ import { action } from '@storybook/addon-actions';
 import '../src/sass/index.scss';
 
 // automatically import all files ending in *.stories.js
-configure(require.context('../src', true, /\.stories\.js$/), module);
+const source = require.context('../src', true, /\.stories\.js$/);
+const stories = require.context('../src', true, /\.stories\.js$/);
+
+configure([source, stories], module);
 // Gatsby's Link overrides:
 // Gatsby defines a global called ___loader to prevent its method calls from creating console errors you override it here
 global.___loader = {

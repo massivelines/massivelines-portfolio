@@ -1,0 +1,92 @@
+.square {
+  width: 100%;
+  position: relative;
+
+  &::after {
+    content: '';
+    display: block;
+    padding-bottom: 100%;
+  }
+
+  .square-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    // overflow: hidden;
+  }
+}
+
+// .square-test {
+//   display: flex;
+//   flex: 1 1 auto;
+//   position: relative;
+//   border: solid 1px red;
+
+//   &::after {
+//     content: '';
+//     display: block;
+//     padding-bottom: 100%;
+//   }
+
+//   .square-content {
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     // width: 100%;
+//     // height: 100%;
+//   }
+// }
+
+// .square-box {
+//   position: relative
+// }
+
+// .square-box::before {
+//   content: '';
+//   display: block;
+//   padding-top: 100%;
+// }
+
+// .square-content {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   bottom: 0;
+//   right: 0;
+// }
+
+// .square-content div {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   height: 100%;
+//   width: 100%;
+//   position: relative;
+//   text-align: center;
+//   font: 0/0 a;
+//   vertical-align: middle;
+// }
+
+// .square-content img {
+//   margin: 0 auto;
+//   text-align: center;
+//   vertical-align: middle;
+// }
+
+// .square-content img.horizontal {
+//   width: 100%;
+// }
+
+// .square-content img.vertical {
+//   height: 100%;
+//   margin: 0;
+// }

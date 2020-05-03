@@ -1,0 +1,24 @@
+// Responsive Widths
+// A map of breakpoints.
+$breakpoints: (
+  xs: 576px,
+  sm: 768px,
+  md: 992px,
+  lg: 1200px,
+);
+
+// Fonts
+$franklin: 'Libre Franklin', sans-serif;
+$Baskerville: 'Libre Baskerville', serif;
+// transition speed
+$menuSpeed: 0.3s;
+
+$background-color: #fff;
+$body-text: #393e41;
+$header-background: #b8312d;
+$header-foreground: #fff;
+$nav-background: #50514f;
+$nav-text: #fff;
+$header-text-color: #b8312d;
+$footer-background: #393e41;
+$test: #cbd4c2;

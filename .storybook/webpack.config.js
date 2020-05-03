@@ -18,5 +18,17 @@ module.exports = ({ config }) => {
 
   // Prefer Gatsby ES6 entrypoint (module) over commonjs (main) entrypoint
   config.resolve.mainFields = ['browser', 'module', 'main'];
+
+  // Disable the Storybook internal-`.svg`-rule for components loaded from our app.
+  const fileLoaderRule = config.module.rules.find(rule =>
+    rule.test.test('.svg'),
+  );
+  fileLoaderRule.exclude = /\.svg$/;
+
+  config.module.rules.push({
+    test: /\.svg$/,
+    use: ['svg-react-loader'],
+  });
+
   return config;
 };

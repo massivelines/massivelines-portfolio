@@ -1,0 +1,14 @@
+.projects {
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+
+  // & >* {
+  //   width: 25%;
+  //   background-color: lightpink;
+  // }
+
+  & > *:not(:last-child) {
+    margin-right: 20px;
+  }
+}

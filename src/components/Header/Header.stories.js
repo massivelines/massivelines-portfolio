@@ -2,8 +2,10 @@ import React from 'react';
 import Header from '.';
 
 export default {
-  title: 'Header',
+  title: 'Components/Header',
   component: Header,
 };
 
-export const basic = () => <Header siteTitle="site title" />;
+export const homePage = () => <Header homePage siteTitle="site title" />;
+
+export const otherPages = () => <Header siteTitle="site title" />;

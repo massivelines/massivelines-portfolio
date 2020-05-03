@@ -1,0 +1,15 @@
+.circle {
+  height: 100%;
+  width: 100%;
+
+  &__svg {
+    height: 100%;
+    width: 100%;
+    transform: rotate(45deg);
+    z-index: 0;
+    transform-origin: 50% 50%;
+    transform-box: fill-box;
+    fill: rgb(238, 238, 238);
+    filter: drop-shadow(5px 5px 3px rgba(0, 0, 0, 0.5));
+  }
+}

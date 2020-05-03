@@ -2,7 +2,7 @@ import React from 'react';
 import SEO from '.';
 
 export default {
-  title: 'SEO',
+  title: 'Components/SEO',
   component: SEO,
 };
 

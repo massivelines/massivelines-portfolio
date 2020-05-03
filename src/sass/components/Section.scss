@@ -1,0 +1,39 @@
+.section {
+  width: 100%;
+  height: 100%;
+  // display: flex;
+  // justify-content: center;
+
+  .section-wrapper {
+    width: 100%;
+    height: 100%;
+    max-width: 1400px;
+    padding: 60px 10px;
+
+    .bar {
+      content: '';
+      height: 5px;
+      width: 100%;
+      background-color: #7f7f7f;
+      filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0.5));
+      transition: filter 500ms ease-in-out 250ms;
+
+      &--raise {
+        filter: drop-shadow(5px 5px 3px rgba(0, 0, 0, 0.5));
+      }
+    }
+
+    .section-title {
+      text-transform: capitalize;
+      padding: 20px 20px 0 20px;
+    }
+
+    .section-content {
+      height: 100%;
+      padding: 0 20px;
+      // display: flex;
+      // flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+}

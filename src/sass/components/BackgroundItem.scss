@@ -1,0 +1,47 @@
+.background-item {
+  &__work {
+    &__header {
+      display: flex;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      padding-bottom: 20px;
+    }
+
+    &__company {
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    &__dates {
+      margin-left: auto;
+    }
+
+    &__company-description {
+      width: 100%;
+    }
+
+    &__content {
+      padding-left: 20px;
+    }
+
+    &__title {
+      text-decoration: underline;
+      font-size: 18px;
+    }
+  }
+
+  &__school {
+    &__header {
+      display: flex;
+    }
+
+    &__school {
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    &__content {
+      display: flex;
+    }
+  }
+}

@@ -29,5 +29,6 @@ module.exports = {
         devDependencies: ['.storybook/**', '**/*.stories.js'],
       },
     ],
+    'react/jsx-props-no-spreading': ['error', { custom: 'ignore' }],
   },
 };

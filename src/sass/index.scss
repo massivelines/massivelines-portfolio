@@ -1,1 +1,28 @@
-@import "layout";
+@import url('https://use.typekit.net/kpr8wpw.css');
+
+@import './reboot/_reboot';
+@import './_vars';
+@import './_mixins';
+
+@import './components/index';
+@import './sections/index';
+
+// storybook
+#root {
+  height: 100%;
+  position: relative;
+}
+
+html,
+#___gatsby,
+#gatsby-focus-wrapper {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font-family: proxima-nova, sans-serif;
+  color: #7f7f7f;
+  background-color: rgb(230, 230, 230);
+  // background-color: #55b9f3;
+}
