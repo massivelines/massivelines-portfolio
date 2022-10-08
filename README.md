@@ -1,72 +1,34 @@
-# Shawn Rhodes
-Front End Developer & Web Designer   
-501-733-9480   
-shawn@massivelines.com  
-https://www.massivelines.com/   
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Summary
+## Getting Started
 
-- Skilled front end developer with a background in graphic design and animation
-- Developed React and GraphQL based administration interface from UX / UI concept to production
-- Designed custom Webpack and development environment to speed up production
-- Built cross-browser compatibility system to support legacy browsers
+First, run the development server:
 
-## Key Skills
-|   |  |  |  |  |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| HTML5         | React         | GraphQL       | Webpack       | Illustrator   |
-| CSS3          | Sass          | Gatsby        | Gulp          | XD            | 
-| Javascript    | Node.js       | Typescript    | Photoshop     |               | 
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-## Employment
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-**Jr. Developer**   
-Creative Circle – Dallas Tx   
-*November 2018 to January 2019*   
-- Developed web app for in-store sales team to increase sales and profit   
-- Refactored legacy code to incorporate current standards and best practices   
-- Created system to ensure cross-browser compatibility with legacy browsers   
+You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-**Front End Web Developer**   
-Harbinger – Plano Tx   
-*June 2018 to October 2018*   
-- Updated legacy React and Webpack code to current version and standards   
-- Introduced code splitting, hot reloading, and progressive web app best practices   
-- Developed user role-based administration control and personalization for the app   
-- Created style guide system for developing and testing new components   
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
 
-**Independent Contractor (Delivery)**   
-Self Employed – Dallas Tx   
-*October 2015 to Current*   
-- Created and managed personal schedule   
-- Maintained complete and appropriate records   
-- Adapted to work independently in a fast-paced environment   
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-**Department Manager**   
-Walmart - Plano, Tx   
-*March 2004 to October 2015*
-- Continuously lead the store in sales and profit
-- Assigned employees to specific duties to best meet the needs of the store
-- Served as a peer coach and trained new sales associates
+## Learn More
 
-## Education & Certifications
+To learn more about Next.js, take a look at the following resources:
 
-**Grow With Google Scholarship**   
-Front End Web Development   
-*January 2018 to March 2018*   
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-**Front End Development Certificate**   
-freeCodeCamp   
-*March 2017 to June 2017*   
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-**Bachelor of Arts: Art and Technology**     
-University of Texas at Dallas   
-*August 2011 to December 2014*   
+## Deploy on Vercel
 
-**Associate of Applied Science**     
-University of Arkansas Community College-Morrilton   
-*January 2004 to August 2005*   
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-## Links  
-https://www.linkedin.com/in/shawn-rhodes/   
-https://github.com/massivelines   
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
