@@ -48,24 +48,6 @@ Walmart - Plano, Tx
 - Assigned employees to specific duties to best meet the needs of the store
 - Served as a peer coach and trained new sales associates
 
-## Education & Certifications
-
-**Grow With Google Scholarship**   
-Front End Web Development   
-*January 2018 to March 2018*   
-
-**Front End Development Certificate**   
-freeCodeCamp   
-*March 2017 to June 2017*   
-
-**Bachelor of Arts: Art and Technology**     
-University of Texas at Dallas   
-*August 2011 to December 2014*   
-
-**Associate of Applied Science**     
-University of Arkansas Community College-Morrilton   
-*January 2004 to August 2005*   
-
 ## Links  
 https://www.linkedin.com/in/shawn-rhodes/   
 https://github.com/massivelines   
