@@ -1,6 +1,5 @@
 # Shawn Rhodes
 Front End Developer & Web Designer   
-501-733-9480   
 shawn@massivelines.com  
 https://www.massivelines.com/   
 
