@@ -10,13 +10,6 @@ https://www.massivelines.com/
 - Designed custom Webpack and development environment to speed up production
 - Built cross-browser compatibility system to support legacy browsers
 
-## Key Skills
-|   |  |  |  |  |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| HTML5         | React         | GraphQL       | Webpack       | Illustrator   |
-| CSS3          | Sass          | Gatsby        | Gulp          | XD            | 
-| Javascript    | Node.js       | Typescript    | Photoshop     |               | 
-
 ## Links  
 https://www.linkedin.com/in/shawn-rhodes/   
 https://github.com/massivelines   
